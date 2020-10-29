@@ -1,0 +1,16 @@
+@keyframes page-left {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.page-left-in {
+  animation: page-left 0.5s forwards;
+}
+
+.page-left-out {
+  animation: page-left 0.5s backwards;
+}

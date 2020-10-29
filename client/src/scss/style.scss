@@ -1,0 +1,36 @@
+@import './reset.scss';
+@import './vars.scss';
+@import './fonts.scss';
+@import './breakpoints.scss';
+@import './animation.scss';
+
+body {
+  font-family: 'Oswald', sans-serif;
+  // background-color: $background_color;
+  // color: $font_color;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 95%;
+
+  @include md {
+    width: 90%;
+  }
+
+  @include lg {
+    width: 87%;
+  }
+
+  @include xl {
+    width: 80%;
+  }
+}
+
+.fluid {
+  width: 100%;
+}
