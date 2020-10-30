@@ -11,6 +11,8 @@ app.use(express.json({ extended: true }))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+app.use('/api/auth', require('./routes/auth'))
+
 async function start() {
   try {
     await mongoose.connect(process.env.MONGO_URL, {
