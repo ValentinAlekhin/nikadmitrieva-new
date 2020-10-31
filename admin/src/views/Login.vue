@@ -8,7 +8,7 @@
               <v-text-field
                 v-model="login"
                 :error-messages="loginErrors"
-                prepend-icon="mdi-at"
+                prepend-icon="mdi-account"
                 label="Login"
                 required
                 @blur="$v.login.$touch()"
@@ -44,15 +44,16 @@
 </template>
 
 <script>
-import { required, email, minLength } from 'vuelidate/lib/validators'
+import { required } from 'vuelidate/lib/validators'
+
 export default {
   data: () => ({
-    email: '',
+    login: '',
     password: '',
   }),
   validations: {
     login: { required },
-    password: { required, minLen: minLength(6) },
+    password: { required },
   },
   computed: {
     loading() {
@@ -61,14 +62,13 @@ export default {
     loginErrors() {
       const errors = []
       if (!this.$v.login.$dirty) return errors
-      !this.$v.login.required && errors.push('E-mail is required')
+      !this.$v.login.required && errors.push('Поле не может быть пустым')
       return errors
     },
     passwordErrors() {
       const errors = []
       if (!this.$v.password.$dirty) return errors
-      !this.$v.password.minLen && errors.push('Min length is 6')
-      !this.$v.password.required && errors.push('Password is required')
+      !this.$v.password.required && errors.push('Поле не может быть пустым')
       return errors
     },
   },
