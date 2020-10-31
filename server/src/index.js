@@ -12,6 +12,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.use('/api/auth', require('./routes/auth'))
+app.use('/api/client', require('./routes/client'))
+app.use('/api/admin', require('./routes/admin'))
 
 async function start() {
   try {

@@ -21,6 +21,7 @@ const schema = new Schema({
   },
   order: { type: Number, required: true },
   description: { type: String },
+  clicks: { type: Number, default: 0 },
 })
 
 module.exports = model('Img', schema)

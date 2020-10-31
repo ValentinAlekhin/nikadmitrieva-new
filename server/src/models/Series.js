@@ -6,6 +6,7 @@ const schema = new Schema({
   route: { type: String },
   description: { type: String },
   order: { type: Number, required: true },
+  clicks: { type: Number, default: 0 },
 })
 
 module.exports = model('Series', schema)
