@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import AuthGuard from './authGuard'
 import Login from '../views/Login.vue'
 import Home from '../views/Home.vue'
+import CreateSeries from '../views/CreateSeries.vue'
 
 Vue.use(VueRouter)
 
@@ -12,6 +13,12 @@ const router = new VueRouter({
       path: '/',
       name: 'home',
       component: Home,
+      beforeEnter: AuthGuard,
+    },
+    {
+      path: '/create',
+      name: 'create-series',
+      component: CreateSeries,
       beforeEnter: AuthGuard,
     },
     {

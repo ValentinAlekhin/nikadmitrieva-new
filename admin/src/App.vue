@@ -3,14 +3,14 @@
     <v-navigation-drawer app temporary v-model="drawer">
       <v-list dense>
         <v-list-item-group v-model="selectedItem" color="primary">
-          <!-- <v-list-item v-for="(item, i) in links" :key="i" :to="item.url">
+          <v-list-item v-for="(item, i) in links" :key="i" :to="item.url">
             <v-list-item-icon>
               <v-icon v-text="item.icon"></v-icon>
             </v-list-item-icon>
             <v-list-item-content>
               <v-list-item-title v-text="item.title" />
             </v-list-item-content>
-          </v-list-item> -->
+          </v-list-item>
 
           <v-list-item @click="onLogout" v-if="isUserLoggedIn">
             <v-list-item-icon>
@@ -33,10 +33,10 @@
       </v-toolbar-title>
       <v-spacer />
       <v-toolbar-items class="hidden-sm-and-down">
-        <!-- <v-btn text v-for="(item, i) of links" :to="item.url" :key="i">
+        <v-btn text v-for="(item, i) of links" :to="item.url" :key="i">
           <v-icon left v-text="item.icon" />
           {{ item.title }}
-        </v-btn> -->
+        </v-btn>
         <v-btn text @click="onLogout" v-if="isUserLoggedIn">
           <v-icon left v-text="'mdi-exit-to-app'" />
           Выход
@@ -80,6 +80,17 @@ export default {
     },
     isUserLoggedIn() {
       return this.$store.getters.isUserLoggedIn
+    },
+    links() {
+      if (this.isUserLoggedIn) {
+        return [
+          {
+            url: '/create',
+            title: 'Новая серия',
+            icon: 'mdi-plus-box',
+          },
+        ]
+      }
     },
   },
   methods: {
