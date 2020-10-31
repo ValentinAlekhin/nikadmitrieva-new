@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import AuthGuard from './authGuard'
 import Login from '../views/Login.vue'
+import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
