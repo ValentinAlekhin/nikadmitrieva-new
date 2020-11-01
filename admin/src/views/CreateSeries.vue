@@ -47,7 +47,7 @@
               </v-col>
               <v-col cols="12" xs="12">
                 <v-file-input
-                  v-model="images"
+                  v-model="files"
                   accept="image/*"
                   prepend-icon="mdi-camera"
                   chips
@@ -56,10 +56,25 @@
                   show-size
                   outlined
                   truncate-length="50"
+                  @blur="onFileChange"
                 />
               </v-col>
-              <v-col cols="12" xs="12" sm="6" md="4">
-                <CreateImgCard />
+              <v-col
+                cols="12"
+                xs="12"
+                sm="6"
+                md="4"
+                v-for="(file, i) in files"
+                :key="i"
+              >
+                <CreateImgCard
+                  :items="items"
+                  :img="file"
+                  :index="i"
+                  @remove-img="removeImg"
+                  @change-order="changeOrder"
+                  @change-desc="changeDesc"
+                />
               </v-col>
             </v-row>
           </v-container>
@@ -83,8 +98,30 @@ export default {
       title: '',
       url: '',
       description: '',
-      images: [],
+      files: [],
     }
+  },
+
+  methods: {
+    onFileChange(event) {
+      this.files = this.files.map((file, i) => {
+        file.description = ''
+        return file
+      })
+    },
+
+    removeImg(index) {
+      this.files.splice(index, 1)
+    },
+
+    changeOrder({ order, index }) {
+      const img = this.files.splice(index, 1)
+      this.files.splice(order - 1, 0, ...img)
+    },
+
+    changeDesc({ description, index }) {
+      this.files[index].description = description
+    },
   },
 
   validations: {
@@ -94,6 +131,10 @@ export default {
   },
 
   computed: {
+    items() {
+      return this.files.map((el, i) => i + 1)
+    },
+
     titleErrors() {
       const errors = []
       if (!this.$v.title.$dirty) return errors
@@ -102,12 +143,14 @@ export default {
         errors.push('Минимальная длинна заголовка 4 символа')
       return errors
     },
+
     urlErrors() {
       const errors = []
       if (!this.$v.url.$dirty) return errors
       !this.$v.url.minLen && errors.push('Минимальная длинна ссылки 4 символа')
       return errors
     },
+
     descriptionErrors() {
       const errors = []
       if (!this.$v.description.$dirty) return errors
