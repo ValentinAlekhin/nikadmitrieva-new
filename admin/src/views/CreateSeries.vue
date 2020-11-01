@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-layout class="justify-center">
-      <v-flex xs12 md10 lg8>
+      <v-flex xs12 lg10>
         <h2 class="text--secondary mb-3 text-center">Создание новой серии</h2>
         <form>
           <v-container fluid>
@@ -58,6 +58,9 @@
                   truncate-length="50"
                 />
               </v-col>
+              <v-col cols="12" xs="12" sm="6" md="4">
+                <CreateImgCard />
+              </v-col>
             </v-row>
           </v-container>
         </form>
@@ -68,8 +71,13 @@
 
 <script>
 import { required, minLength } from 'vuelidate/lib/validators'
+import CreateImgCard from '../components/CreateImgCard'
 
 export default {
+  components: {
+    CreateImgCard,
+  },
+
   data() {
     return {
       title: '',
