@@ -16,7 +16,7 @@
     <v-divider />
 
     <v-card-actions>
-      <v-btn color="orange lighten-2" @click="remove" text>
+      <v-btn color="orange lighten-2" @click="onRemove" text>
         Удалить
       </v-btn>
 
@@ -42,7 +42,6 @@
             multi-line
             outlined
             @blur="$v.description.$touch()"
-            @input="onDescChange"
           />
         </v-card-text>
       </div>
@@ -56,43 +55,65 @@ import { minLength } from 'vuelidate/lib/validators'
 export default {
   data() {
     return {
-      show: !!this.description,
-      src: '',
       order: this.index + 1,
-      description: '',
+      src: '',
+      show: false,
     }
   },
 
-  props: ['img', 'items', 'index'],
-
-  methods: {
-    remove() {
-      this.$emit('remove-img', this.index)
-    },
-
-    onOrderChange() {
-      this.$emit('change-order', { order: this.order, index: this.index })
-    },
-
-    onDescChange() {
-      this.$emit('change-desc', {
-        description: this.description,
-        index: this.index,
-      })
-    },
-
-    getImageUrl() {
-      const reader = new FileReader()
-      reader.onload = e => (this.src = reader.result)
-      reader.readAsDataURL(this.img)
-    },
-  },
+  props: ['index'],
 
   validations: {
     description: { minLen: minLength(10) },
   },
 
+  methods: {
+    setImgUrl() {
+      const reader = new FileReader()
+      reader.onload = () => (this.src = reader.result)
+      reader.readAsDataURL(this.$store.state.series.files[this.index])
+    },
+
+    setShow() {
+      this.show = this.$store.state.series.files[this.index].show
+    },
+
+    onRemove() {
+      this.$store.commit('removeSeriesFile', this.index)
+    },
+
+    onOrderChange() {
+      this.$store.commit('changeSeriesFileOrder', {
+        index: this.index,
+        order: this.order,
+      })
+    },
+
+    onShow() {
+      this.$store.commit('setSeriesFileShow', {
+        index: this.index,
+        show: !this.show,
+      })
+    },
+  },
+
   computed: {
+    description: {
+      get() {
+        return this.$store.state.series.files[this.index].description || ''
+      },
+      set(value) {
+        this.$store.commit('setSeriesFileDescription', {
+          index: this.index,
+          description: value,
+        })
+      },
+    },
+
+    items() {
+      return this.$store.getters.seriesSelectItems
+    },
+
     descriptionErrors() {
       const errors = []
       if (!this.$v.description.$dirty) return errors
@@ -102,14 +123,27 @@ export default {
     },
   },
 
-  created() {
-    this.getImageUrl()
+  watch: {
+    show() {
+      console.log('show')
+      this.$store.commit('setSeriesFileShow', {
+        index: this.index,
+        show: this.show,
+      })
+    },
   },
 
+  created() {
+    this.setImgUrl()
+    this.setShow()
+  },
   updated() {
-    this.getImageUrl()
+    this.setImgUrl()
+    this.setShow()
     this.order = this.index + 1
-    this.description = this.img.description
+    this.description =
+      this.$store.state.series.files[this.index].description || ''
+    this.show = this.$store.state.series.files[this.index].show
   },
 }
 </script>

@@ -56,7 +56,6 @@
                   show-size
                   outlined
                   truncate-length="50"
-                  @blur="onFileChange"
                 />
               </v-col>
               <v-col
@@ -67,14 +66,12 @@
                 v-for="(file, i) in files"
                 :key="i"
               >
-                <CreateImgCard
-                  :items="items"
-                  :img="file"
-                  :index="i"
-                  @remove-img="removeImg"
-                  @change-order="changeOrder"
-                  @change-desc="changeDesc"
-                />
+                <CreateImgCard :index="i" />
+              </v-col>
+              <v-col cols="12" xs="12">
+                <v-btn block>
+                  Добавить серию
+                </v-btn>
               </v-col>
             </v-row>
           </v-container>
@@ -93,37 +90,6 @@ export default {
     CreateImgCard,
   },
 
-  data() {
-    return {
-      title: '',
-      url: '',
-      description: '',
-      files: [],
-    }
-  },
-
-  methods: {
-    onFileChange(event) {
-      this.files = this.files.map((file, i) => {
-        file.description = ''
-        return file
-      })
-    },
-
-    removeImg(index) {
-      this.files.splice(index, 1)
-    },
-
-    changeOrder({ order, index }) {
-      const img = this.files.splice(index, 1)
-      this.files.splice(order - 1, 0, ...img)
-    },
-
-    changeDesc({ description, index }) {
-      this.files[index].description = description
-    },
-  },
-
   validations: {
     title: { required, minLen: minLength(4) },
     url: { minLen: minLength(4) },
@@ -131,8 +97,40 @@ export default {
   },
 
   computed: {
-    items() {
-      return this.files.map((el, i) => i + 1)
+    title: {
+      get() {
+        return this.$store.state.series.title
+      },
+      set(value) {
+        this.$store.commit('setSeriesTitle', value)
+      },
+    },
+
+    url: {
+      get() {
+        return this.$store.state.series.url
+      },
+      set(value) {
+        this.$store.commit('setSeriesUrl', value)
+      },
+    },
+
+    description: {
+      get() {
+        return this.$store.state.series.description
+      },
+      set(value) {
+        this.$store.commit('setSeriesDescription', value)
+      },
+    },
+
+    files: {
+      get() {
+        return this.$store.state.series.files
+      },
+      set(value) {
+        this.$store.commit('setSeriesFiles', value)
+      },
     },
 
     titleErrors() {
