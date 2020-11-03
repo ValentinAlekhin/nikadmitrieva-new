@@ -4,6 +4,7 @@
 
     <v-card-text>
       <v-select
+        v-if="items.length !== 1"
         :items="items"
         label="Order"
         v-model="order"
@@ -41,7 +42,7 @@
             :counter="200"
             multi-line
             outlined
-            @blur="$v.description.$touch()"
+            @input="onAreaInput"
           />
         </v-card-text>
       </div>
@@ -58,6 +59,7 @@ export default {
       order: this.index + 1,
       src: '',
       show: false,
+      description: '',
     }
   },
 
@@ -72,6 +74,10 @@ export default {
       const reader = new FileReader()
       reader.onload = () => (this.src = reader.result)
       reader.readAsDataURL(this.$store.state.series.files[this.index])
+    },
+
+    setDescription() {
+      this.description = this.$store.getters.seriesFileDescription(this.index)
     },
 
     setShow() {
@@ -95,21 +101,20 @@ export default {
         show: !this.show,
       })
     },
+
+    onAreaInput() {
+      this.$v.description.$touch()
+
+      this.$store.commit('setSeriesFileValid', {
+        index: this.index,
+        valid: !this.$v.$invalid,
+      })
+
+      this.$emit('card-input')
+    },
   },
 
   computed: {
-    description: {
-      get() {
-        return this.$store.state.series.files[this.index].description || ''
-      },
-      set(value) {
-        this.$store.commit('setSeriesFileDescription', {
-          index: this.index,
-          description: value,
-        })
-      },
-    },
-
     items() {
       return this.$store.getters.seriesSelectItems
     },
@@ -125,10 +130,16 @@ export default {
 
   watch: {
     show() {
-      console.log('show')
       this.$store.commit('setSeriesFileShow', {
         index: this.index,
         show: this.show,
+      })
+    },
+
+    description() {
+      this.$store.commit('setSeriesFileDescription', {
+        index: this.index,
+        description: this.description,
       })
     },
   },
@@ -136,14 +147,13 @@ export default {
   created() {
     this.setImgUrl()
     this.setShow()
+    this.setDescription()
   },
   updated() {
     this.setImgUrl()
     this.setShow()
+    this.setDescription()
     this.order = this.index + 1
-    this.description =
-      this.$store.state.series.files[this.index].description || ''
-    this.show = this.$store.state.series.files[this.index].show
   },
 }
 </script>

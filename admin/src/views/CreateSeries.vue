@@ -56,6 +56,7 @@
                   show-size
                   outlined
                   truncate-length="50"
+                  @change="onFileInput"
                 />
               </v-col>
               <v-col
@@ -66,10 +67,14 @@
                 v-for="(file, i) in files"
                 :key="i"
               >
-                <CreateImgCard :index="i" />
+                <CreateImgCard :index="i" @card-input="onCardInput" />
               </v-col>
               <v-col cols="12" xs="12">
-                <v-btn block>
+                <v-btn
+                  block
+                  :disabled="invalid || $v.$invalid"
+                  @click="onFormSubmit"
+                >
                   Добавить серию
                 </v-btn>
               </v-col>
@@ -90,10 +95,45 @@ export default {
     CreateImgCard,
   },
 
+  data() {
+    return {
+      invalid: true,
+    }
+  },
+
   validations: {
     title: { required, minLen: minLength(4) },
     url: { minLen: minLength(4) },
     description: { minLen: minLength(10) },
+  },
+
+  methods: {
+    onCardInput() {
+      this.validateFiles()
+    },
+
+    onFileInput() {
+      this.validateFiles()
+    },
+
+    validateFiles() {
+      const files = this.$store.state.series.files
+      if (files.length) {
+        for (const file of files) {
+          if (!file.valid) {
+            return (this.invalid = true)
+          }
+        }
+        return (this.invalid = false)
+      } else return (this.invalid = true)
+    },
+
+    onFormSubmit() {
+      this.validateFiles()
+      if (!this.invalid) {
+        console.log('click')
+      } else this.$store.commit('setError', 'Форма невалидна')
+    },
   },
 
   computed: {

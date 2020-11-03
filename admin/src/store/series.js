@@ -22,6 +22,7 @@ export default {
     setSeriesFiles(state, payload) {
       state.files = payload.map(file => {
         file.show = false
+        file.valid = true
         return file
       })
     },
@@ -32,6 +33,10 @@ export default {
 
     setSeriesFileShow(state, { index, show }) {
       state.files[index].show = show
+    },
+
+    setSeriesFileValid(state, { index, valid }) {
+      state.files[index].valid = valid
     },
 
     removeSeriesFile(state, payload) {
@@ -47,6 +52,10 @@ export default {
   getters: {
     seriesSelectItems(state) {
       return state.files.map((el, i) => i + 1)
+    },
+
+    seriesFileDescription(state) {
+      return index => state.files[index].description || ''
     },
   },
 }
