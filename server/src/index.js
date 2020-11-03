@@ -30,6 +30,7 @@ async function start() {
       console.log(`Server has been started on port: ${PORT}`)
     )
   } catch (e) {
+    console.error(e)
     process.exit(1)
   }
 }
