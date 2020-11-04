@@ -9,16 +9,19 @@ const router = Router()
 
 router.post('/new/series', auth, async (req, res) => {
   try {
-    const { title, route, description, order } = req.body
+    const { title, route, description } = req.body
 
-    const series = new Series({
-      title,
-      route,
-      description,
-      order,
-    })
+    const seriesObg = { title }
+    if (route) seriesObg.route = route
+    if (description) seriesObg.description = description
 
-    res.status(200).json({ message: 'Серия создана' })
+    seriesObg.order = (await Series.count()) + 1
+
+    const series = new Series(seriesObg)
+
+    const seriesId = series._id
+
+    res.status(200).json({ message: 'Серия создана', seriesId })
   } catch (e) {
     res.status(500).json({ message: e })
     throw new Error(e)
@@ -27,8 +30,8 @@ router.post('/new/series', auth, async (req, res) => {
 
 router.post('/new/image', auth, async (req, res) => {
   try {
-    const { role } = req.query
-    const { galleryId, placeholder, order, description } = req.body
+    const { seriesId, order, description } = req.query
+    const { file } = req.body
 
     const image = new Image({})
 

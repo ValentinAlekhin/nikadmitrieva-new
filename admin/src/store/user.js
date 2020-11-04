@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from '../axios/index'
 
 export default {
   state: {
@@ -19,12 +19,13 @@ export default {
       try {
         const {
           data: { token },
-        } = await axios.post('http://localhost:5000/api/auth', {
+        } = await axios.post('auth', {
           login,
           password,
         })
 
         sessionStorage.setItem('token', token)
+        axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
         commit('setToken', token)
       } catch (e) {
         const message = e.response.data.message || e
@@ -41,7 +42,8 @@ export default {
 
       if (token) {
         try {
-          await axios.post('http://localhost:5000/api/auth/check', { token })
+          await axios.post('/auth/check', { token })
+          axios.defaults.headers.common['Authorization'] = `Bearer ${token}`
           commit('setToken', token)
         } catch (e) {
           const message = e.response.data.message || e
