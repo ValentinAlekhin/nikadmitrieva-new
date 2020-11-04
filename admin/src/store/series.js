@@ -1,3 +1,5 @@
+import axios from '../axios/index'
+
 export default {
   state: {
     title: '',
@@ -64,16 +66,26 @@ export default {
   },
 
   actions: {
-    seriesPost({ commit }) {
+    async seriesPost({ commit, state }) {
       commit('clearError')
       commit('setLoading', true)
-      return new Promise((res, rej) => {
-        setTimeout(() => {
-          commit('clearSeriesForm')
-          commit('setLoading', false)
-          res()
-        }, 3000)
-      })
+
+      const seriesObj = { title: state.title }
+      if (state.url) seriesObj.url = state.url
+      if (state.description) seriesObj.description = state.description
+
+      try {
+        const {
+          data: { seriesId },
+        } = await axios.post('admin/new/series', seriesObj)
+        console.log(seriesId)
+      } catch (e) {
+        const message = e.response.data.message || e
+        commit('setError', message)
+        throw new Error(message)
+      } finally {
+        commit('setLoading', false)
+      }
     },
   },
 

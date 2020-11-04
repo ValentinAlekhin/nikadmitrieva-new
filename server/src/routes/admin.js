@@ -15,9 +15,10 @@ router.post('/new/series', auth, async (req, res) => {
     if (route) seriesObg.route = route
     if (description) seriesObg.description = description
 
-    seriesObg.order = (await Series.count()) + 1
+    seriesObg.order = (await Series.countDocuments()) + 1
 
     const series = new Series(seriesObg)
+    await series.save()
 
     const seriesId = series._id
 
@@ -33,7 +34,11 @@ router.post('/new/image', auth, async (req, res) => {
     const { seriesId, order, description } = req.query
     const { file } = req.body
 
-    const image = new Image({})
+    const imageObj = { seriesId, order }
+    if (description) imageObj.description = description
+
+    const image = new Image(imageObj)
+    await image.save()
 
     res.status(200).json({ message: 'Изображение добавлено' })
   } catch (e) {
