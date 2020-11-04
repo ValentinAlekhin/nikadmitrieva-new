@@ -6,6 +6,7 @@
       <v-select
         v-if="items.length !== 1"
         :items="items"
+        :disabled="loading"
         label="Order"
         v-model="order"
         outlined
@@ -17,13 +18,18 @@
     <v-divider />
 
     <v-card-actions>
-      <v-btn color="orange lighten-2" @click="onRemove" text>
+      <v-btn
+        color="orange lighten-2"
+        @click="onRemove"
+        text
+        :disabled="loading"
+      >
         Удалить
       </v-btn>
 
       <v-spacer />
 
-      <v-btn icon @click="onShow">
+      <v-btn icon @click="onShow" :disabled="loading">
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
     </v-card-actions>
@@ -37,6 +43,7 @@
             v-model="description"
             type="text"
             :error-messages="descriptionErrors"
+            :disabled="loading"
             label="Description"
             required
             :counter="200"
@@ -118,6 +125,10 @@ export default {
 
     show() {
       return this.$store.getters.seriesImageShow(this.index)
+    },
+
+    loading() {
+      return this.$store.getters.loading
     },
 
     descriptionErrors() {

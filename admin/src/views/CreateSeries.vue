@@ -12,6 +12,7 @@
                   v-model="title"
                   type="text"
                   :error-messages="titleErrors"
+                  :disabled="loading"
                   label="Title"
                   required
                   outlined
@@ -25,6 +26,7 @@
                   v-model="url"
                   type="text"
                   :error-messages="urlErrors"
+                  :disabled="loading"
                   label="Url"
                   required
                   outlined
@@ -37,6 +39,7 @@
                   v-model="description"
                   type="text"
                   :error-messages="descriptionErrors"
+                  :disabled="loading"
                   label="Description"
                   required
                   :counter="200"
@@ -50,6 +53,7 @@
                   v-model="files"
                   accept="image/*"
                   prepend-icon="mdi-camera"
+                  :disabled="loading"
                   chips
                   counter
                   multiple
@@ -71,7 +75,8 @@
               <v-col cols="12" xs="12">
                 <v-btn
                   block
-                  :disabled="invalidFiles || $v.$invalid"
+                  :disabled="invalidFiles || $v.$invalid || loading"
+                  :loading="loading"
                   @click="onFormSubmit"
                 >
                   Добавить серию
@@ -102,9 +107,7 @@ export default {
 
   methods: {
     onFormSubmit() {
-      if (!this.invalid) {
-        console.log('click')
-      } else this.$store.commit('setError', 'Форма невалидна')
+      this.$store.dispatch('seriesPost').then(() => this.$router.push('/'))
     },
   },
 
@@ -147,6 +150,10 @@ export default {
 
     invalidFiles() {
       return this.$store.getters.isImagesInvalid
+    },
+
+    loading() {
+      return this.$store.getters.loading
     },
 
     titleErrors() {

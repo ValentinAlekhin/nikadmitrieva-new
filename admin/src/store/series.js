@@ -54,6 +54,27 @@ export default {
       const file = state.images.splice(index, 1)
       state.images.splice(order - 1, 0, ...file)
     },
+
+    clearSeriesForm(state) {
+      state.title = ''
+      state.url = ''
+      state.description = ''
+      state.images = []
+    },
+  },
+
+  actions: {
+    seriesPost({ commit }) {
+      commit('clearError')
+      commit('setLoading', true)
+      return new Promise((res, rej) => {
+        setTimeout(() => {
+          commit('clearSeriesForm')
+          commit('setLoading', false)
+          res()
+        }, 3000)
+      })
+    },
   },
 
   getters: {
