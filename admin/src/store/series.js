@@ -3,7 +3,7 @@ export default {
     title: '',
     url: '',
     description: '',
-    files: [],
+    images: [],
   },
 
   mutations: {
@@ -19,43 +19,67 @@ export default {
       state.description = payload
     },
 
-    setSeriesFiles(state, payload) {
-      state.files = payload.map(file => {
-        file.show = false
-        file.valid = true
-        return file
-      })
+    setSeriesImages(state, payload) {
+      state.images = payload.map(file => ({
+        file,
+        show: false,
+        valid: true,
+        src: URL.createObjectURL(file),
+      }))
     },
 
-    setSeriesFileDescription(state, { index, description }) {
-      state.files[index].description = description
+    setSeriesImageDescription(state, { index, description }) {
+      const images = [...state.images]
+      images[index].description = description
+      state.images = images
     },
 
-    setSeriesFileShow(state, { index, show }) {
-      state.files[index].show = show
+    setSeriesImageShow(state, { index, show }) {
+      const images = [...state.images]
+      images[index].show = show
+      state.images = images
     },
 
-    setSeriesFileValid(state, { index, valid }) {
-      state.files[index].valid = valid
+    setSeriesImageValid(state, { index, valid }) {
+      const images = [...state.images]
+      images[index].valid = valid
+      state.images = images
     },
 
-    removeSeriesFile(state, payload) {
-      state.files.splice(payload, 1)
+    removeSeriesImage(state, payload) {
+      state.images.splice(payload, 1)
     },
 
-    changeSeriesFileOrder(state, { index, order }) {
-      const file = state.files.splice(index, 1)
-      state.files.splice(order - 1, 0, ...file)
+    changeSeriesImageOrder(state, { index, order }) {
+      const file = state.images.splice(index, 1)
+      state.images.splice(order - 1, 0, ...file)
     },
   },
 
   getters: {
-    seriesSelectItems(state) {
-      return state.files.map((el, i) => i + 1)
-    },
+    seriesSelectItems: state => state.images.map((el, i) => i + 1),
 
-    seriesFileDescription(state) {
-      return index => state.files[index].description || ''
+    seriesImageDescription: state => index =>
+      state.images[index].description || '',
+
+    seriesInputFiles: state => state.images.map(image => image.file),
+
+    seriesImagesSrc: state => index => state.images[index].src,
+
+    seriesImageDescription: state => index => state.images[index].description,
+
+    seriesImageShow: state => index => state.images[index].show,
+
+    isImagesInvalid: state => {
+      const images = state.images
+      if (images.length) {
+        for (const image of images) {
+          if (!image.valid) {
+            return true
+          }
+        }
+        return false
+      } else return true
     },
   },
 }

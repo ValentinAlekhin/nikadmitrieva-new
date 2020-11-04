@@ -23,7 +23,7 @@
 
       <v-spacer />
 
-      <v-btn icon @click="show = !show">
+      <v-btn icon @click="onShow">
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
     </v-card-actions>
@@ -42,7 +42,7 @@
             :counter="200"
             multi-line
             outlined
-            @input="onAreaInput"
+            @input="onInput()"
           />
         </v-card-text>
       </div>
@@ -57,9 +57,6 @@ export default {
   data() {
     return {
       order: this.index + 1,
-      src: '',
-      show: false,
-      description: '',
     }
   },
 
@@ -70,53 +67,57 @@ export default {
   },
 
   methods: {
-    setImgUrl() {
-      const reader = new FileReader()
-      reader.onload = () => (this.src = reader.result)
-      reader.readAsDataURL(this.$store.state.series.files[this.index])
-    },
-
-    setDescription() {
-      this.description = this.$store.getters.seriesFileDescription(this.index)
-    },
-
-    setShow() {
-      this.show = this.$store.state.series.files[this.index].show
-    },
-
     onRemove() {
-      this.$store.commit('removeSeriesFile', this.index)
+      this.$store.commit('removeSeriesImage', this.index)
     },
 
     onOrderChange() {
-      this.$store.commit('changeSeriesFileOrder', {
+      this.$store.commit('changeSeriesImageOrder', {
         index: this.index,
         order: this.order,
       })
     },
 
     onShow() {
-      this.$store.commit('setSeriesFileShow', {
+      this.$store.commit('setSeriesImageShow', {
         index: this.index,
         show: !this.show,
       })
     },
 
-    onAreaInput() {
+    onInput() {
       this.$v.description.$touch()
 
-      this.$store.commit('setSeriesFileValid', {
+      this.$store.commit('setSeriesImageValid', {
         index: this.index,
         valid: !this.$v.$invalid,
       })
-
-      this.$emit('card-input')
     },
   },
 
   computed: {
+    src() {
+      return this.$store.getters.seriesImagesSrc(this.index)
+    },
+
     items() {
       return this.$store.getters.seriesSelectItems
+    },
+
+    description: {
+      get() {
+        return this.$store.getters.seriesImageDescription(this.index)
+      },
+      set(value) {
+        this.$store.commit('setSeriesImageDescription', {
+          index: this.index,
+          description: value,
+        })
+      },
+    },
+
+    show() {
+      return this.$store.getters.seriesImageShow(this.index)
     },
 
     descriptionErrors() {
@@ -128,31 +129,7 @@ export default {
     },
   },
 
-  watch: {
-    show() {
-      this.$store.commit('setSeriesFileShow', {
-        index: this.index,
-        show: this.show,
-      })
-    },
-
-    description() {
-      this.$store.commit('setSeriesFileDescription', {
-        index: this.index,
-        description: this.description,
-      })
-    },
-  },
-
-  created() {
-    this.setImgUrl()
-    this.setShow()
-    this.setDescription()
-  },
   updated() {
-    this.setImgUrl()
-    this.setShow()
-    this.setDescription()
     this.order = this.index + 1
   },
 }
