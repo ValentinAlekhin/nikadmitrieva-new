@@ -39,13 +39,15 @@ router.post('/new/series', auth, async (req, res) => {
 router.post('/new/image', auth, multer, async (req, res) => {
   try {
     const { seriesId, order, description } = req.query
-    const file = req.file
 
     const imageObj = { seriesId, order }
     if (description) imageObj.description = description
 
     const image = new Image(imageObj)
     const id = image._id
+
+    const sharpImg = new Sharp(req.file.path, id)
+    const sharpResonse = await sharpImg.save()
 
     res.status(200).json({ message: 'Изображение добавлено' })
   } catch (e) {
