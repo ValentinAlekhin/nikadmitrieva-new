@@ -5,8 +5,10 @@ const path = require('path')
 const { Router } = require('express')
 const appRoot = require('app-root-path').toString()
 const auth = require('../middleware/auth')
+const multer = require('../middleware/multer')
 const Image = require('../models/Image')
 const Series = require('../models/Series')
+const Sharp = require('../helpers/sharp')
 
 const dataDirName = process.env.IMAGE_DIR
 
@@ -34,21 +36,16 @@ router.post('/new/series', auth, async (req, res) => {
   }
 })
 
-router.post('/new/image', auth, async (req, res) => {
+router.post('/new/image', auth, multer, async (req, res) => {
   try {
     const { seriesId, order, description } = req.query
-    const { file } = req.body
+    const file = req.file
 
     const imageObj = { seriesId, order }
     if (description) imageObj.description = description
 
     const image = new Image(imageObj)
     const id = image._id
-
-    console.log(path.join(appRoot, 'buffer', id))
-    // await fs.writeFile(path.join(appRoot, 'buffer', id), file)
-
-    // await image.save()
 
     res.status(200).json({ message: 'Изображение добавлено' })
   } catch (e) {

@@ -5,8 +5,6 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const cors = require('cors')
 
-const Sharp = require('./helpers/sharp')
-
 const app = express()
 const PORT = process.env.PORT || 5000
 

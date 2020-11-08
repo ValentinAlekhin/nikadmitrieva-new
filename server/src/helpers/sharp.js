@@ -84,6 +84,8 @@ class Sharp {
         break
       }
     }
+
+    return this.response
   }
 }
 
