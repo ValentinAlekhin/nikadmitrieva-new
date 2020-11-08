@@ -3,7 +3,9 @@ require('dotenv').config()
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
-var cors = require('cors')
+const cors = require('cors')
+
+const Sharp = require('./helpers/sharp')
 
 const app = express()
 const PORT = process.env.PORT || 5000

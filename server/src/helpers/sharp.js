@@ -1,6 +1,12 @@
+require('dotenv').config()
+
 const fs = require('fs-extra')
 const path = require('path')
 const sharp = require('sharp')
+const appRoot = require('app-root-path').toString()
+
+const dataDirName = process.env.IMAGE_DIR
+const dataDir = appRoot + dataDirName
 
 class Sharp {
   constructor(path, name) {
@@ -36,25 +42,49 @@ class Sharp {
     await sharp(this.path).webp({ quality: 80 }).toFile(this.webp)
   }
 
-  async createPlaceholder() {}
-}
+  async createPlaceholder() {
+    const fileName = `${this.name}_${this.tags.placeholder}.jpeg`
+    const height = 400 * this.aspectRatio
+    await sharp(this.jpeg)
+      .resize(400, height)
+      .blur(20)
+      .toFile(path.join(dataDir, fileName))
+    this.response.placeholder = `/${dataDirName}/${fileName}`
+  }
 
-const resize = async (width, height) => {
-  const webpName = `${this.fileName}_${width + settings.tags.width}.webp`
-  const jpegName = `${this.fileName}_${width + settings.tags.width}.jpeg`
-  await sharp(this.buffer.webp)
-    .resize(width, height)
-    .toFile(path.join(rootDir, this.pathToSave, webpName))
-  await sharp(this.buffer.jpeg)
-    .resize(width, height)
-    .toFile(path.join(rootDir, this.pathToSave, jpegName))
-  this.response.main[width + this.tags.factorName] = {
-    webp: `/${this.pathToSave}/${webpName}`,
-    jpeg: `/${this.pathToSave}/${jpegName}`,
+  async resize(width, height) {
+    const webpName = `${this.name}_${width + settings.tags.width}.webp`
+    const jpegName = `${this.name}_${width + settings.tags.width}.jpeg`
+    await sharp(this.buffer.webp)
+      .resize(width, height)
+      .toFile(path.join(rootDir, this.pathToSave, webpName))
+    await sharp(this.buffer.jpeg)
+      .resize(width, height)
+      .toFile(path.join(rootDir, this.pathToSave, jpegName))
+    this.response.main[width + this.tags.factorName] = {
+      webp: `/${this.pathToSave}/${webpName}`,
+      jpeg: `/${this.pathToSave}/${jpegName}`,
+    }
+  }
+
+  async save() {
+    await this.getData()
+    await this.compress()
+    await this.createPlaceholder()
+
+    for (let step = 1; step < this.steps; step++) {
+      const currentWidth = step * this.stepSize
+      const currentHight = currentWidth * this.aspectRatio
+
+      if (currentWidth <= this.width && currentWidth <= this.height) {
+        await this.resize(currentWidth, currentHight)
+      } else {
+        if (step === 1)
+          throw new Error('Изображение слишком маленького разршения')
+        break
+      }
+    }
   }
 }
 
-module.exports = async path => {
-  const { width, height } = await sharp(path).metadata()
-  const aspectRatio = width / height
-}
+module.exports = Sharp

@@ -4,8 +4,8 @@ const schema = new Schema({
   galleryId: { type: Types.ObjectId, required: true },
   webp: [
     {
-      width: { type: Number, required: true },
-      src: { type: String, required: true },
+      width: { type: Number },
+      src: { type: String },
     },
   ],
   jpg: [
@@ -14,10 +14,10 @@ const schema = new Schema({
       src: { type: String },
     },
   ],
-  placeholder: { type: String, required: true },
+  placeholder: { type: String },
   size: {
-    width: { type: Number, required: true },
-    height: { type: Number, required: true },
+    width: { type: Number },
+    height: { type: Number },
   },
   order: { type: Number, required: true },
   description: { type: String },

@@ -1,9 +1,14 @@
 require('dotenv').config()
 
+const fs = require('fs-extra')
+const path = require('path')
 const { Router } = require('express')
+const appRoot = require('app-root-path').toString()
 const auth = require('../middleware/auth')
 const Image = require('../models/Image')
 const Series = require('../models/Series')
+
+const dataDirName = process.env.IMAGE_DIR
 
 const router = Router()
 
@@ -38,7 +43,12 @@ router.post('/new/image', auth, async (req, res) => {
     if (description) imageObj.description = description
 
     const image = new Image(imageObj)
-    await image.save()
+    const id = image._id
+
+    console.log(path.join(appRoot, 'buffer', id))
+    // await fs.writeFile(path.join(appRoot, 'buffer', id), file)
+
+    // await image.save()
 
     res.status(200).json({ message: 'Изображение добавлено' })
   } catch (e) {
