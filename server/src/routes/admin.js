@@ -14,10 +14,10 @@ const router = Router()
 
 router.post('/new/series', auth, async (req, res) => {
   try {
-    const { title, route, description } = req.body
+    const { title, url, description } = req.body
 
     const seriesObg = { title }
-    if (route) seriesObg.route = route
+    if (url) seriesObg.url = url
     if (description) seriesObg.description = description
 
     seriesObg.order = (await Series.countDocuments()) + 1

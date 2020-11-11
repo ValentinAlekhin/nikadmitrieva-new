@@ -66,7 +66,7 @@ export default {
   },
 
   actions: {
-    async seriesPost({ commit, state }) {
+    async seriesPost({ commit, state, getters }) {
       commit('clearError')
       commit('setLoading', true)
 
@@ -75,10 +75,31 @@ export default {
       if (state.description) seriesObj.description = state.description
 
       try {
-        const {
-          data: { seriesId },
-        } = await axios.post('admin/new/series', seriesObj)
-        console.log(seriesId)
+        const response = await axios.post('admin/new/series', seriesObj)
+        const seriesId = response.data.seriesId
+
+        let order = 1
+
+        for (const img of getters.images) {
+          const { file, description } = img
+          const params = { seriesId, order }
+          if (description) params.description = description
+
+          console.log(file)
+          const imgFd = new FormData()
+          imgFd.append('image', file)
+
+          await axios.post('admin/new/image', imgFd, {
+            params,
+            headers: {
+              'Content-Type': `multipart/form-data; boundary=${imgFd._boundary}`,
+            },
+          })
+
+          order++
+        }
+
+        commit('clearSeriesForm')
       } catch (e) {
         const message = e.response.data.message || e
         commit('setError', message)
@@ -90,6 +111,8 @@ export default {
   },
 
   getters: {
+    images: state => state.images,
+
     seriesSelectItems: state => state.images.map((el, i) => i + 1),
 
     seriesImageDescription: state => index =>
