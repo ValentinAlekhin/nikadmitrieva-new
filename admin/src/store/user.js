@@ -2,7 +2,7 @@ import axios from '../axios/index'
 
 export default {
   state: {
-    token: '',
+    token: 'aa',
   },
 
   mutations: {
@@ -36,7 +36,7 @@ export default {
       }
     },
 
-    async autoLoginUser({ commit }) {
+    async autoLoginUser({ commit, dispatch }) {
       commit('setLoading', true)
       const token = sessionStorage.getItem('token')
 
@@ -48,13 +48,16 @@ export default {
         } catch (e) {
           const message = e.response.data.message || e
           sessionStorage.removeItem('token')
+          dispatch('logoutUser')
           commit('setError', message)
+          throw 'Сессия устарела'
         } finally {
           commit('setLoading', false)
         }
       } else {
-        commit('setToken', token)
+        dispatch('logoutUser')
         commit('setLoading', false)
+        throw 'Нет аторизации'
       }
     },
 

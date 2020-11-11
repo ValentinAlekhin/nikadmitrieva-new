@@ -16,6 +16,10 @@ new Vue({
   vuetify,
   render: h => h(App),
   created() {
-    this.$store.dispatch('autoLoginUser')
+    this.$store
+      .dispatch('autoLoginUser')
+      .then(() => {})
+      .catch(() => this.$router.push('/login'))
+    this.$store.dispatch('fetchAllData')
   },
 })
