@@ -10,8 +10,6 @@ const Image = require('../models/Image')
 const Series = require('../models/Series')
 const Sharp = require('../helpers/sharp')
 
-const dataDirName = process.env.IMAGE_DIR
-
 const router = Router()
 
 router.post('/new/series', auth, async (req, res) => {
@@ -38,20 +36,18 @@ router.post('/new/series', auth, async (req, res) => {
 
 router.post('/new/image', auth, multer, async (req, res) => {
   try {
-    const { seriesId, order, description } = req.query
-
-    const imageObj = { seriesId, order }
-    if (description) imageObj.description = description
-
-    const image = new Image(imageObj)
+    const image = new Image(req.query)
     const id = image._id
 
     const sharpImg = new Sharp(req.file.path, id)
-    const sharpResonse = await sharpImg.save()
+    const sharpResponse = await sharpImg.save()
+
+    image.overwrite({ ...sharpResponse, ...req.query })
+    await image.save()
 
     res.status(200).json({ message: 'Изображение добавлено' })
   } catch (e) {
-    res.status(500).json({ message: e })
+    res.status(500).json({ message: e.message })
   }
 })
 

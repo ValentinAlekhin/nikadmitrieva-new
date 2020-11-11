@@ -82,8 +82,8 @@ class Sharp {
         .rotate()
         .toFile(path.join(dataDir, jpegName))
 
-      this.response.jpeg.push({ width, src: `/${dataDirName}/${webpName}` })
-      this.response.webp.push({ width, src: `/${dataDirName}/${jpegName}` })
+      this.response.webp.push({ width, src: `/${dataDirName}/${webpName}` })
+      this.response.jpeg.push({ width, src: `/${dataDirName}/${jpegName}` })
     } catch (e) {
       throw e
     }
@@ -119,8 +119,7 @@ class Sharp {
 
       return this.response
     } catch (e) {
-      console.error(e)
-      throw e.toString()
+      throw { message: e.toString() }
     }
   }
 }

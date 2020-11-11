@@ -1,14 +1,14 @@
 const { Schema, Types, model } = require('mongoose')
 
 const schema = new Schema({
-  galleryId: { type: Types.ObjectId, required: true },
+  seriesId: { type: Types.ObjectId, required: true },
   webp: [
     {
       width: { type: Number },
       src: { type: String },
     },
   ],
-  jpg: [
+  jpeg: [
     {
       width: { type: Number },
       src: { type: String },
