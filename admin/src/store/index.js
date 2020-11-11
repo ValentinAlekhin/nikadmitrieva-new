@@ -22,7 +22,7 @@ export default new Vuex.Store({
       commit('clearError')
 
       try {
-        const response = await axios.get('/api/ceilnt')
+        const response = await axios.get('/api/client')
         const { series, images } = response.data
 
         commit('setImages', images)
