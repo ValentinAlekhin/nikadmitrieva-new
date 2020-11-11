@@ -181,10 +181,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-circle.v-progress-circular__overlay {
-  transition: none;
-}
-
 .progress_container {
   position: relative;
   height: 100%;
