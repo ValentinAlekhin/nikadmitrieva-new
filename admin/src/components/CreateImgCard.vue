@@ -1,6 +1,36 @@
 <template>
   <v-card class="mx-auto" max-width="344">
-    <v-img :src="src" height="200px" />
+    <v-img :src="src" height="200px" class="image">
+      <div class="progress_container" v-if="loading">
+        <v-progress-circular
+          v-if="progress !== 100 && progress !== true"
+          class="progress"
+          :rotate="360"
+          :size="150"
+          :width="15"
+          :value="progress"
+        >
+          {{ progress }}
+        </v-progress-circular>
+
+        <v-progress-circular
+          v-else-if="progress === 100"
+          class="progress"
+          :size="150"
+          :width="15"
+          indeterminate
+        />
+
+        <v-alert
+          v-else-if="progress === true"
+          color="green"
+          type="success"
+          class="progress"
+        >
+          Изображение загружено
+        </v-alert>
+      </div>
+    </v-img>
 
     <v-card-text>
       <v-select
@@ -131,6 +161,10 @@ export default {
       return this.$store.getters.loading
     },
 
+    progress() {
+      return this.$store.getters.seriesImageProgress(this.index)
+    },
+
     descriptionErrors() {
       const errors = []
       if (!this.$v.description.$dirty) return errors
@@ -145,3 +179,21 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+circle.v-progress-circular__overlay {
+  transition: none;
+}
+
+.progress_container {
+  position: relative;
+  height: 100%;
+
+  .progress {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+</style>

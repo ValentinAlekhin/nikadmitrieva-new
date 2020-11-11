@@ -48,6 +48,12 @@ export default {
       state.images = images
     },
 
+    setSeriesImageProgress(state, { index, progress }) {
+      const images = [...state.images]
+      images[index].progress = progress
+      state.images = images
+    },
+
     removeSeriesImage(state, payload) {
       state.images.splice(payload, 1)
     },
@@ -89,12 +95,25 @@ export default {
           const imgFd = new FormData()
           imgFd.append('image', file)
 
-          await axios.post('admin/new/image', imgFd, {
+          const config = {
             params,
+
             headers: {
               'Content-Type': `multipart/form-data; boundary=${imgFd._boundary}`,
             },
-          })
+
+            onUploadProgress: progressEvent => {
+              const progress = Math.round(
+                (progressEvent.loaded * 100) / progressEvent.total
+              )
+              commit('setSeriesImageProgress', { progress, index: order - 1 })
+              console.log(progress)
+            },
+          }
+
+          await axios.post('admin/new/image', imgFd, config)
+
+          commit('setSeriesImageProgress', { progress: true, index: order - 1 })
 
           order++
         }
@@ -125,6 +144,8 @@ export default {
     seriesImageDescription: state => index => state.images[index].description,
 
     seriesImageShow: state => index => state.images[index].show,
+
+    seriesImageProgress: state => index => state.images[index].progress,
 
     isImagesInvalid: state => {
       const images = state.images
