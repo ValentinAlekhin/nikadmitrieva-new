@@ -24,7 +24,7 @@
             Disagree
           </v-btn>
           <v-spacer></v-spacer>
-          <v-btn color="red darken-1" text @click="removeSeries">
+          <v-btn color="red darken-1" text @click="deleteSeries">
             Agree
           </v-btn>
         </v-card-actions>
@@ -35,14 +35,20 @@
 
 <script>
 export default {
+  props: ['id'],
   data() {
     return {
       dialog: false,
     }
   },
   methods: {
-    removeSeries() {
-      this.dialog = false
+    async deleteSeries() {
+      try {
+        await this.$store.dispatch('deleteSeries', this.id)
+        this.dialog = false
+      } catch (e) {
+        throw new Error(e)
+      }
     },
   },
   computed: {

@@ -1,14 +1,13 @@
 require('dotenv').config()
 
-const fs = require('fs-extra')
-const path = require('path')
 const { Router } = require('express')
-const appRoot = require('app-root-path').toString()
 const auth = require('../middleware/auth')
 const multer = require('../middleware/multer')
 const Image = require('../models/Image')
 const Series = require('../models/Series')
 const Sharp = require('../helpers/sharp')
+
+const deleteSeriesImages = require('../utils/deleteSeriesImages')
 
 const router = Router()
 
@@ -48,6 +47,20 @@ router.post('/new/image', auth, multer, async (req, res) => {
     res.status(200).json({ message: 'Изображение добавлено' })
   } catch (e) {
     res.status(500).json({ message: e.message })
+  }
+})
+
+router.delete('/series/:id', auth, async (req, res) => {
+  try {
+    const id = req.params.id
+    const images = await Image.find({ seriesId: id })
+    await Series.findByIdAndDelete(id)
+    await Image.collection.deleteMany({ seriesId: id })
+    await deleteSeriesImages(images)
+    res.status(200).json({ message: 'Серия удалена' })
+  } catch (e) {
+    res.status(500).json({ message: e })
+    throw new Error(e)
   }
 })
 

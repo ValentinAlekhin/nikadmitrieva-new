@@ -130,6 +130,21 @@ export default {
         commit('setLoading', false)
       }
     },
+    async deleteSeries({ commit, dispatch }, seriesId) {
+      commit('clearError')
+      commit('setLoading', true)
+
+      try {
+        await axios.delete(`admin/series/${seriesId}`)
+        await dispatch('fetchAllData')
+      } catch (e) {
+        const message = e.response.data.message || e
+        commit('setError', message)
+        throw new Error(e)
+      } finally {
+        commit('setLoading', false)
+      }
+    },
   },
 
   getters: {

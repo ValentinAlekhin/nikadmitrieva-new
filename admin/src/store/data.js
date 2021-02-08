@@ -8,6 +8,8 @@ export default {
   mutations: {
     setImages: (state, payload) => (state.images = payload),
     setSeries: (state, payload) => (state.series = payload),
+    deleteSeries: (state, seriesId) =>
+      (state.series = state.series.filter(series => series._id !== seriesId)),
   },
   actions: {
     async fetchAllData({ commit }) {

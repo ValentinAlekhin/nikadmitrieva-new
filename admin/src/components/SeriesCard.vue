@@ -14,7 +14,7 @@
       </v-icon>
       <span class="subheading" v-text="imageCount"></span>
       <v-spacer></v-spacer>
-      <DeletePopup />
+      <DeletePopup :id="series._id" />
       <v-btn color="orange lighten-1" text>
         Edit
       </v-btn>

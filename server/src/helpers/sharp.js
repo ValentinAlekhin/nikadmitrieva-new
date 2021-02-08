@@ -30,9 +30,6 @@ class Sharp {
   }
 
   async compress() {
-    // this.jpeg = path.join(dataDir, `${this.name}_${this.tags.original}.jpeg`)
-    // this.webp = path.join(dataDir, `${this.name}_${this.tags.original}.webp`)
-
     try {
       this.jpeg = await sharp(this.path)
         .jpeg()

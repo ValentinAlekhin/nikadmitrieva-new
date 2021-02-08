@@ -1,7 +1,7 @@
 const { Schema, Types, model } = require('mongoose')
 
 const schema = new Schema({
-  seriesId: { type: Types.ObjectId, required: true },
+  seriesId: { type: String, required: true },
   webp: [
     {
       width: { type: Number },
