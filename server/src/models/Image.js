@@ -24,4 +24,4 @@ const schema = new Schema({
   clicks: { type: Number, default: 0 },
 })
 
-module.exports = model('Img', schema)
+module.exports = model('Image', schema)

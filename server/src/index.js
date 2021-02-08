@@ -1,5 +1,6 @@
 require('dotenv').config()
 
+const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
@@ -16,6 +17,8 @@ app.use(cors())
 app.use('/api/auth', require('./routes/auth'))
 app.use('/api/client', require('./routes/client'))
 app.use('/api/admin', require('./routes/admin'))
+
+app.use('/data', express.static(path.join(__dirname, '../data')))
 
 async function start() {
   try {

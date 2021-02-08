@@ -1,40 +1,43 @@
 <template>
-  <v-card class="mx-auto" max-width="344">
-    <v-img :src="''" height="200px" />
-
-    <v-card-title v-text="series.title" />
-
-    <v-card-subtitle v-text="'Просмотров: ' + series.clicks" />
+  <v-card>
+    <v-img :src="src" class="white--text align-end" height="200px">
+      <v-card-title v-text="series.title"></v-card-title>
+    </v-img>
 
     <v-card-actions>
-      <v-btn color="orange lighten-2" text>
-        Редактировать
-      </v-btn>
-
-      <v-spacer />
-
-      <v-btn icon @click="show = !show" v-if="series.description">
-        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+      <v-icon class="mr-1">
+        mdi-eye
+      </v-icon>
+      <span class="subheading mr-2" v-text="series.clicks"></span>
+      <v-icon class="mr-1">
+        mdi-image
+      </v-icon>
+      <span class="subheading" v-text="imageCount"></span>
+      <v-spacer></v-spacer>
+      <DeletePopup />
+      <v-btn color="orange lighten-1" text>
+        Edit
       </v-btn>
     </v-card-actions>
-
-    <v-expand-transition>
-      <div v-show="show">
-        <v-divider />
-
-        <v-card-text>
-          {{ series.description }}
-        </v-card-text>
-      </div>
-    </v-expand-transition>
   </v-card>
 </template>
 
 <script>
+import DeletePopup from './DeletePopup.vue'
+
 export default {
+  components: { DeletePopup },
   props: ['series'],
   data: () => ({
-    show: false,
+    baseUrl: process.env.VUE_APP_BASE_URL,
   }),
+  computed: {
+    src() {
+      return this.baseUrl + this.$store.getters.titleImage(this.series._id)
+    },
+    imageCount() {
+      return this.$store.getters.allImagesInSeries(this.series._id).length
+    },
+  },
 }
 </script>

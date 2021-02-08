@@ -27,4 +27,14 @@ export default {
       }
     },
   },
+  getters: {
+    series: state => state.series.sort((a, b) => a.order - b.order),
+    images: state => state.images,
+    allImagesInSeries: state => seriesId =>
+      state.images.filter(image => image.seriesId === seriesId),
+    titleImage: state => seriesId =>
+      state.images.find(
+        image => image.seriesId === seriesId && image.order === 1
+      ).jpeg[0].src,
+  },
 }

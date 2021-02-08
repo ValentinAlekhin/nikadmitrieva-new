@@ -86,18 +86,16 @@ export default {
 
         let order = 1
 
-        for (const img of getters.images) {
+        for (const img of getters.seriesImages) {
           const { file, description } = img
           const params = { seriesId, order }
           if (description) params.description = description
 
-          console.log(file)
           const imgFd = new FormData()
           imgFd.append('image', file)
 
           const config = {
             params,
-
             headers: {
               'Content-Type': `multipart/form-data; boundary=${imgFd._boundary}`,
             },
@@ -106,14 +104,19 @@ export default {
               const progress = Math.round(
                 (progressEvent.loaded * 100) / progressEvent.total
               )
-              commit('setSeriesImageProgress', { progress, index: order - 1 })
-              console.log(progress)
+              commit('setSeriesImageProgress', {
+                progress,
+                index: order - 1,
+              })
             },
           }
 
           await axios.post('admin/new/image', imgFd, config)
 
-          commit('setSeriesImageProgress', { progress: true, index: order - 1 })
+          commit('setSeriesImageProgress', {
+            progress: true,
+            index: order - 1,
+          })
 
           order++
         }
@@ -130,7 +133,7 @@ export default {
   },
 
   getters: {
-    images: state => state.images,
+    seriesImages: state => state.images,
 
     seriesSelectItems: state => state.images.map((el, i) => i + 1),
 

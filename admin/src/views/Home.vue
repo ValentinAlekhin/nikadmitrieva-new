@@ -1,10 +1,10 @@
 <template>
-  <v-container>
-    <v-layout row>
-      <v-flex xs12 v-for="el in series" :key="el.id">
-        <SeriesCard series="el" />
-      </v-flex>
-    </v-layout>
+  <v-container fluid>
+    <v-row>
+      <v-col cols="12" xs="12" sm="6" md="4" v-for="el in series" :key="el._id">
+        <SeriesCard :series="el" />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -16,9 +16,12 @@ export default {
     SeriesCard,
   },
   data() {
-    return {
-      series: [],
-    }
+    return {}
+  },
+  computed: {
+    series() {
+      return this.$store.getters.series
+    },
   },
 }
 </script>

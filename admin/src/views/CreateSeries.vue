@@ -107,7 +107,13 @@ export default {
 
   methods: {
     onFormSubmit() {
-      this.$store.dispatch('seriesPost').then(() => this.$router.push('/'))
+      this.$store
+        .dispatch('seriesPost')
+        .then(() =>
+          this.$store
+            .dispatch('fetchAllData')
+            .then(() => this.$router.push('/'))
+        )
     },
   },
 
