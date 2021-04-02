@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+
+import shared from './shared'
+import content from './content'
 import sideNav from './sideNav'
 
 Vue.use(Vuex)
@@ -27,6 +30,8 @@ export default new Vuex.Store({
   mutations: {},
   actions: {},
   modules: {
+    shared,
+    content,
     sideNav,
   },
 })
