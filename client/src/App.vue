@@ -2,14 +2,13 @@
   <div id="app" class="app">
     <Header />
     <SideNav />
-    <vue-page-transition :name="transitionName">
-      <router-view />
-    </vue-page-transition>
+    <router-view />
   </div>
 </template>
 
 <script>
 import './scss/style.scss'
+
 import Header from './components/Header/Header.vue'
 import SideNav from './components/SideNav/SideNav.vue'
 
@@ -19,43 +18,16 @@ export default {
     Header,
     SideNav,
   },
-  data: () => ({
-    transitionName: '',
-    enterActiveClass: '',
-    leaveActiveClass: '',
-  }),
   methods: {},
-  watch: {
-    $route(from, to) {
-      console.log(from, to)
-      const fPath = from.fullPath
-      const tPath = to.fullPath
-      if (fPath === '/') {
-        this.transitionName = 'fade-in-right'
-        this.enterActiveClass = 'animate fadeInRightBig'
-        this.leaveActiveClass = 'animate fadeOutLeftBig'
-      } else if (fPath === '/contact') {
-        this.transitionName = 'fade-in-left'
-        this.enterActiveClass = 'animate fadeOutLeftBig'
-        this.leaveActiveClass = 'animate fadeInRightBig'
-      } else if (fPath === '/about') {
-        if (tPath === '/') {
-          this.transitionName = 'fade-in-right'
-          this.enterActiveClass = 'animate fadeOutLeftBig'
-          this.leaveActiveClass = 'animate fadeInRightBig'
-        } else {
-          this.transitionName = 'fade-in-left'
-          this.enterActiveClass = 'animate fadeInRightBig'
-          this.leaveActiveClass = 'animate fadeOutLeftBig'
-        }
-      }
-    },
+  created() {
+    this.$store.dispatch('fetchAllData')
   },
 }
 </script>
 
 <style lang="scss">
 .app {
-  overflow: hidden;
+  width: 60%;
+  margin: 0 auto;
 }
 </style>
