@@ -42,6 +42,8 @@ export default {
   .CardsWrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
 
     .Card {
       .CardTitle {
