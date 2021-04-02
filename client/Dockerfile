@@ -1,17 +1,21 @@
-FROM node:14-alpine
+FROM node:14-alpine as builder
 
 WORKDIR /app
 
 COPY . .
 
-RUN  npm install
+RUN  npm ci
 
 RUN npm run build
 
-RUN rm -rf node_modules
+FROM node:14-alpine
 
-RUN npm i -g serve
+WORKDIR /app
 
-EXPOSE 80
+COPY --from=builder /app/dist .
 
-CMD [ "serve" "-S" "-p" "80" "./build" ]
+RUN npm install -g http-server
+
+EXPOSE 8080 
+
+CMD  http-server . --proxy http://localhost:8080?

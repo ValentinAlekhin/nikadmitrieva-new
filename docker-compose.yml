@@ -13,7 +13,7 @@ services:
       - IMAGE_DIR=${IMAGE_DIR}
       - UPLOADS_DIR=${UPLOADS_DIR}
     ports:
-      - '${PORT}:8000'
+      - 8000:${PORT}
     volumes:
       - ./data:/app/data
     restart: always
@@ -25,14 +25,14 @@ services:
     environment:
       - VUE_APP_BASE_URL=${VUE_APP_BASE_URL}
     ports:
-      - '80:8080'
+      - 8080:8080
     restart: always
   client:
     build:
       context: ./client
+    ports:
+      - 8081:8080
     depends_on:
       - server
       - admin
-    ports:
-      - '80:8081'
     restart: always
