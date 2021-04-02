@@ -1,27 +1,55 @@
 <template>
   <div class="home-page">
-    <h1>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
-      molestiae dolor maxime non repudiandae itaque placeat, deserunt, a
-      aliquid, quos quibusdam illum eum. Distinctio officiis maiores, porro
-      exercitationem accusamus velit explicabo, consequatur id obcaecati fugit
-      quae! Aliquam quam fuga voluptatum ad voluptates adipisci, in, perferendis
-      omnis hic dicta deleniti recusandae soluta autem quos provident rem quia
-      nemo. Quas facere aperiam reprehenderit tempora quibusdam quod quia
-      possimus ex fuga cupiditate quasi molestias, obcaecati placeat aut itaque
-      vero enim rerum repudiandae saepe a esse doloribus temporibus provident
-      assumenda. Qui, molestiae. Quasi magnam iusto illo dolor, hic consequatur
-      voluptates dolorem voluptatibus dignissimos sequi.
-    </h1>
+    <h2 class="HomeTitle">
+      All series
+    </h2>
+    <div class="CardsWrapper">
+      <router-link
+        v-for="card of seriesCards"
+        :key="card._id"
+        :to="`/series/${card._id}`"
+      >
+        <div class="Card">
+          <ResponsiveImg :img="card.titleImage" :alt="card.title" />
+          <h4 class="CardTitle" v-text="card.title" />
+        </div>
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+import ResponsiveImg from '../components/ResponsiveImg'
+
+export default {
+  components: { ResponsiveImg },
+  computed: {
+    seriesCards() {
+      return this.$store.getters.seriesCards
+    },
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .home-page {
   height: 2000px;
+  .HomeTitle {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .CardsWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .Card {
+      .CardTitle {
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 2rem;
+      }
+    }
+  }
 }
 </style>

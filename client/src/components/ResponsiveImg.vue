@@ -1,9 +1,9 @@
 <template>
-  <div class="res-img">
+  <div class="ResponsiveImg">
     <picture>
-      <source :srcSet="webp" type="image/webp" />
-      <source :srcSet="jpeg" type="image/jpeg" />
-      <img :src="base" :alt="alt" />
+      <source :srcSet="webpSrcset" type="image/webp" />
+      <source :srcSet="jpegSrcset" type="image/jpeg" />
+      <img :src="img.jpeg[0].src" :alt="alt" class="ResponsiveImg__Image" />
     </picture>
   </div>
 </template>
@@ -20,6 +20,27 @@ export default {
       reuqire: true,
     },
   },
-  computed: {},
+  computed: {
+    jpegSrcset() {
+      return this.img.jpeg
+        .map(({ src, width }) => `${src} ${width}w`)
+        .join(',\n')
+    },
+    webpSrcset() {
+      return this.img.webp
+        .map(({ src, width }) => `${src} ${width}w`)
+        .join(',\n')
+    },
+  },
 }
 </script>
+
+<style lang="scss" scoped>
+.ResponsiveImg {
+  width: 100%;
+  &__Image {
+    object-fit: contain;
+    width: 100%;
+  }
+}
+</style>
