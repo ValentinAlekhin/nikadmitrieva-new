@@ -1,6 +1,7 @@
 import React from 'react'
 
 import MainContainer from '../../shared/MainContainer/MainContainer'
+
 import {
   Wrapper,
   StyledHeader,
