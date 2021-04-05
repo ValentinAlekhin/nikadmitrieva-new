@@ -1,9 +1,9 @@
 export const breakpoints = {
-  xs: '480px',
-  sm: '768px',
-  md: '992px',
-  lg: '1200px',
-  xl: '1400px',
+  xs: 480,
+  sm: 768,
+  md: 992,
+  lg: 1200,
+  xl: 1400,
 }
 
 export const mainContainerWidthInPercentage = {
