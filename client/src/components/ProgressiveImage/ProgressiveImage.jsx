@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Wrapper, StyledImg } from './styled'
+import { Wrapper, StyledImg, Picture } from './styled'
 
 const ProgressiveImage = ({
   defaultImg,
@@ -17,12 +17,12 @@ const ProgressiveImage = ({
   return (
     <Wrapper>
       <StyledImg src={placeholder} alt={`${alt} placeholder`} />
-      <picture style={{ opacity: imgLoad ? 1 : 0 }}>
+      <Picture style={{ opacity: imgLoad ? 1 : 0 }}>
         {webp ? <source srcSet={webp} type="image/webp" /> : null}
         {jpg ? <source srcSet={webp} type="image/jpeg" /> : null}
         {avif ? <source srcSet={webp} type="image/avif" /> : null}
         <StyledImg src={defaultImg} alt={alt} onLoad={onLoadHandler} />
-      </picture>
+      </Picture>
     </Wrapper>
   )
 }

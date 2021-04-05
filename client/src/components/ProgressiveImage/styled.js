@@ -16,3 +16,10 @@ export const Wrapper = styled.div`
 export const StyledImg = styled.img`
   ${imageStyles}
 `
+
+export const Picture = styled.picture`
+  ${imageStyles}
+  position: absolute;
+  left: 0;
+  transition: opacity 0.5s;
+`
