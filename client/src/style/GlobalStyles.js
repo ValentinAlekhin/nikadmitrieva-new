@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: #fff;
-    font-family: 'Manrope', sans-serif;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     &::-webkit-scrollbar {
       display: none;
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
   } 
   a {
     text-decoration: none;
-    color: #fff;
+    color: #000;
   }
   * {
     box-sizing: border-box;
