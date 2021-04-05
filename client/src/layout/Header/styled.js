@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 export const Wrapper = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  margin-bottom: 2rem;
 `
 
 export const StyledHeader = styled.header`
