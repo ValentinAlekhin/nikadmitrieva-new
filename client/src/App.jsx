@@ -1,5 +1,7 @@
 import { Switch, Route, useLocation } from 'react-router-dom'
 
+import ContentState from './context/ContentState'
+
 import GlobalStyles from './style/GlobalStyles'
 
 import Header from './layout/Header/Header'
@@ -10,7 +12,7 @@ const App = () => {
   const location = useLocation()
 
   return (
-    <>
+    <ContentState>
       <GlobalStyles />
       <Header />
 
@@ -18,7 +20,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route exact path="/series/:id" component={Series} />
       </Switch>
-    </>
+    </ContentState>
   )
 }
 
