@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Wrapper, StyledImg, Picture } from './styled'
 
 const ProgressiveImage = ({
+  className,
   defaultImg,
   webp,
   jpg,
@@ -22,7 +23,7 @@ const ProgressiveImage = ({
   const onLoadHandler = () => setImgLoad(true)
 
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <StyledImg src={placeholder} alt={`${alt} placeholder`} />
       <Picture style={{ opacity: imgLoad ? 1 : 0 }}>
         {webp ? <source srcSet={webp} type="image/webp" /> : null}
