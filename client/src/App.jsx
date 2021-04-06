@@ -16,7 +16,7 @@ const App = () => {
     <ContentState>
       <GlobalStyles />
 
-      <Preloader />
+      {/* <Preloader /> */}
 
       <Header />
 
