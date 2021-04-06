@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <v-row>
-      <v-col cols="12" xs="12" sm="6" md="4" v-for="el in series" :key="el._id">
+      <v-col cols="12" xs="12" sm="4" md="3" v-for="el in series" :key="el._id">
         <SeriesCard :series="el" />
       </v-col>
     </v-row>
