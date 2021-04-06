@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 
+import axios from '../../axios/index'
+
 import { ContentContext } from 'context/ContentState'
 
 import MainContainer from 'shared/MainContainer/MainContainer'
@@ -11,8 +13,11 @@ import { Wrapper } from './styled'
 
 const Home = () => {
   const { getSeries } = useContext(ContentContext)
+
+  const onClickHandler = async id => await axios.get(`/view/series/${id}`)
+
   const gridItems = getSeries().map(({ title, titleImage, _id }, i) => (
-    <Link key={i} to={`/series/${_id}`}>
+    <Link key={i} to={`/series/${_id}`} onClick={() => onClickHandler(_id)}>
       <SeriesCard title={title} image={titleImage} />
     </Link>
   ))

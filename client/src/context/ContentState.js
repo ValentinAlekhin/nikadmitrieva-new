@@ -44,7 +44,7 @@ const ProjectsState = ({ children }) => {
     setLoading(true)
 
     try {
-      const { data } = await axios.get('/client')
+      const { data } = await axios.get('/')
       const { series, images } = data
 
       setContent({ series, images: addSrcSet(addBaseUrl(images)) })
