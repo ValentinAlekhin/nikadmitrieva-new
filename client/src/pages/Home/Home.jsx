@@ -13,7 +13,7 @@ const Home = () => {
   const { getSeries } = useContext(ContentContext)
   const gridItems = getSeries().map(({ title, titleImage, _id }, i) => (
     <Link key={i} to={`/series/${_id}`}>
-      <SeriesCard title={title} titleImage={titleImage} />
+      <SeriesCard title={title} image={titleImage} />
     </Link>
   ))
 

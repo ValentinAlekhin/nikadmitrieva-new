@@ -10,21 +10,21 @@ import {
   Title,
 } from './styled'
 
-const SeriesCard = ({ title, titleImage }) => {
+const SeriesCard = ({ title, image }) => {
   return (
     <Wrapper>
       <StyledProgressiveImg
-        placeholder={titleImage.placeholder}
-        webp={titleImage.webpSrcSet}
-        jpg={titleImage.jpgSrcSet}
-        defaultImg={titleImage.jpeg[0].src}
+        placeholder={image.placeholder}
+        webp={image.webpSrcSet}
+        jpg={image.jpgSrcSet}
+        defaultImg={image.jpeg[0].src}
       />
       <Overlay>
         <OverlayContent>
           <IconBackground>
             <PlusIcon />
           </IconBackground>
-          <Title>{title}</Title>
+          {title ? <Title>{title}</Title> : null}
         </OverlayContent>
       </Overlay>
     </Wrapper>
