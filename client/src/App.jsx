@@ -4,6 +4,7 @@ import ContentState from './context/ContentState'
 
 import GlobalStyles from './style/GlobalStyles'
 
+import Preloader from 'components/Preloader/Preloader'
 import Header from './layout/Header/Header'
 import Home from './pages/Home/Home'
 import Series from './pages/Series/Series'
@@ -14,6 +15,9 @@ const App = () => {
   return (
     <ContentState>
       <GlobalStyles />
+
+      <Preloader />
+
       <Header />
 
       <Switch location={location} key={location.pathname}>
