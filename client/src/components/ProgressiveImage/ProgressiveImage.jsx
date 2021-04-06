@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useContext } from 'react'
+
+import { ContentContext } from 'context/ContentState'
 
 import { Wrapper, StyledImg, Picture } from './styled'
 
@@ -11,16 +13,21 @@ const ProgressiveImage = ({
   placeholder,
   alt,
 }) => {
+  const { addImage, addLoadedImage } = useContext(ContentContext)
   const [imgLoad, setImgLoad] = useState(true)
   const imgRef = useRef()
 
   useEffect(() => {
+    addImage()
     if (!imgRef.current.complete) {
       setImgLoad(false)
     }
   }, [])
 
-  const onLoadHandler = () => setImgLoad(true)
+  const onLoadHandler = () => {
+    setImgLoad(true)
+    addLoadedImage()
+  }
 
   return (
     <Wrapper className={className}>

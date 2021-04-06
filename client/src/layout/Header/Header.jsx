@@ -14,9 +14,9 @@ import {
 } from './styled'
 
 const links = [
-  { to: '/', title: 'Главная' },
-  { to: '/contacts', title: 'Контакты' },
-  { to: '/about', title: 'Обо мне' },
+  { to: '/', title: 'Main' },
+  { to: '/contacts', title: 'Contacts' },
+  { to: '/about', title: 'About' },
 ]
 
 const Header = () => {
@@ -25,7 +25,7 @@ const Header = () => {
       <MainContainer>
         <StyledHeader>
           <Title>
-            <HeaderLink to="/">Ника Дмитриева</HeaderLink>
+            <HeaderLink to="/">Nika Dmitrieva</HeaderLink>
           </Title>
           <NavWrapper>
             <NavList>
