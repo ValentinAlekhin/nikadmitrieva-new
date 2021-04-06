@@ -5,11 +5,14 @@ const BASE_URL = process.env.REACT_APP_BASE_URL
 
 export const ContentContext = createContext({
   loading: true,
+  pageNotReady: true,
   series: [],
   images: [],
   fetchAll: async () => {},
   getSeries: () => {},
   getSeriesImages: () => {},
+  addImage: () => {},
+  addLoadedImage: () => {},
 })
 
 ContentContext.displayName = 'ContentContext'
@@ -17,6 +20,8 @@ ContentContext.displayName = 'ContentContext'
 const ProjectsState = ({ children }) => {
   const [content, setContent] = useState({ series: [], images: [] })
   const [loading, setLoading] = useState(true)
+  const [pageNotReady, setPageNotReady] = useState(true)
+  const [images, setImages] = useState({ count: 0, loaded: 0 })
 
   const addBaseUrl = images =>
     images.map(img => {
@@ -67,12 +72,30 @@ const ProjectsState = ({ children }) => {
   const getSeriesImages = seriesId =>
     content.images.filter(image => image.seriesId === seriesId)
 
+  const addImage = () => setImages({ ...images, count: images.count + 1 })
+
+  const addLoadedImage = () => {
+    const { count, loaded } = images
+    setImages({ ...images, loaded: loaded + 1 })
+    if (count === loaded) {
+      setPageNotReady(false)
+    }
+  }
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => fetchAll(), [])
 
   return (
     <ContentContext.Provider
-      value={{ content, loading, getSeries, getSeriesImages }}
+      value={{
+        content,
+        loading,
+        pageNotReady,
+        getSeries,
+        getSeriesImages,
+        addImage,
+        addLoadedImage,
+      }}
     >
       {children}
     </ContentContext.Provider>
