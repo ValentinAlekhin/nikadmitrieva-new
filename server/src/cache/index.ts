@@ -1,5 +1,7 @@
 import NodeCache from 'node-cache'
 
+const { ENABLE_CACHE } = process.env
+
 class Cache {
   private readonly cache: NodeCache
 
@@ -12,6 +14,10 @@ class Cache {
   }
 
   async get(key: string, storeFunction: () => Promise<any>) {
+    if (ENABLE_CACHE === 'false') {
+      return await storeFunction()
+    }
+
     const value = this.cache.get(key)
     if (value) {
       return value
