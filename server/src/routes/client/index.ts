@@ -20,8 +20,22 @@ router.get('/', async (req, res) => {
     const { originalUrl } = req
 
     const result = await cache.get(originalUrl, async () => {
-      const series = await Series.find()
-      const images = await Image.find()
+      const imageDocuments = await Image.find().lean()
+      const seriesDocuments = await Series.find().lean()
+
+      const images = imageDocuments.map(img => ({
+        ...img,
+        jpg: `images/${img._id}.jpg`,
+        webp: `images/${img._id}.webp`,
+        placeholder: `images/${img._id}_placeholder.jpg`,
+      }))
+
+      const series = seriesDocuments.map(ser => ({
+        ...ser,
+        titleImage: images.find(
+          ({ order, series_id }) => order === 1 && series_id === ser._id
+        ),
+      }))
 
       return { images, series }
     })
