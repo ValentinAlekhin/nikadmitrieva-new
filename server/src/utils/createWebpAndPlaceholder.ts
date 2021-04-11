@@ -19,11 +19,12 @@ const convertToWebp = async (image: string, name: string) => {
 }
 
 const createPlaceholder = async (image: string, name: string) => {
-  const fileName = `${name}_placeholder.jpeg`
+  const fileName = `${name}_placeholder.jpg`
 
   await sharp(image)
-    .blur(20)
     .withMetadata()
+    .resize(600, null)
+    .blur(30)
     .toFile(path.join(dataDir, fileName))
 }
 
