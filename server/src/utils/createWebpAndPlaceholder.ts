@@ -12,8 +12,10 @@ const appRoot = toString()
 const dataDirName = process.env.IMAGE_DIR
 const dataDir = path.join(appRoot, dataDirName)
 
-const convertToWebp = async (image: string) => {
-  await sharp(image).webp().withMetadata().rotate().toBuffer()
+const convertToWebp = async (image: string, name: string) => {
+  const webpPath = path.join(dataDir, `${name}.webp`)
+
+  await sharp(image).webp().withMetadata().rotate().toFile(webpPath)
 }
 
 const createPlaceholder = async (image: string, name: string) => {
@@ -27,10 +29,10 @@ const createPlaceholder = async (image: string, name: string) => {
 
 const createWebpAndPlaceholder = async (imagePath: string, name: string) => {
   try {
-    await convertToWebp(imagePath)
+    await convertToWebp(imagePath, name)
     await createPlaceholder(imagePath, name)
   } catch (e) {
-    throw e
+    throw new Error(e)
   }
 }
 

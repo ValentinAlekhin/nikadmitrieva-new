@@ -33,10 +33,12 @@ router.post('/check', async (req, res) => {
     }
   } catch (e) {
     if (e.name === 'TokenExpiredError') {
-      return res.status(401).json({ message: 'Токен больше не валиден' })
+      res.status(401).json({ message: 'Токен больше не валиден' })
+      throw new Error(e)
     }
 
-    return res.status(500).json({ message: 'Ошибка на сервере' })
+    res.status(500).json({ message: 'Ошибка на сервере' })
+    throw new Error(e)
   }
 })
 
