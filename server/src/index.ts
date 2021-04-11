@@ -1,22 +1,27 @@
-require('dotenv').config()
+import { config } from 'dotenv'
 
-const path = require('path')
-const express = require('express')
-const bodyParser = require('body-parser')
-const mongoose = require('mongoose')
-const cors = require('cors')
+import path from 'path'
+import express from 'express'
+import bodyParser from 'body-parser'
+import mongoose from 'mongoose'
+import cors from 'cors'
+
+import authRoute from './routes/auth.js'
+import clientRoute from './routes/client.js'
+import adminRoute from './routes/admin.js'
+
+config()
 
 const app = express()
 const PORT = process.env.PORT || 5000
 
-app.use(express.json({ extended: true }))
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 app.use(cors())
 
-app.use('/api/auth', require('./routes/auth'))
-app.use('/api/client', require('./routes/client'))
-app.use('/api/admin', require('./routes/admin'))
+app.use('/api/auth', authRoute)
+app.use('/api/client', clientRoute)
+app.use('/api/admin', adminRoute)
 
 app.use('/data', express.static(path.join(__dirname, '../data')))
 
