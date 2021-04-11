@@ -1,8 +1,10 @@
 import { config } from 'dotenv'
 
 import fs from 'fs-extra'
+import path from 'path'
 import { Router } from 'express'
 import { generate as createId } from 'shortid'
+import { toString } from 'app-root-path'
 
 import auth from '../../middleware/auth'
 import multer from '../../middleware/multer'
@@ -15,6 +17,10 @@ import createWebpAndPlaceholder from '../../utils/createWebpAndPlaceholder'
 import deleteSeriesImages from '../../utils/deleteSeriesImages'
 
 config()
+
+const appRoot = toString()
+const dataDirName = process.env.IMAGE_DIR
+const dataDir = path.join(appRoot, dataDirName)
 
 const router = Router()
 
@@ -40,17 +46,22 @@ router.post('/new/series', auth, async (req, res) => {
   }
 })
 
-router.post('/new/image', auth, multer, async (req, res) => {
+router.post('/new/image', multer, async (req, res) => {
   try {
-    const { series_id, order } = req.body
-    const { path } = req.file
+    const { seriesId, order } = req.query as { seriesId: string; order: string }
+    const { path: imagePath } = req.file
 
     const _id = createId()
 
-    const imageObj: Image = { _id, series_id, order, views: 0 }
+    const imageObj: Image = {
+      _id,
+      series_id: seriesId,
+      order: +order,
+      views: 0,
+    }
 
-    await createWebpAndPlaceholder(path, _id)
-    await fs.unlink(path)
+    await createWebpAndPlaceholder(imagePath, _id)
+    await fs.move(imagePath, path.join(dataDir, `${_id}.jpg`))
 
     const image = new ImageSchema(imageObj)
     await image.save()
@@ -58,6 +69,7 @@ router.post('/new/image', auth, multer, async (req, res) => {
     res.status(200).json({ message: 'Изображение добавлено' })
   } catch (e) {
     res.status(500).json({ message: e.message })
+    throw new Error(e)
   }
 })
 
