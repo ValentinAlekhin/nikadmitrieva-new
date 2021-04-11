@@ -1,12 +1,14 @@
-require('dotenv').config()
+import { config } from 'dotenv'
 
-const { Router } = require('express')
-const Image = require('../models/Image')
-const Series = require('../models/Series')
+import { Router } from 'express'
+import Image from '../../models/Image'
+import Series from '../../models/Series'
+
+config()
 
 const router = Router()
 
-router.get('/', async (req, res) => {
+router.get('/', async (_, res) => {
   try {
     const series = await Series.find()
     const images = await Image.find()
@@ -24,7 +26,7 @@ router.get('/view/series/:id', async (req, res) => {
 
     await Series.findByIdAndUpdate(id, { $inc: { clicks: 1 } })
 
-    res.status(200).json({ message: 'ok' })
+    res.status(200).send()
   } catch (e) {
     res.status(500).json({ message: e })
     throw new Error(e)
@@ -37,11 +39,11 @@ router.get('/view/image/:id', async (req, res) => {
 
     await Image.findByIdAndUpdate(id, { $inc: { clicks: 1 } })
 
-    res.status(200).json({ message: 'ok' })
+    res.status(200).send()
   } catch (e) {
     res.status(500).json({ message: e })
     throw new Error(e)
   }
 })
 
-module.exports = router
+export default router
