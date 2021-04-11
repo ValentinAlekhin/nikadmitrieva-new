@@ -5,9 +5,9 @@ import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
 
-import authRoute from './routes/auth.js'
-import clientRoute from './routes/client.js'
-import adminRoute from './routes/admin.js'
+import authRoute from './routes/auth'
+import clientRoute from './routes/client'
+import adminRoute from './routes/admin'
 
 config()
 
