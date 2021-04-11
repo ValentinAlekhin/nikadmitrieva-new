@@ -6,7 +6,7 @@ import { toString } from 'app-root-path'
 
 config()
 
-sharp.cache({ files: 6 })
+sharp.cache(false)
 
 const appRoot = toString()
 const dataDirName = process.env.IMAGE_DIR
