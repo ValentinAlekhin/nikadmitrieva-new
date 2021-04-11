@@ -1,6 +1,7 @@
 import { Schema, model, Document } from 'mongoose'
 
 export interface Image extends Document {
+  _id: string
   series_id: string
   order: number
   name: string
@@ -8,7 +9,12 @@ export interface Image extends Document {
   views: number
 }
 
-const schema = new Schema({
+export interface ImageDocument extends Image, Document {
+  _id: string
+}
+
+const schema: Schema = new Schema({
+  _id: { type: String },
   series_id: { type: String, required: true },
   order: { type: Number, required: true },
   name: { type: String, required: true },
@@ -16,4 +22,4 @@ const schema = new Schema({
   views: { type: Number, default: 0 },
 })
 
-export default model<Image>('Image', schema)
+export default model<ImageDocument>('Image', schema)
