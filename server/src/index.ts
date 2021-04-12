@@ -9,6 +9,7 @@ import compression from 'compression'
 import authRoute from './routes/auth'
 import clientRoute from './routes/client'
 import adminRoute from './routes/admin'
+import imageRoute from './routes/image'
 
 config()
 
@@ -23,8 +24,7 @@ app.use(compression())
 app.use('/api/auth', authRoute)
 app.use('/api/client', clientRoute)
 app.use('/api/admin', adminRoute)
-
-app.use('/images', express.static(path.join(__dirname, '../data/images')))
+app.use('/image', imageRoute)
 
 async function start() {
   try {
