@@ -2,16 +2,12 @@ import { config } from 'dotenv'
 
 import { Router } from 'express'
 
-import CacheService from '../../cache'
+import cache from '../../libs/cache'
 
 import Image from '../../models/Image'
 import Series from '../../models/Series'
 
 config()
-
-const { TTL } = process.env
-
-const cache = new CacheService(+TTL)
 
 const router = Router()
 
@@ -47,7 +43,7 @@ router.get('/', async (req, res) => {
   }
 })
 
-router.get('/view/series/:id', async (req, res) => {
+router.put('/view/series/:id', async (req, res) => {
   try {
     const { id } = req.params
 
@@ -60,7 +56,7 @@ router.get('/view/series/:id', async (req, res) => {
   }
 })
 
-router.get('/view/image/:id', async (req, res) => {
+router.put('/view/image/:id', async (req, res) => {
   try {
     const { id } = req.params
 
