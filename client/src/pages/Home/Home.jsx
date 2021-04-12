@@ -12,11 +12,11 @@ import SeriesCard from 'components/SeriesCard/SeriesCard'
 import { Wrapper } from './styled'
 
 const Home = () => {
-  const { getSeries } = useContext(ContentContext)
+  const { series } = useContext(ContentContext)
 
-  const onClickHandler = async id => await axios.get(`/view/series/${id}`)
+  const onClickHandler = async id => await axios.put(`/view/series/${id}`)
 
-  const gridItems = getSeries().map(({ title, titleImage, _id }, i) => (
+  const gridItems = series.map(({ title, titleImage, _id }, i) => (
     <Link key={i} to={`/series/${_id}`} onClick={() => onClickHandler(_id)}>
       <SeriesCard title={title} image={titleImage} />
     </Link>

@@ -12,6 +12,7 @@ import { Wrapper } from './styled'
 const Series = () => {
   const { id } = useParams()
   const { getSeriesImages } = useContext(ContentContext)
+  console.log(getSeriesImages(id))
   const gridItems = getSeriesImages(id).map((img, i) => (
     <SeriesCard key={i} image={img} />
   ))

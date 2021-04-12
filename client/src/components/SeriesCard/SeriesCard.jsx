@@ -15,9 +15,9 @@ const SeriesCard = ({ title, image }) => {
     <Wrapper>
       <StyledProgressiveImg
         placeholder={image.placeholder}
-        webp={image.webpSrcSet}
-        jpg={image.jpgSrcSet}
-        defaultImg={image.jpeg[0].src}
+        webp={image.webp}
+        jpg={image.jpg}
+        defaultImg={image.jpg}
       />
       <Overlay>
         <OverlayContent>

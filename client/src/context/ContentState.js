@@ -1,8 +1,6 @@
 import { createContext, useState, useEffect } from 'react'
 import axios from '../axios/index'
 
-const BASE_URL = process.env.REACT_APP_BASE_URL
-
 export const ContentContext = createContext({
   loading: true,
   pageNotReady: true,
@@ -23,28 +21,6 @@ const ProjectsState = ({ children }) => {
   const [pageNotReady, setPageNotReady] = useState(true)
   const [images, setImages] = useState({ count: 0, loaded: 0 })
 
-  const addBaseUrl = images =>
-    images.map(img => {
-      const placeholder = BASE_URL + img.placeholder
-      const jpeg = img.jpeg.map(el => ({ ...el, src: BASE_URL + el.src }))
-      const webp = img.webp.map(el => ({ ...el, src: BASE_URL + el.src }))
-
-      return { ...img, placeholder, jpeg, webp }
-    })
-
-  const addSrcSet = images =>
-    images.map(img => {
-      img.webpSrcSet = img.webp
-        .map(({ src, width }) => `${src} ${width}w`)
-        .join(',\n')
-
-      img.jpgSrcSet = img.jpeg
-        .map(({ src, width }) => `${src} ${width}w`)
-        .join(',\n')
-
-      return img
-    })
-
   const fetchAll = async () => {
     setLoading(true)
 
@@ -52,7 +28,7 @@ const ProjectsState = ({ children }) => {
       const { data } = await axios.get('/')
       const { series, images } = data
 
-      setContent({ series, images: addSrcSet(addBaseUrl(images)) })
+      setContent({ series, images: images })
     } catch (e) {
       console.error(e)
     } finally {
@@ -60,17 +36,8 @@ const ProjectsState = ({ children }) => {
     }
   }
 
-  const getSeries = () =>
-    content.series.map(({ title, _id }) => {
-      const titleImage = content.images.find(
-        img => img.seriesId === _id && img.order === 1
-      )
-
-      return { title, _id, titleImage }
-    })
-
   const getSeriesImages = seriesId =>
-    content.images.filter(image => image.seriesId === seriesId)
+    content.images.filter(image => image.series_id === seriesId)
 
   const addImage = () => setImages({ ...images, count: images.count + 1 })
 
@@ -88,10 +55,9 @@ const ProjectsState = ({ children }) => {
   return (
     <ContentContext.Provider
       value={{
-        content,
+        series: content.series,
         loading,
         pageNotReady,
-        getSeries,
         getSeriesImages,
         addImage,
         addLoadedImage,
