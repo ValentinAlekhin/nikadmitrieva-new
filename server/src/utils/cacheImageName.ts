@@ -1,7 +1,16 @@
-export const createName = (originalName: string, width: number | string) => {
-  const [name, ext] = originalName.split('.')
+interface Suffix {
+  width?: number | string
+  height?: number | string
+}
 
-  return `${name}_${width}.${ext}`
+export const createName = (originalName: string, suffix: Suffix) => {
+  const [name, ext] = originalName.split('.')
+  const tags: (string | number)[] = [name]
+
+  if (suffix.width) tags.push(suffix.width + 'w')
+  if (suffix.height) tags.push(suffix.height + 'h')
+
+  return `${tags.join('_')}.${ext}`
 }
 
 export const parseName = (originalName: string) => {
