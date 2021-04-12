@@ -2,45 +2,50 @@ import { config } from 'dotenv'
 
 import path from 'path'
 import { Router } from 'express'
-import sharp from 'sharp'
 import { toString } from 'app-root-path'
 
 import { createName } from '../../utils/cacheImageName'
 import fileExists from '../../libs/fileExists'
+import { resize, getMetadata } from '../../libs/sharp'
+import getSizeFromList from '../../utils/getSizeFromList'
 
 config()
 
-sharp.cache(false)
+const { IMAGE_DIR, CACHE_DIR } = process.env
 
 const appRoot = toString()
-const imagesDirName = process.env.IMAGE_DIR
-const imagesDir = path.join(appRoot, imagesDirName)
-const cacheDir = path.join(appRoot, 'data', 'cache')
+const imagesDir = path.join(appRoot, IMAGE_DIR)
+const cacheDir = path.join(appRoot, CACHE_DIR)
 
 const router = Router()
 
 router.get('/:name', async (req, res) => {
   try {
     const { name } = req.params
-    const { width } = req.query as { width: string }
+    const { width: queryWidth } = req.query as {
+      width: string
+    }
 
-    const imagePath = path.join(imagesDir, name)
+    const width = getSizeFromList(+queryWidth, 200, 10)
+    let imagePath = path.join(imagesDir, name)
 
-    if (width) {
-      const newName = createName(name, width)
+    const isImageExists = await fileExists(imagePath)
+    if (!isImageExists) {
+      return res.status(404).json({ message: 'Изображение не найдено' })
+    }
+
+    const { width: originalWidth } = await getMetadata(imagePath)
+
+    if (+width < originalWidth) {
+      const newName = createName(name, { width })
       const cacheImagePath = path.join(cacheDir, newName)
 
-      const isImageExists = await fileExists(cacheImagePath)
-      if (isImageExists) {
-        return res.sendFile(cacheImagePath)
+      const isCacheImageExists = await fileExists(cacheImagePath)
+      if (!isCacheImageExists) {
+        await resize(imagePath, cacheImagePath, +width)
       }
 
-      await sharp(imagePath)
-        .withMetadata()
-        .resize(+width)
-        .toFile(cacheImagePath)
-
-      return res.sendFile(cacheImagePath)
+      imagePath = cacheImagePath
     }
 
     res.sendFile(imagePath)
