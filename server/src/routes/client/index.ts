@@ -9,6 +9,8 @@ import Series from '../../models/Series'
 
 config()
 
+const { BASE_URL } = process.env
+
 const router = Router()
 
 router.get('/', async (req, res) => {
@@ -21,9 +23,9 @@ router.get('/', async (req, res) => {
 
       const images = imageDocuments.map(img => ({
         ...img,
-        jpg: `images/${img._id}.jpg`,
-        webp: `images/${img._id}.webp`,
-        placeholder: `images/${img._id}_placeholder.jpg`,
+        jpg: `${BASE_URL}/image/${img._id}.jpg`,
+        webp: `${BASE_URL}/image/${img._id}.webp`,
+        placeholder: `${BASE_URL}/image/${img._id}_placeholder.jpg`,
       }))
 
       const series = seriesDocuments.map(ser => ({

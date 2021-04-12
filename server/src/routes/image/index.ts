@@ -36,7 +36,7 @@ router.get('/:name', async (req, res) => {
 
     const { width: originalWidth } = await getMetadata(imagePath)
 
-    if (+width < originalWidth) {
+    if (queryWidth && +width < originalWidth) {
       const newName = createName(name, { width })
       const cacheImagePath = path.join(cacheDir, newName)
 
