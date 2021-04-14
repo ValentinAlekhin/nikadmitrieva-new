@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node build/index.js",
     "build": "tsc",
-    "serve": "nodemon"
+    "dev": "nodemon"
   },
   "author": "ValentinAlekhin",
   "license": "ISC",
