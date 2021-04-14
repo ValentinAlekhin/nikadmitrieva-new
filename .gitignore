@@ -3,3 +3,4 @@ data
 static
 node_modules
 build
+out
