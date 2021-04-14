@@ -2,8 +2,8 @@ import React from 'react'
 
 import { Wrapper } from './styled'
 
-const MainContainer = ({ children }) => {
+const Container = ({ children }) => {
   return <Wrapper>{children}</Wrapper>
 }
 
-export default MainContainer
+export default Container
