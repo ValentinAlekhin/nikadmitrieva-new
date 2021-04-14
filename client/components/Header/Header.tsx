@@ -1,6 +1,7 @@
-import React from 'react'
+import Link from 'next/link'
 
 import Container from '@components/Container/Container'
+import ActiveLink from '@components/ActiveLink/ActiveLink'
 
 import {
   Wrapper,
@@ -10,7 +11,7 @@ import {
   NavWrapper,
   NavList,
   NavItem,
-  StyledNavLink,
+  NavLink,
 } from './styled'
 
 const links = [
@@ -25,17 +26,17 @@ const Header = () => {
       <Container>
         <StyledHeader>
           <Title>
-            <HeaderLink href="/">
-              <a>Nika Dmitrieva</a>
-            </HeaderLink>
+            <Link href="/" passHref>
+              <HeaderLink>Nika Dmitrieva</HeaderLink>
+            </Link>
           </Title>
           <NavWrapper>
             <NavList>
               {links.map(({ to, title }, i) => (
                 <NavItem key={i}>
-                  <StyledNavLink href={to}>
-                    <a>{title}</a>
-                  </StyledNavLink>
+                  <ActiveLink href={to} passHref activeClassName="active">
+                    <NavLink>{title}</NavLink>
+                  </ActiveLink>
                 </NavItem>
               ))}
             </NavList>

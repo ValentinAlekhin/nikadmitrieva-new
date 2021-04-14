@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import Link from 'next/link'
 
 export const Wrapper = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -15,10 +14,11 @@ export const StyledHeader = styled.header`
 
 export const Title = styled.h1``
 
-export const HeaderLink = styled(Link)`
+export const HeaderLink = styled.a`
   font-weight: 600;
   font-size: 26px;
   color: #404044;
+
   &:hover {
     color: #8c8c8e;
   }
@@ -38,10 +38,15 @@ export const NavItem = styled.li`
   margin-left: 1rem;
 `
 
-export const StyledNavLink = styled(Link)`
+export const NavLink = styled.a`
   font-size: 14px;
   font-weight: 400;
-  color: #49494c;
+  color: #8f8f8e;
+
+  &.active {
+    color: #49494c;
+  }
+
   &:hover {
     color: #8f8f8e;
   }
