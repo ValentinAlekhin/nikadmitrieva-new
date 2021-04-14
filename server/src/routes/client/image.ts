@@ -1,8 +1,8 @@
 import { config } from 'dotenv'
 
 import path from 'path'
-import { Router } from 'express'
 import { toString } from 'app-root-path'
+import { Request, Response } from 'express'
 
 import { createName } from '../../utils/cacheImageName'
 import fileExists from '../../libs/fileExists'
@@ -17,9 +17,7 @@ const appRoot = toString()
 const imagesDir = path.join(appRoot, IMAGE_DIR)
 const cacheDir = path.join(appRoot, CACHE_DIR)
 
-const router = Router()
-
-router.get('/:name', async (req, res) => {
+const imageRoute = async (req: Request, res: Response) => {
   try {
     const { name } = req.params
     const { width: queryWidth } = req.query as {
@@ -52,6 +50,6 @@ router.get('/:name', async (req, res) => {
   } catch (e) {
     throw new Error(e)
   }
-})
+}
 
-export default router
+export default imageRoute

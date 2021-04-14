@@ -9,7 +9,7 @@ import compression from 'compression'
 import authRoute from './routes/auth'
 import clientRoute from './routes/client'
 import adminRoute from './routes/admin'
-import imageRoute from './routes/image'
+import imageRoute from './routes/client/image'
 
 config()
 
@@ -24,7 +24,6 @@ app.use(compression())
 app.use('/api/auth', authRoute)
 app.use('/api/client', clientRoute)
 app.use('/api/admin', adminRoute)
-app.use('/image', imageRoute)
 
 async function start() {
   try {
