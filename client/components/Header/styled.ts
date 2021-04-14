@@ -48,7 +48,7 @@ export const NavLink = styled.a`
   }
 
   &:hover {
-    color: #8f8f8e;
+    color: #49494c;
   }
 `
 
