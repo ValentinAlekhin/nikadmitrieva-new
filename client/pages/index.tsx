@@ -1,6 +1,5 @@
 import type { GetStaticProps } from 'next'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 import { FC } from 'react'
 
 import { RootResponse, Series } from '@interfaces/ServerResponses'
@@ -22,12 +21,6 @@ const Home: FC<Props> = ({ series }) => {
     </Link>
   ))
 
-  const { isFallback } = useRouter()
-
-  if (isFallback) {
-    return <></>
-  }
-
   return (
     <MainContainer>
       <div>
@@ -42,7 +35,6 @@ export const getStaticProps: GetStaticProps = async () => {
   const { series }: RootResponse = await res.json()
 
   return {
-    revalidate: 1,
     props: {
       series,
     },

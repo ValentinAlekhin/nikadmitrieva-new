@@ -1,8 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { FC, useState, useEffect, useRef } from 'react'
 
-import { Wrapper, StyledImg, Picture } from './styled'
+import Picture from './Picture'
 
-export interface ProgressiveImageProps {
+import { Wrapper, StyledImg } from './styled'
+
+interface Props {
   className?: string
   defaultImg: string
   webp?: string
@@ -12,7 +14,7 @@ export interface ProgressiveImageProps {
   alt?: string
 }
 
-const ProgressiveImage = ({
+const ProgressiveImage: FC<Props> = ({
   className,
   defaultImg,
   webp,
@@ -20,41 +22,33 @@ const ProgressiveImage = ({
   avif,
   placeholder,
   alt,
-}: ProgressiveImageProps) => {
-  const [imgLoad, setImgLoad] = useState(true)
-  const imgRef = useRef<HTMLImageElement>()
+}) => {
+  const [loading, setLoading] = useState(false)
+  const placeholderRef = useRef<HTMLImageElement>()
 
   useEffect(() => {
-    if (!imgRef.current.complete) {
-      setImgLoad(false)
+    if (!placeholderRef.current.complete) {
+      setLoading(true)
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const onLoadHandler = () => {
-    setImgLoad(true)
+    setLoading(false)
   }
-
-  const createSrcSet = (url: string, steps = 10, width = 200) =>
-    Array(steps)
-      .fill('')
-      .map((_, i) => `${url}?width=${width * (i + 1)} ${width * (i + 1)}w`)
-      .join(',\n')
 
   return (
     <Wrapper className={className}>
-      <StyledImg src={placeholder} alt={`${alt} placeholder`} />
-      <Picture style={{ opacity: imgLoad ? 1 : 0 }}>
-        {webp ? <source srcSet={createSrcSet(webp)} type="image/webp" /> : null}
-        {jpg ? <source srcSet={createSrcSet(jpg)} type="image/jpeg" /> : null}
-        {avif ? <source srcSet={createSrcSet(avif)} type="image/avif" /> : null}
-        <StyledImg
-          src={defaultImg}
-          alt={alt}
-          onLoad={onLoadHandler}
-          ref={imgRef}
-        />
-      </Picture>
+      <StyledImg
+        src={placeholder}
+        alt={`${alt} placeholder`}
+        ref={placeholderRef}
+        onLoad={onLoadHandler}
+      />
+      {!loading ? (
+        <Picture jpg={jpg} webp={webp} defaultImg={defaultImg} />
+      ) : null}
     </Wrapper>
   )
 }
