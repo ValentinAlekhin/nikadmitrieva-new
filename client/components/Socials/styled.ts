@@ -6,11 +6,11 @@ import InstagramSVG from './icons/instagram.svg'
 const iconStyles = css`
   width: 20px;
   height: 20px;
-  fill: #8c8c8e;
+  fill: #404044;
   transition: all 0.3s;
 
   &:hover {
-    fill: #404044;
+    fill: #8f8f8e;
   }
 `
 

@@ -47,14 +47,10 @@ export const NavItem = styled.li`
 export const NavLink = styled.a`
   font-size: 14px;
   font-weight: 400;
-  color: #8f8f8e;
-
-  &.active {
-    color: #49494c;
-  }
+  color: #404044;
 
   &:hover {
-    color: #49494c;
+    color: #8f8f8e;
   }
 `
 

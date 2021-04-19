@@ -71,6 +71,6 @@ export const PlusIcon = styled(PlusSVG)`
 
 export const Title = styled.h4`
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
 `
