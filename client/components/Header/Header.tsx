@@ -2,12 +2,14 @@ import Link from 'next/link'
 
 import Container from '@components/Container/Container'
 import ActiveLink from '@components/ActiveLink/ActiveLink'
+import Socials from '@components/Socials/Socials'
 
 import {
   Wrapper,
   StyledHeader,
   Title,
   HeaderLink,
+  NavAndSocials,
   NavWrapper,
   NavList,
   NavItem,
@@ -30,17 +32,20 @@ const Header = () => {
               <HeaderLink>Nika Dmitrieva</HeaderLink>
             </Link>
           </Title>
-          <NavWrapper>
-            <NavList>
-              {links.map(({ to, title }, i) => (
-                <NavItem key={i}>
-                  <ActiveLink href={to} passHref activeClassName="active">
-                    <NavLink>{title}</NavLink>
-                  </ActiveLink>
-                </NavItem>
-              ))}
-            </NavList>
-          </NavWrapper>
+          <NavAndSocials>
+            <NavWrapper>
+              <NavList>
+                {links.map(({ to, title }, i) => (
+                  <NavItem key={i}>
+                    <ActiveLink href={to} passHref activeClassName="active">
+                      <NavLink>{title}</NavLink>
+                    </ActiveLink>
+                  </NavItem>
+                ))}
+              </NavList>
+            </NavWrapper>
+            <Socials />
+          </NavAndSocials>
         </StyledHeader>
       </Container>
     </Wrapper>

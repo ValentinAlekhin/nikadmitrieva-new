@@ -24,9 +24,15 @@ export const HeaderLink = styled.a`
   }
 `
 
+export const NavAndSocials = styled.div`
+  display: flex;
+  align-items: center;
+`
+
 export const NavWrapper = styled.nav`
   display: flex;
   align-items: center;
+  margin-right: 30px;
 `
 
 export const NavList = styled.ul`
