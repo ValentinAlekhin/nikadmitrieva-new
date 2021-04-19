@@ -1,15 +1,13 @@
+import { FC } from 'react'
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry'
 
-import { breakpoints } from '@styles/variables'
+import { gridBreakpoints } from './styled'
 
-const gridBreakpoints = {
-  [breakpoints.xs]: 1,
-  [breakpoints.sm]: 2,
-  [breakpoints.lg]: 3,
-  [breakpoints.xl]: 4,
+interface Props {
+  children: JSX.Element[]
 }
 
-const Grid = ({ children }) => {
+const Grid: FC<Props> = ({ children }) => {
   return (
     <ResponsiveMasonry columnsCountBreakPoints={gridBreakpoints}>
       <Masonry gutter="20px">{children}</Masonry>
