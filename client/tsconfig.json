@@ -28,8 +28,8 @@
     "**/*.svg",
     "**/*.ts",
     "**/*.tsx",
-    "pages/_app.tsx",
-    "pages/_document.tsx"
+    "pages/_app.page.tsx",
+    "pages/_document.page.tsx"
   ],
   "exclude": ["node_modules"]
 }
