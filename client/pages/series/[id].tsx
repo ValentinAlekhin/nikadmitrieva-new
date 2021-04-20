@@ -19,7 +19,7 @@ const Series: FC<Props> = ({ series, title, id }) => {
   return (
     <Layout
       title={`| ${title}`}
-      description={`Ника Дмитриева. Фотограф. Серия ${title}`}
+      description={`Ника Дмитриева. Фотограф. Серия ${title}.`}
       url={`/series/${id}`}
       image={`${series[0].jpg}?width=600`}
     >

@@ -36,10 +36,7 @@ const Layout: FC<Props> = ({ children, title, description, image, url }) => {
           content={description || defaultProps.description}
         />
         <meta property="og:image" content={image || defaultProps.image} />
-        <meta
-          property="og:url"
-          content={defaultProps.url + url || defaultProps.url}
-        />
+        <meta property="og:url" content={`${defaultProps.url}${url || ''}`} />
         <meta property="og:site_name" content="Nikadmitrieva.ru" />
       </Head>
       <Header />
