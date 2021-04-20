@@ -237,7 +237,6 @@ const GlobalFonts = createGlobalStyle`/* poppins-100 - latin-ext_latin */
        url('/fonts/montserrat-v15-cyrillic-900.ttf') format('truetype'), /* Safari, Android, iOS */
        url('/fonts/montserrat-v15-cyrillic-900.svg#Montserrat') format('svg'); /* Legacy iOS */
 }
-
 `
 
 export default GlobalFonts

@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
     color: #000;
     font-family: 'Poppins', 'Montserrat', sans-serif;
     overflow-x: hidden;
+    
     &::-webkit-scrollbar {
       display: none;
     }
@@ -16,7 +17,8 @@ const GlobalStyle = createGlobalStyle`
 
   ul {
     list-style: none;
-  } 
+  }
+
   a
   {
     text-decoration: none;
