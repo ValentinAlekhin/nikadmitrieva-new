@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     color: #000;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
     overflow-x: hidden;
     &::-webkit-scrollbar {
       display: none;
