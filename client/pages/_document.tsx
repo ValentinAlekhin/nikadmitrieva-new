@@ -33,15 +33,6 @@ class MyDocument extends Document {
         <Head lang="ru">
           <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#000000" />
-          <meta
-            name="description"
-            content="Ника Дмитриева. Художник и фотограф. На сайте собраны все лучшие работы. Приятного просмотра!"
-          />
-          <meta
-            property="og:title"
-            content="Ника Дмитриева. Художник и фотограф. На сайте собраны все лучшие работы. Приятного просмотра!"
-            key="og:title"
-          />
         </Head>
         <body>
           <Main />

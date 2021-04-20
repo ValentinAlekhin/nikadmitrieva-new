@@ -4,7 +4,8 @@ import { FC } from 'react'
 
 import { RootResponse, Series } from '@interfaces/ServerResponses'
 
-import MainContainer from '@components/Container/Container'
+import Layout from '@components/Layout/Layout'
+import Container from '@components/Container/Container'
 import Grid from 'components/Grid/Grid'
 import SeriesCard from 'components/SeriesCard/SeriesCard'
 
@@ -22,11 +23,13 @@ const Home: FC<Props> = ({ series }) => {
   ))
 
   return (
-    <MainContainer>
-      <div>
-        <Grid>{gridItems}</Grid>
-      </div>
-    </MainContainer>
+    <Layout>
+      <Container>
+        <div>
+          <Grid>{gridItems}</Grid>
+        </div>
+      </Container>
+    </Layout>
   )
 }
 

@@ -1,29 +1,32 @@
-import Head from 'next/head'
+import { FC } from 'react'
 
-import { RootResponse } from '@interfaces/ServerResponses'
+import { RootResponse, Image } from '@interfaces/ServerResponses'
 
-import MainContainer from '@components/Container/Container'
+import Layout from '@components/Layout/Layout'
+import Container from '@components/Container/Container'
 import Grid from '@components/Grid/Grid'
 import SeriesCard from '@components/SeriesCard/SeriesCard'
 
-const Series = ({ series, title }) => {
-  const gridItems = series.map((img, i: number) => (
-    <SeriesCard key={i} image={img} />
-  ))
+interface Props {
+  series: Image[]
+  title: string
+  id: string
+}
 
-  const description = `Ника Дмитриева. Художник и фотограф. Серия ${title}`
+const Series: FC<Props> = ({ series, title, id }) => {
+  const gridItems = series.map((img, i) => <SeriesCard key={i} image={img} />)
 
   return (
-    <>
-      <Head>
-        <meta name="description" content={description} />
-        <meta property="og:title" content={description} key="og:title" />
-        <title>Nika Dmitrieva | {title}</title>
-      </Head>
-      <MainContainer>
+    <Layout
+      title={`| ${title}`}
+      description={`Ника Дмитриева. Фотограф. Серия ${title}`}
+      url={`/series/${id}`}
+      image={`${series[0].jpg}?width=600`}
+    >
+      <Container>
         <Grid>{gridItems}</Grid>
-      </MainContainer>
-    </>
+      </Container>
+    </Layout>
   )
 }
 
@@ -39,13 +42,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const { id } = params
   const res = await fetch(`http://localhost:5000/api/client`)
   const { images, series }: RootResponse = await res.json()
 
-  const seriesImages = images.filter(({ series_id }) => series_id === params.id)
-  const { title } = series.find(({ _id }) => _id === params.id)
+  const seriesImages = images.filter(({ series_id }) => series_id === id)
+  const { title } = series.find(({ _id }) => _id === id)
 
-  return { props: { series: seriesImages, title } }
+  return { props: { series: seriesImages, title, id } }
 }
 
 export default Series

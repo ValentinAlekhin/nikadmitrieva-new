@@ -3,7 +3,7 @@ export interface Image {
   series_id: string
   order: number
   views: number
-  jpeg: string
+  jpg: string
   webp: string
   placeholder: string
   description?: string
