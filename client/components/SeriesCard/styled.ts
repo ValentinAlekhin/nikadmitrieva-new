@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components'
 
 import ProgressiveImg from '@components/ProgressiveImage/ProgressiveImage'
+import CircleIcon from '@ui/CircleIcon/CircleIcon'
 
 const stretchStyles = css`
   position: absolute;
@@ -44,6 +45,13 @@ export const OverlayContent = styled.div`
   ${Wrapper}:hover & {
     transform: scale(1);
   }
+`
+
+export const StyledCircleIcon = styled(CircleIcon)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
 export const Title = styled.h4`
