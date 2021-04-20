@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { respondTo } from '@styles/respondTo'
+
 export const Wrapper = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   margin-bottom: 2rem;
@@ -12,7 +14,9 @@ export const StyledHeader = styled.header`
   align-items: center;
 `
 
-export const Title = styled.h1``
+export const Title = styled.h1`
+  padding-bottom: 6px;
+`
 
 export const HeaderLink = styled.a`
   font-weight: 600;
@@ -25,8 +29,12 @@ export const HeaderLink = styled.a`
 `
 
 export const NavAndSocials = styled.div`
-  display: flex;
   align-items: center;
+  display: none;
+
+  ${respondTo.sm`
+    display: flex;
+  `}
 `
 
 export const NavWrapper = styled.nav`

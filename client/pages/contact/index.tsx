@@ -1,15 +1,17 @@
+import { FC } from 'react'
+
 import Layout from '@components/Layout/Layout'
 import Container from '@components/Container/Container'
 
-const Contacts = () => {
+const Contacts: FC = () => {
   return (
     <Layout
       title="| Contacts"
       description="Ника Дмитриева. Фотограф. Контакты."
-      url="/contacts"
+      url="/contact"
     >
       <Container>
-        <h1>Contacts</h1>
+        <h1>Contact</h1>
       </Container>
     </Layout>
   )

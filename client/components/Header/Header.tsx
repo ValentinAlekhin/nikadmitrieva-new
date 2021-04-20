@@ -22,8 +22,8 @@ interface Props {
 }
 
 const links = [
-  { to: '/', title: 'Main' },
-  { to: '/contacts', title: 'Contacts' },
+  { to: '/', title: 'Home' },
+  { to: '/contact', title: 'Contact' },
   { to: '/about', title: 'About' },
 ]
 
