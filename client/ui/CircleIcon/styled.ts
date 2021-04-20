@@ -10,7 +10,6 @@ const iconStyles = css`
 `
 
 export const Wrapper = styled.div`
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,9 +19,6 @@ export const Wrapper = styled.div`
   border-radius: 50px;
   line-height: 57px;
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 `
 
 export const PlusIcon = styled(PlusSVG)`
@@ -35,12 +31,13 @@ export const FullscreenIcon = styled(FullscreenSVG)`
 
 export const RightArrowIcon = styled(ArrowSVG)`
   ${iconStyles}
+  width: 27px;
 `
 
-export const LeftArrowIcon = styled(ArrowSVG)`
-  ${iconStyles}
+export const LeftArrowIcon = styled(RightArrowIcon)`
   transform: rotate(180deg);
 `
 export const CloseIcon = styled(PlusIcon)`
-  transform: rotate(90deg);
+  width: 23px;
+  transform: rotate(45deg);
 `

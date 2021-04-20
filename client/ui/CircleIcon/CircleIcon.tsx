@@ -11,11 +11,12 @@ import {
 
 export interface Props {
   icon: 'plus' | 'fullscreen' | 'rightArrow' | 'leftArrow' | 'close'
+  className?: string
 }
 
-const CircleIcon: FC<Props> = ({ icon }) => {
+const CircleIcon: FC<Props> = ({ icon, className }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       {icon === 'plus' ? <PlusIcon /> : null}
       {icon === 'fullscreen' ? <FullscreenIcon /> : null}
       {icon === 'close' ? <CloseIcon /> : null}
