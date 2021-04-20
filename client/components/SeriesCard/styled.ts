@@ -2,20 +2,12 @@ import styled, { css } from 'styled-components'
 
 import ProgressiveImg from '@components/ProgressiveImage/ProgressiveImage'
 
-import PlusSVG from './icons/plus.svg'
-import FullscreenSVG from './icons/fullscreen.svg'
-
 const stretchStyles = css`
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-`
-
-const iconStyles = css`
-  width: 20px;
-  fill: #fff;
 `
 
 export const Wrapper = styled.div`
@@ -52,30 +44,6 @@ export const OverlayContent = styled.div`
   ${Wrapper}:hover & {
     transform: scale(1);
   }
-`
-
-export const IconBackground = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #404044;
-  width: 55px;
-  height: 55px;
-  border-radius: 50px;
-  line-height: 57px;
-  text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`
-
-export const PlusIcon = styled(PlusSVG)`
-  ${iconStyles}
-`
-
-export const FullscreenIcon = styled(FullscreenSVG)`
-  ${iconStyles}
 `
 
 export const Title = styled.h4`

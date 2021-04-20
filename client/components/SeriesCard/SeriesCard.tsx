@@ -1,13 +1,12 @@
 import React from 'react'
 
+import CircleIcon from '@ui/CircleIcon/CircleIcon'
+
 import {
   Wrapper,
   StyledProgressiveImg,
   Overlay,
   OverlayContent,
-  IconBackground,
-  PlusIcon,
-  FullscreenIcon,
   Title,
 } from './styled'
 
@@ -46,10 +45,7 @@ const SeriesCard = ({ title, image, icon }: SeriesCardProps) => {
       />
       <Overlay>
         <OverlayContent>
-          <IconBackground>
-            {icon === 'plus' ? <PlusIcon /> : null}
-            {icon === 'fullscreen' ? <FullscreenIcon /> : null}
-          </IconBackground>
+          <CircleIcon icon={icon} />
           {title ? <Title>{title}</Title> : null}
         </OverlayContent>
       </Overlay>
