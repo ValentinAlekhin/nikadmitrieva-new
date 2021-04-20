@@ -17,7 +17,7 @@ const Home: FC<Props> = ({ series }) => {
   const gridItems = series.map(({ title, titleImage, _id }, i) => (
     <Link key={i} href={`/series/${_id}`}>
       <a>
-        <SeriesCard title={title} image={titleImage} />
+        <SeriesCard title={title} image={titleImage} icon="plus" />
       </a>
     </Link>
   ))

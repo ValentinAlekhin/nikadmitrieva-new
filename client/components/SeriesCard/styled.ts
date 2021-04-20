@@ -2,7 +2,8 @@ import styled, { css } from 'styled-components'
 
 import ProgressiveImg from '@components/ProgressiveImage/ProgressiveImage'
 
-import PlusSVG from './plus.svg'
+import PlusSVG from './icons/plus.svg'
+import FullscreenSVG from './icons/fullscreen.svg'
 
 const stretchStyles = css`
   position: absolute;
@@ -10,6 +11,11 @@ const stretchStyles = css`
   left: 0;
   right: 0;
   bottom: 0;
+`
+
+const iconStyles = css`
+  width: 20px;
+  fill: #fff;
 `
 
 export const Wrapper = styled.div`
@@ -65,8 +71,11 @@ export const IconBackground = styled.div`
 `
 
 export const PlusIcon = styled(PlusSVG)`
-  width: 20px;
-  fill: #fff;
+  ${iconStyles}
+`
+
+export const FullscreenIcon = styled(FullscreenSVG)`
+  ${iconStyles}
 `
 
 export const Title = styled.h4`

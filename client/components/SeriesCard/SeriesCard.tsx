@@ -1,4 +1,3 @@
-import { breakpoints } from '@styles/variables'
 import React from 'react'
 
 import {
@@ -8,12 +7,14 @@ import {
   OverlayContent,
   IconBackground,
   PlusIcon,
+  FullscreenIcon,
   Title,
 } from './styled'
 
 export interface SeriesCardProps {
   title?: string
   image: any
+  icon: 'plus' | 'fullscreen'
   key?: string | number
 }
 
@@ -26,7 +27,7 @@ const imageBreakpoints = [
   { imageWidth: 600, windowWidth: 2000 },
 ]
 
-const SeriesCard = ({ title, image }: SeriesCardProps) => {
+const SeriesCard = ({ title, image, icon }: SeriesCardProps) => {
   const createSrcSet = (src: string) =>
     imageBreakpoints
       .map(
@@ -46,7 +47,8 @@ const SeriesCard = ({ title, image }: SeriesCardProps) => {
       <Overlay>
         <OverlayContent>
           <IconBackground>
-            <PlusIcon />
+            {icon === 'plus' ? <PlusIcon /> : null}
+            {icon === 'fullscreen' ? <FullscreenIcon /> : null}
           </IconBackground>
           {title ? <Title>{title}</Title> : null}
         </OverlayContent>

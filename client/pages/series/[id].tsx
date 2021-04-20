@@ -14,7 +14,9 @@ interface Props {
 }
 
 const Series: FC<Props> = ({ series, title, id }) => {
-  const gridItems = series.map((img, i) => <SeriesCard key={i} image={img} />)
+  const gridItems = series.map((img, i) => (
+    <SeriesCard key={i} image={img} icon="fullscreen" />
+  ))
 
   return (
     <Layout
