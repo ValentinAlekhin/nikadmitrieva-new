@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import Head from 'next/head'
 
-import Header from '@components/Header/Header'
+import { Layout as Wrapper, Header, Content, Footer } from './styled'
 
 interface Props {
   title?: string
@@ -39,8 +39,11 @@ const Layout: FC<Props> = ({ children, title, description, image, url }) => {
         <meta property="og:url" content={`${defaultProps.url}${url || ''}`} />
         <meta property="og:site_name" content="Nikadmitrieva.ru" />
       </Head>
-      <Header />
-      {children}
+      <Wrapper>
+        <Header />
+        <Content>{children}</Content>
+        <Footer />
+      </Wrapper>
     </>
   )
 }

@@ -1,3 +1,4 @@
+import { FC } from 'react'
 import Link from 'next/link'
 
 import Container from '@components/Container/Container'
@@ -16,15 +17,19 @@ import {
   NavLink,
 } from './styled'
 
+interface Props {
+  className?: string
+}
+
 const links = [
   { to: '/', title: 'Main' },
   { to: '/contacts', title: 'Contacts' },
   { to: '/about', title: 'About' },
 ]
 
-const Header = () => {
+const Header: FC<Props> = ({ className }) => {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <Container>
         <StyledHeader>
           <Title>
