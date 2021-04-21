@@ -1,9 +1,8 @@
-import { FC, KeyboardEventHandler, useEffect, useCallback } from 'react'
+import { FC, useEffect } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { ParsedUrlQuery } from 'node:querystring'
 
-import { RootResponse, Image } from '@interfaces/ServerResponses'
+import { RootResponse } from '@interfaces/ServerResponses'
 
 import Layout from '@components/Layout/Layout'
 import ProgressiveImage from '@components/ProgressiveImage/ProgressiveImage'
@@ -16,6 +15,7 @@ import {
   PrevIcon,
   NextIcon,
   CloseIcon,
+  Counter,
 } from './styled'
 
 interface Props {
@@ -30,11 +30,6 @@ interface Props {
     next: string
     prev: string
   }
-}
-
-interface Query extends ParsedUrlQuery {
-  image_id: string
-  series_url: string
 }
 
 const Viewer: FC<Props> = ({
@@ -116,6 +111,10 @@ const Viewer: FC<Props> = ({
             </Next>
           </Link>
         ) : null}
+
+        <Counter>
+          {order}/{length}
+        </Counter>
       </Wrapper>
     </Layout>
   )
@@ -150,7 +149,9 @@ export async function getStaticProps({ params }) {
     next: `/series/${series_url}/${images[order]?._id}`,
   }
 
-  return { props: { links, title, jpg, webp, placeholder, length } }
+  const props: Props = { links, title, jpg, webp, placeholder, length, order }
+
+  return { props }
 }
 
 export default Viewer

@@ -23,7 +23,7 @@ const iconStyles = css`
 `
 
 export const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #111111;
   overflow: hidden;
 `
@@ -80,4 +80,12 @@ export const Next = styled.a`
   &:hover ${NextIcon} {
     transform: translateX(0);
   }
+`
+
+export const Counter = styled.span`
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  font-size: 1.5rem;
 `
