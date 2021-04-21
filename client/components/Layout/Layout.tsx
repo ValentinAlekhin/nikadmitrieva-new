@@ -8,6 +8,8 @@ interface Props {
   description?: string
   image?: string
   url?: string
+  noHeader?: boolean
+  noFooter?: boolean
 }
 
 const defaultProps: Props = {
@@ -18,7 +20,15 @@ const defaultProps: Props = {
   url: 'http://nikadmitrieva.ru',
 }
 
-const Layout: FC<Props> = ({ children, title, description, image, url }) => {
+const Layout: FC<Props> = ({
+  children,
+  title,
+  description,
+  image,
+  url,
+  noHeader,
+  noFooter,
+}) => {
   return (
     <>
       <Head>
@@ -40,9 +50,9 @@ const Layout: FC<Props> = ({ children, title, description, image, url }) => {
         <meta property="og:site_name" content="Nikadmitrieva.ru" />
       </Head>
       <Wrapper>
-        <Header />
+        {!noHeader ? <Header /> : null}
         <Content>{children}</Content>
-        <Footer />
+        {!noFooter ? <Footer /> : null}
       </Wrapper>
     </>
   )
