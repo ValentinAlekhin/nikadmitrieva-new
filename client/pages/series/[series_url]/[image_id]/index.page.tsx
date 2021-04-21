@@ -19,7 +19,11 @@ import {
 } from './styled'
 
 interface Props {
-  images: Image[]
+  jpg: string
+  webp: string
+  placeholder: string
+  length: number
+  order: number
   title: string
   links: {
     close: string
@@ -33,17 +37,18 @@ interface Query extends ParsedUrlQuery {
   series_url: string
 }
 
-const Viewer: FC<Props> = ({ images, title, links }) => {
+const Viewer: FC<Props> = ({
+  jpg,
+  webp,
+  placeholder,
+  length,
+  order,
+  title,
+  links,
+}) => {
   const router = useRouter()
-  const { image_id, series_url } = router.query as Query
-  const { length } = images
-  const { order, webp, jpg, placeholder } = images.find(
-    ({ _id }) => _id === image_id
-  )
 
-  const keyPressedHandler = e => {
-    // console.log(order)
-
+  const keyPressedHandler = (e: KeyboardEvent) => {
     switch (e.key) {
       case 'Escape':
         router.push(links.close)
@@ -64,22 +69,14 @@ const Viewer: FC<Props> = ({ images, title, links }) => {
     }
   }
 
-  const handleRouteChange = () => {
-    console.log(order)
-
-    document.removeEventListener('keyup', keyPressedHandler, false)
-    document.addEventListener('keyup', keyPressedHandler, false)
-  }
-
   useEffect(() => {
-    router.events.on('routeChangeStart', handleRouteChange)
     document.addEventListener('keyup', keyPressedHandler, false)
+    document.addEventListener('keyup', e => {}, false)
 
     return () => {
-      router.events.off('routeChangeStart', handleRouteChange)
       document.removeEventListener('keyup', keyPressedHandler, false)
     }
-  }, [])
+  }, [router.asPath])
 
   return (
     <Layout
@@ -141,11 +138,11 @@ export async function getStaticProps({ params }) {
   const { images, series }: RootResponse = await res.json()
 
   const { title } = series.find(({ _id }) => _id === series_url)
-  const seriesImages = images.filter(
-    ({ series_id }) => series_id === series_url
-  )
+  const { length } = images.filter(({ series_id }) => series_id === series_url)
 
-  const { order } = images.find(({ _id }) => _id === image_id)
+  const { order, jpg, webp, placeholder } = images.find(
+    ({ _id }) => _id === image_id
+  )
 
   const links = {
     close: `/series/${series_url}`,
@@ -153,7 +150,7 @@ export async function getStaticProps({ params }) {
     next: `/series/${series_url}/${images[order]?._id}`,
   }
 
-  return { props: { images: seriesImages, links, title } }
+  return { props: { links, title, jpg, webp, placeholder, length } }
 }
 
 export default Viewer
