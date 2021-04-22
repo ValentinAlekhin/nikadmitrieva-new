@@ -15,12 +15,12 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["components/*"],
-      "@ui/*": ["ui/*"],
-      "@public/*": ["public/*"],
-      "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
-      "@interfaces/*": ["interfaces/*"]
+      "@components/*": ["src/components/*"],
+      "@ui/*": ["src/ui/*"],
+      "@public/*": ["src/public/*"],
+      "@pages/*": ["src/pages/*"],
+      "@styles/*": ["src/styles/*"],
+      "@interfaces/*": ["src/interfaces/*"]
     }
   },
   "include": [

@@ -16,9 +16,9 @@ interface Props {
 
 const Series: FC<Props> = ({ series, title, series_url }) => {
   const gridItems = series.map((img, i) => (
-    <Link href={`/series/${series_url}/${img._id}`}>
+    <Link key={i} href={`/series/${series_url}/${img._id}`}>
       <a>
-        <SeriesCard key={i} image={img} icon="fullscreen" />
+        <SeriesCard image={img} icon="fullscreen" />
       </a>
     </Link>
   ))

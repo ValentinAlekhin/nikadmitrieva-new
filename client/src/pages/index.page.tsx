@@ -6,8 +6,8 @@ import { RootResponse, Series } from '@interfaces/ServerResponses'
 
 import Layout from '@components/Layout/Layout'
 import Container from '@components/Container/Container'
-import Grid from 'components/Grid/Grid'
-import SeriesCard from 'components/SeriesCard/SeriesCard'
+import Grid from '@components/Grid/Grid'
+import SeriesCard from '@components/SeriesCard/SeriesCard'
 
 interface Props {
   series: Series[]
