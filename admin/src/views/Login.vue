@@ -12,6 +12,7 @@
                 label="Login"
                 required
                 @blur="$v.login.$touch()"
+                @keyup.enter="submit"
               />
               <v-text-field
                 v-model="password"
@@ -22,6 +23,7 @@
                 type="password"
                 required
                 @blur="$v.password.$touch()"
+                @keyup.enter="submit"
               />
 
               <v-card-actions>
@@ -74,6 +76,8 @@ export default {
   },
   methods: {
     submit() {
+      if (this.$v.$invalid) return
+
       const user = {
         login: this.login,
         password: this.password,
