@@ -5,244 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Add strapi">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.prettierignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/assets/scss/fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/assets/scss/index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/assets/scss/mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/assets/scss/vars.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/ImageCard/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/MasonryGrid/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/UI/Icons/Instagram.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/UI/Icons/Plus.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/UI/Icons/Telegram.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/UI/Socials.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/jsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/layouts/default.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/mixins/meta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/index.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/series/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-100.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-100.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-100.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-100.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-100.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-200.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-200.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-200.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-200.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-200.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-300.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-300.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-300.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-300.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-300.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-500.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-500.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-500.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-500.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-500.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-600.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-600.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-600.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-600.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-600.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-700.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-700.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-700.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-800.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-800.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-800.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-800.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-800.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/montserrat-v15-cyrillic-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-100.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-100.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-100.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-100.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-100.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-300.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-300.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-300.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-300.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-300.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-500.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-500.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-500.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-500.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-500.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-600.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-600.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-600.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-600.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-600.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-700.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-700.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-700.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-700.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-700.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-800.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-800.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-800.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-800.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-800.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-900.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-900.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-900.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-900.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-900.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-regular.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/static/fonts/poppins-v15-latin-ext_latin-regular.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/footer/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/footer/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/footer/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/meta/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/meta/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/meta/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/navbar/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/navbar/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/navbar/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/series/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/series/getters.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/series/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/series/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/stylelint.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/.env.example" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/.eslintrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/config/admin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/config/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/config/database.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/config/middlewares.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/config/plugins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/config/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/public/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/public/uploads/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/admin/app.example.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/admin/webpack.config.example.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/about/content-types/about/schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/about/controllers/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/about/routes/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/about/services/about.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/footer/content-types/footer/schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/footer/controllers/footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/footer/routes/footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/footer/services/footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/header/content-types/header/schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/header/controllers/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/header/routes/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/header/services/header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/home/content-types/home/schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/home/controllers/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/home/routes/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/home/services/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/meta/content-types/meta/schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/meta/controllers/meta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/meta/routes/meta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/meta/services/meta.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/series/content-types/series/schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/series/controllers/series.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/series/routes/series.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/series/services/series.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/extensions/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/.browserslistrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/babel.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/axios/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/CreateImgCard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/DeletePopup.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/components/SeriesCard.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/plugins/vuetify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/router/authGuard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/scss/vars.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/store/home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/store/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/store/series.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/store/shared.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/store/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/CreateSeries.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/Home.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/src/views/Login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/template.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/vue.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/nodemon.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/libs/cache.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/libs/database.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/libs/fileExists.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/libs/sharp.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/middleware/auth.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/middleware/multer.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/Image.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/models/Series.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/admin/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/auth/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/client/image.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/client/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/client/root.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/client/viewImage.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/routes/client/viewSeries.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/utils/cacheImageName.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/utils/createWebpAndPlaceholder.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/utils/deleteSeriesImages.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/utils/getSizeFromList.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/template.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/series/content-types/series/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/series/content-types/series/schema.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,7 +19,7 @@
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/client" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -310,8 +74,10 @@
     <property name="add_unversioned_files" value="$PROJECT_DIR$/server/.env" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\node_modules\stylelint" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\node_modules\prettier" />
@@ -333,7 +99,17 @@
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev client">
+    <configuration name="dev client" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev strapi" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/strapi/package.json" />
       <command value="run" />
@@ -344,6 +120,10 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.dev strapi" />
+      <item itemvalue="npm.dev client" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -361,7 +141,16 @@
       <workItem from="1644593728551" duration="2901000" />
       <workItem from="1644596675041" duration="6128000" />
       <workItem from="1644602863260" duration="51000" />
+      <workItem from="1644603075191" duration="1362000" />
     </task>
+    <task id="LOCAL-00001" summary="Add strapi">
+      <created>1644603117948</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1644603117948</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,6 +166,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add strapi" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add strapi" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -28,8 +28,13 @@
       "required": true,
       "allowedTypes": [
         "images"
-      ],
-      "private": false
+      ]
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "unique": true,
+      "min": 0
     }
   }
 }
