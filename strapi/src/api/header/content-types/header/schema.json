@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "headers",
+  "info": {
+    "singularName": "header",
+    "pluralName": "headers",
+    "displayName": "Header",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "links": {
+      "type": "json",
+      "required": true
+    },
+    "socials": {
+      "type": "json",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "default": "Nika Dmitrieva",
+      "minLength": 4,
+      "maxLength": 20
+    }
+  }
+}
