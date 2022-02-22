@@ -1,9 +1,19 @@
-'use strict';
+const {createCoreController} = require('@strapi/strapi').factories
 
-/**
- *  series controller
- */
+module.exports = createCoreController('api::series.series', () => ({
+  async find(ctx) {
+    ctx.query = {...ctx.query, local: 'en'}
 
-const { createCoreController } = require('@strapi/strapi').factories;
+    const {data} = await super.find(ctx)
 
-module.exports = createCoreController('api::series.series');
+    return data.map((s) => ({
+      ...s.attributes,
+      id: s.id,
+      images: s.attributes.images.data.map((img) => ({
+        ...img.attributes,
+        id: img.id,
+        preview: `/api/image?id=${img.id}&width=200&ext=jpeg&blur=50`,
+      })),
+    }))
+  },
+}))

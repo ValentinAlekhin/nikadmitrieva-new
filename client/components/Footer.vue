@@ -2,7 +2,9 @@
   <footer class="Footer">
     <span class="Footer_Developer">
       Developed by
-      <a class="Footer_DeveloperLink" target="_blank" :href="data.attributes.developer">valentin alekhin</a>
+      <a class="Footer_DeveloperLink" target="_blank" :href="data.developer">
+        valentin alekhin
+      </a>
     </span>
   </footer>
 </template>
@@ -12,7 +14,7 @@ import { mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('footer', ['data'])
+    ...mapState('footer', ['data']),
   },
 }
 </script>

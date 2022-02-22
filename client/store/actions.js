@@ -3,9 +3,10 @@ export default {
     const actions = [
       'series/getItems',
       'footer/getData',
-      'navbar/getData',
+      'header/getData',
       'meta/getData',
-      'home/getData'
+      'home/getData',
+      'about/getData',
     ].map((action) => dispatch(action))
     await Promise.all(actions)
   },

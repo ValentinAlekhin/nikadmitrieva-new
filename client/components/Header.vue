@@ -13,7 +13,12 @@
               :key="link.to"
               class="Header_NavItem"
             >
-              <nuxt-link class="Header_NavLink" :to="link.to">
+              <nuxt-link
+                class="Header_NavLink"
+                :to="link.to"
+                active-class="active"
+                exact
+              >
                 {{ link.title }}
               </nuxt-link>
             </li>
@@ -31,7 +36,7 @@ import { mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('navbar', ['data']),
+    ...mapState('header', ['data']),
   },
 }
 </script>
@@ -44,8 +49,12 @@ export default {
   &_Content {
     height: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+
+    @include md {
+      justify-content: space-between;
+    }
   }
 
   &_Title {
@@ -63,9 +72,13 @@ export default {
   }
 
   &_NavSocials {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+
+    @include md {
+      display: flex;
+    }
   }
 
   &_Nav {
@@ -87,6 +100,10 @@ export default {
     font-size: 14px;
     font-weight: 400;
     color: #404044;
+
+    &.active {
+      color: #8f8f8e;
+    }
 
     &:hover {
       color: #8f8f8e;

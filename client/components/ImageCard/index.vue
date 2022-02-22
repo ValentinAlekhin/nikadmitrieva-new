@@ -1,13 +1,26 @@
 <template>
   <nuxt-link :to="link" class="ImageCard">
     <picture class="ImageCard_Picture">
-      <source v-for="set of srcSets" :key='set.ext' :srcset="set.urls" :type="set.type" />
+      <source
+        v-for="set of srcSets"
+        :key="set.ext"
+        :srcset="set.urls"
+        :type="set.type"
+      />
       <img
         class="ImageCard_Image"
         :src="image.url"
         :alt="image.alternateText"
+        @load="loaded = true"
       />
     </picture>
+
+    <img
+      class="ImageCard_Preview"
+      :class="{ hide: loaded }"
+      :src="image.preview"
+      :alt="`${image.alternateText} preview`"
+    />
 
     <div class="ImageCard_Overlay">
       <h4 class="ImageCard_Title">{{ title }}</h4>
@@ -40,12 +53,12 @@ export default {
       required: true,
     },
   },
+  data: () => ({
+    loaded: false,
+  }),
   computed: {
-    srcSets: (vm) => getSrcSetsById(vm.image.id)
+    srcSets: (vm) => getSrcSetsById(vm.image.id),
   },
-  mounted() {
-    console.log(this.srcSets)
-  }
 }
 </script>
 
@@ -55,17 +68,42 @@ export default {
   position: relative;
   overflow: hidden;
 
+  &:hover {
+    .ImageCard_Image {
+      transform: scale(1.05);
+    }
+  }
+
   * {
     transition: all ease 0.3s;
   }
 
   &_Picture {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 
   &_Image {
+    position: absolute;
+  }
+
+  &_Image,
+  &_Preview {
     object-fit: cover;
     width: 100%;
+    height: 100%;
+  }
+
+  &_Preview {
+    position: relative;
+    transition: all 0.3s;
+
+    &.hide {
+      opacity: 0;
+    }
   }
 
   &_Overlay {

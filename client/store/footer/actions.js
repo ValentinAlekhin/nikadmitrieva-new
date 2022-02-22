@@ -3,7 +3,7 @@ export default {
     commit('setLoading', true)
 
     try {
-      const { data } = await this.$axios.$get('/footer')
+      const data = await this.$axios.$get('/footer')
       commit('setData', data)
     } catch (e) {
       commit('setError', e)

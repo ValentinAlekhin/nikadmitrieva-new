@@ -10,38 +10,55 @@ const rootDir = appRootDir.get()
 const uploadsDir = path.join(rootDir, 'public', 'uploads')
 const tmpDir = path.join(rootDir, '.cache', 'images')
 
-const findClosest = (num, arr) => arr.reduce((prev, curr) => (Math.abs(curr - num) < Math.abs(prev - num) ? curr : prev))
+const findClosest = (num, arr) =>
+  arr.reduce((prev, curr) =>
+    Math.abs(curr - num) < Math.abs(prev - num) ? curr : prev,
+  )
 
-const widths = Array(20).fill('').map((_, i) => (i + 1) * 100)
+const widths = Array(20)
+  .fill('')
+  .map((_, i) => (i + 1) * 100)
 
-const getImageName = ({ ext, blur, width, height, id }) => `${id}_w${width}_h${height}_b${blur}.${ext}`
+const getImageName = ({ext, blur, width, height, id}) =>
+  `${id}_w${width}_h${height}_b${blur}.${ext}`
 
-const fileExist = (filePath) => fs.promises.access(filePath, fs.constants.F_OK)
-  .then(() => true)
-  .catch(() => false)
+const fileExist = (filePath) =>
+  fs.promises
+    .access(filePath, fs.constants.F_OK)
+    .then(() => true)
+    .catch(() => false)
 
 module.exports = {
   index: async (ctx) => {
-    const { id } = ctx.query
+    const {id} = ctx.query
 
     try {
-      const targetImage = await strapi.plugins.upload.services.upload.findOne(id)
+      const targetImage = await strapi.plugins.upload.services.upload.findOne(
+        id,
+      )
       if (!targetImage) {
-         return ctx.status = 404
+        return (ctx.status = 404)
       }
 
-      const { hash, ext: imageExt, height: imageHeight, width: imageWidth } = targetImage
+      const {
+        hash,
+        ext: imageExt,
+        height: imageHeight,
+        width: imageWidth,
+      } = targetImage
 
       const query = {
         ext: 'jpeg',
-        ...ctx.query
+        ...ctx.query,
       }
-      query.width = query.width ? findClosest(Number(query.width), widths) : imageWidth
+      query.width = query.width
+        ? findClosest(Number(query.width), widths)
+        : imageWidth
       query.blur = query.blur ? Number(query.blur) : 0
-      const { width, ext, blur } = query
+      const {width, ext, blur} = query
 
-      const height = Math.round(width * (imageWidth / imageHeight))
-      const imageName = getImageName({ ...query, height })
+      const height = Math.round(width / (imageWidth / imageHeight))
+      const imageName = getImageName({...query, height})
       const imagePath = path.join(tmpDir, imageName)
       const originalPath = path.join(uploadsDir, `${hash}${imageExt}`)
 
@@ -49,7 +66,7 @@ module.exports = {
       if (!imageExist) {
         const sharpInstance = sharp(originalPath).withMetadata()
         if (width !== imageWidth) {
-          sharpInstance.resize({ width, height })
+          sharpInstance.resize({width, height})
         }
 
         if (blur) {
@@ -59,7 +76,7 @@ module.exports = {
         if (ext === 'webp') {
           sharpInstance.webp()
         } else if (ext === 'avif') {
-          sharpInstance.avif({ quality: 60 })
+          sharpInstance.avif({quality: 60})
         } else {
           sharpInstance.jpeg()
         }
@@ -77,5 +94,5 @@ module.exports = {
       ctx.status = 500
       ctx.body = e.message
     }
-  }
+  },
 }

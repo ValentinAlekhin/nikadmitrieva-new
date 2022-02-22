@@ -1,9 +1,11 @@
-'use strict';
+const {createCoreController} = require('@strapi/strapi').factories
 
-/**
- *  footer controller
- */
+module.exports = createCoreController('api::footer.footer', () => ({
+  async find(ctx) {
+    const {
+      data: {attributes},
+    } = await super.find(ctx)
 
-const { createCoreController } = require('@strapi/strapi').factories;
-
-module.exports = createCoreController('api::footer.footer');
+    return attributes
+  },
+}))

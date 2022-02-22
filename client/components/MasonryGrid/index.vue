@@ -1,7 +1,7 @@
 <template>
   <div ref="grid" class="MasonryGrid">
-    <div class="MasonryGrid_Col" v-for="(col, i) of cols" :key="i">
-      <div class="MasonryGrid_Item" v-for="(item, i2) of col" :key="i2">
+    <div v-for="(col, i) of cols" :key="i" class="MasonryGrid_Col">
+      <div v-for="(item, i2) of col" :key="i2" class="MasonryGrid_Item">
         <slot name="item" :item="item" />
       </div>
     </div>
@@ -10,31 +10,29 @@
 
 <script>
 import { chunk, throttle } from 'lodash'
+import { MASONRY_GRID_BREAKPOINTS } from '~/constants/constants'
 
 export default {
   props: {
     items: {
       type: Array,
       default: () => [],
-    }
+    },
   },
   data: () => ({
     width: null,
   }),
   computed: {
-    colsNum: (vm) => {
-      const breakpoints = [
-        { width: 576, cols: 1 },
-        { width: 768, cols: 2 },
-        { width: 1400, cols: 3 },
-      ]
-
-      return breakpoints.find(({ width }) => vm.width <= width)?.cols || breakpoints[breakpoints.length - 1].cols
-    },
+    colsNum: (vm) =>
+      MASONRY_GRID_BREAKPOINTS.find(({ width }) => vm.width <= width)?.cols ||
+      MASONRY_GRID_BREAKPOINTS[MASONRY_GRID_BREAKPOINTS.length - 1].cols,
     itemChunks: (vm) => chunk(vm.items, vm.colsNum),
-    cols: (vm) => Array(vm.colsNum)
-      .fill('')
-      .map((_, col) => vm.itemChunks.map((chunk) => chunk[col]).filter(item => item)),
+    cols: (vm) =>
+      Array(vm.colsNum)
+        .fill('')
+        .map((_, col) =>
+          vm.itemChunks.map((chunk) => chunk[col]).filter((item) => item)
+        ),
   },
   mounted() {
     this.setWidth()

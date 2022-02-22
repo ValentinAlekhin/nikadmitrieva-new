@@ -4,140 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Добавил сжатие на ходу">
-      <change beforePath="$PROJECT_DIR$/client/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/@types/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/next-env.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/next.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-100.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-100.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-100.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-100.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-100.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-200.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-200.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-200.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-200.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-200.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-300.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-300.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-300.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-300.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-300.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-500.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-500.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-500.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-500.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-500.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-600.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-600.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-600.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-600.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-600.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-700.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-700.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-700.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-700.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-700.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-800.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-800.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-800.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-800.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-800.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/montserrat-v15-cyrillic-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-100.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-100.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-100.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-100.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-100.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-300.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-300.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-300.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-300.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-300.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-500.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-500.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-500.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-500.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-500.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-600.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-600.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-600.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-600.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-600.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-700.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-700.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-700.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-700.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-700.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-800.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-800.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-800.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-800.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-800.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-900.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-900.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-900.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-900.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-900.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/fonts/poppins-v15-latin-ext_latin-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ActiveLink/ActiveLink.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Container/Container.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Container/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/Footer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Footer/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Grid/Grid.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Grid/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/Layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Layout/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ProgressiveImage/Picture.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ProgressiveImage/ProgressiveImage.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/ProgressiveImage/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SeriesCard/SeriesCard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SeriesCard/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Socials/Socials.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Socials/icons/instagram.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Socials/icons/telegram.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Socials/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/interfaces/ServerResponses.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/404/index.page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/404/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/_app.page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/_document.page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/contact/index.page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/index.page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/series/[series_url]/[image_id]/index.page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/series/[series_url]/[image_id]/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/series/[series_url]/index.page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/GlobalFonts.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/GlobalStyles.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/respondTo.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/variables.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ui/CircleIcon/CircleIcon.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ui/CircleIcon/icons/arrow.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ui/CircleIcon/icons/fullscreen.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ui/CircleIcon/icons/plus.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/ui/CircleIcon/styled.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/tsconfig.json" beforeDir="false" />
+    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Добавил клиент">
+      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/Drawer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/ui/Icons/BurgerMenu.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/about.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/pages/contact.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/about/state.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/header/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/store/header/mutations.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strapi/src/api/contact/content-types/contact/schema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strapi/src/api/contact/controllers/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strapi/src/api/contact/routes/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strapi/src/api/contact/services/contact.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strapi/src/components/contact/contact.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Footer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ImageCard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ImageCard/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/MasonryGrid/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MasonryGrid/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Icons/Plus.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Icons/Plus.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Socials.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Socials.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/constants/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/constants/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/helpers/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/helpers/helpers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/series/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/series/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/footer/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/footer/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/home/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/home/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/meta/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/meta/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/navbar/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/about/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/navbar/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/about/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/navbar/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/header/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/series/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/series/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/series/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/series/getters.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/about/content-types/about/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/about/content-types/about/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/about/controllers/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/about/controllers/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/footer/controllers/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/footer/controllers/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/header/controllers/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/header/controllers/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/home/controllers/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/home/controllers/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/image/controllers/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/image/controllers/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/meta/controllers/meta.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/meta/controllers/meta.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/series/controllers/series.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/series/controllers/series.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -210,7 +121,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/server/.env" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/projects/cnp-mobile-app-rebirth" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/store/about" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -218,15 +129,16 @@
     <property name="node.js.selected.package.stylelint" value="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\node_modules\stylelint" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\node_modules\prettier" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="\\wsl$\Ubuntu\home\valentin\Projects\nikadmitrieva-new\client\node_modules\prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.DirectoryMappings" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
     <property name="vuejs.nuxt.types-notification-shown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="\\wsl$\Ubuntu\home\valentin\Projects\nikadmitrieva-new\client\store\about" />
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\store\home" />
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\static\fonts" />
     </key>
@@ -353,7 +265,9 @@
       <workItem from="1645373766864" duration="1408000" />
       <workItem from="1645455883190" duration="2207000" />
       <workItem from="1645458151620" duration="6284000" />
-      <workItem from="1645543324132" duration="218000" />
+      <workItem from="1645543324132" duration="2199000" />
+      <workItem from="1645545617207" duration="1256000" />
+      <workItem from="1645554367432" duration="12012000" />
     </task>
     <task id="LOCAL-00001" summary="Add strapi">
       <created>1644603117948</created>
@@ -376,7 +290,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645543468116</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Добавил клиент">
+      <created>1645543568643</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1645543568643</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Добавил клиент">
+      <created>1645543670310</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1645543670310</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +328,8 @@
     <MESSAGE value="Add strapi" />
     <MESSAGE value="Add order" />
     <MESSAGE value="Добавил сжатие на ходу" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил сжатие на ходу" />
+    <MESSAGE value="Добавил клиент" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил клиент" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

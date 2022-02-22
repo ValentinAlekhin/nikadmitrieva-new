@@ -3,14 +3,15 @@ export default {
     commit('setLoading', true)
 
     try {
-      const {
-        data: { attributes },
-      } = await this.$axios.$get('header')
-      commit('setData', attributes)
+      const data = await this.$axios.$get('header')
+      commit('setData', data)
     } catch (e) {
       commit('setError', e)
     } finally {
       commit('setLoading', false)
     }
+  },
+  toggleDrawer({ state, commit }) {
+    commit('setDrawer', !state.drawer)
   },
 }

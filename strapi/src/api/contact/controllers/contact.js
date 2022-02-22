@@ -1,6 +1,6 @@
 const {createCoreController} = require('@strapi/strapi').factories
 
-module.exports = createCoreController('api::home.home', () => ({
+module.exports = createCoreController('api::contact.contact', () => ({
   async find(ctx) {
     const {
       data: {attributes},

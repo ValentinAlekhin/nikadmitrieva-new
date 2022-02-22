@@ -8,7 +8,17 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'theme-color', name: 'theme-color', content: '#fff' },
+      {
+        hid: 'msapplication-navbutton-color',
+        name: 'msapplication-navbutton-color',
+        content: '#fff',
+      },
+      {
+        hid: 'apple-mobile-web-app-status-bar-style',
+        name: 'apple-mobile-web-app-status-bar-style',
+        content: '#fff',
+      },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],

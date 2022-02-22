@@ -1,9 +1,16 @@
-'use strict';
+const {marked} = require('marked')
 
-/**
- *  about controller
- */
+const {createCoreController} = require('@strapi/strapi').factories
 
-const { createCoreController } = require('@strapi/strapi').factories;
+module.exports = createCoreController('api::about.about', () => ({
+  async find(ctx) {
+    const {
+      data: {attributes},
+    } = await super.find(ctx)
 
-module.exports = createCoreController('api::about.about');
+    return {
+      ...attributes,
+      textHtml: marked.parse(attributes.text),
+    }
+  },
+}))

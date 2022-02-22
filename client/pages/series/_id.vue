@@ -31,9 +31,6 @@ export default {
     pageTitle: (vm) => vm.series.title,
     pageImage: (vm) => vm.series?.images[0]?.url || '',
   },
-  mounted() {
-    console.log(this.series.images[0].url)
-  }
 }
 </script>
 

@@ -1,10 +1,10 @@
 export default {
-  async getItems({ commit }) {
+  async getData({ commit }) {
     commit('setLoading', true)
 
     try {
-      const data = await this.$axios.$get('seriess?populate=images')
-      commit('setItems', data)
+      const data = await this.$axios.$get('/about')
+      commit('setData', data)
     } catch (e) {
       commit('setError', e)
     } finally {
