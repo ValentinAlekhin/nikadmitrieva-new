@@ -12,13 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
-      "type": "string",
-      "required": true,
-      "maxLength": 20,
-      "minLength": 4
-    },
-    "data": {
+    "seriesOrder": {
       "type": "json",
       "required": true
     }
