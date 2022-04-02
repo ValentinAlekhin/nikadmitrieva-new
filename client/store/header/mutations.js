@@ -3,7 +3,6 @@ export default {
     state.data = payload
   },
   setDrawer(state, payload) {
-    console.log('setDrawer', payload)
     state.drawer = payload
   },
   setLoading(state, payload) {

@@ -1,9 +1,9 @@
 version: '3.1'
 
 services:
-  server:
+  strapi:
     build:
-      context: ./server
+      context: ./strapi
     environment:
       - PORT=${PORT}
       - PASSWORD=${PASSWORD}
@@ -16,23 +16,12 @@ services:
       - 8000:${PORT}
     volumes:
       - ./data:/app/data
-    restart: always
-  admin:
-    build:
-      context: ./admin
-    depends_on:
-      - server
-    environment:
-      - VUE_APP_BASE_URL=${VUE_APP_BASE_URL}
-    ports:
-      - 8080:8080
-    restart: always
+    restart: unless-stopped
   client:
     build:
       context: ./client
     ports:
       - 8081:8080
     depends_on:
-      - server
-      - admin
-    restart: always
+      - strapi
+    restart: unless-stopped

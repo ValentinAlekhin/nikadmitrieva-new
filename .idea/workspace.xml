@@ -5,49 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Добавил клиент">
-      <change afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/Drawer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/components/ui/Icons/BurgerMenu.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/about.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/contact.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/about/state.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/header/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/store/header/mutations.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/contact/content-types/contact/schema.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/contact/controllers/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/contact/routes/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/api/contact/services/contact.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/src/components/contact/contact.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strapi/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/strapi/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Footer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Footer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ImageCard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ImageCard/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/MasonryGrid/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MasonryGrid/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/Icons/Plus.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Icons/Plus.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/Socials.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Socials.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/constants/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/constants/constants.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/helpers/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/helpers/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/layouts/default.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/series/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/series/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/footer/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/footer/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/home/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/home/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/meta/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/meta/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/navbar/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/about/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/navbar/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/about/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/navbar/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/header/state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/series/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/series/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/series/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/series/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/about/content-types/about/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/about/content-types/about/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/about/controllers/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/about/controllers/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/footer/controllers/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/footer/controllers/footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/header/controllers/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/header/controllers/header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/home/controllers/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/home/controllers/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/image/controllers/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/image/controllers/image.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/meta/controllers/meta.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/meta/controllers/meta.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/series/controllers/series.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/series/controllers/series.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/assets/scss/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/scss/fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/header/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/header/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/header/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/header/mutations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/home/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/home/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/meta/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/meta/state.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="72aa7831055e193b61fb198cb0c686d11996a5c3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,7 +43,7 @@
     </file-type-list>
   </component>
   <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="4" />
+    <option name="projectConfigVersion" value="5" />
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -83,7 +53,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="strapi-backend" />
-                    <option name="lastUsedInstant" value="1642845332" />
+                    <option name="lastUsedInstant" value="1648925755" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
@@ -99,10 +69,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/strapi/src/api/image/controllers/image.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/strapi/src/api/image/routes/image.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/strapi/package.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/strapi/.eslintrc" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/strapi/src/api/image/routes/image.js" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/strapi/src/api/image/controllers/image.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -121,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/server/.env" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/store/about" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/static/fonts" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -138,6 +108,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\client\static\fonts" />
       <recent name="\\wsl$\Ubuntu\home\valentin\Projects\nikadmitrieva-new\client\store\about" />
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\store\home" />
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\static\fonts" />
@@ -177,7 +148,7 @@
       <scripts>
         <script value="dev" />
       </scripts>
-      <node-interpreter value="wsl://Ubuntu@/root/.nvm/versions/node/v14.16.0/bin/node" />
+      <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
@@ -187,7 +158,7 @@
       <scripts>
         <script value="develop" />
       </scripts>
-      <node-interpreter value="wsl://Ubuntu@/root/.nvm/versions/node/v14.16.0/bin/node" />
+      <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
@@ -268,6 +239,7 @@
       <workItem from="1645543324132" duration="2199000" />
       <workItem from="1645545617207" duration="1256000" />
       <workItem from="1645554367432" duration="12012000" />
+      <workItem from="1648925719661" duration="3079000" />
     </task>
     <task id="LOCAL-00001" summary="Add strapi">
       <created>1644603117948</created>

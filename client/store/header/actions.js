@@ -4,6 +4,7 @@ export default {
 
     try {
       const data = await this.$axios.$get('header')
+      console.log(data)
       commit('setData', data)
     } catch (e) {
       commit('setError', e)
