@@ -1,38 +1,20 @@
 version: '3.1'
 
 services:
-  server:
+  strapi:
     build:
-      context: ./server
-    environment:
-      - PORT=${PORT}
-      - PASSWORD=${PASSWORD}
-      - LOGIN=${LOGIN}
-      - MONGO_URL=${MONGO_URL}
-      - JWT_SECRET=${JWT_SECRET}
-      - IMAGE_DIR=${IMAGE_DIR}
-      - UPLOADS_DIR=${UPLOADS_DIR}
+      context: ./strapi
     ports:
-      - 8000:${PORT}
+      - "1337:1337"
     volumes:
-      - ./data:/app/data
-    restart: always
-  admin:
-    build:
-      context: ./admin
-    depends_on:
-      - server
-    environment:
-      - VUE_APP_BASE_URL=${VUE_APP_BASE_URL}
-    ports:
-      - 8080:8080
-    restart: always
+      - ./.cache:/home/app/.cache
+      - ./.tmp:/home/app/.tmp
+    restart: unless-stopped
   client:
     build:
       context: ./client
     ports:
-      - 8081:8080
+      - "3000:3000"
     depends_on:
-      - server
-      - admin
-    restart: always
+      - strapi
+    restart: unless-stopped

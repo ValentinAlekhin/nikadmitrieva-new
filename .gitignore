@@ -1,7 +1,8 @@
 .env
 data
-static
 node_modules
 build
 out
 *.pem
+.cache
+.tmp
