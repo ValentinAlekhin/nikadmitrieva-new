@@ -1,9 +1,9 @@
 <template>
   <ul class="Socials">
-    <li v-for="link of data.socials" :key="link.to">
-      <a :href="link.to" class="Socials_Link">
+    <li v-for="link of data.socials" :key="link.url">
+      <a :href="link.url" class="Socials_Link" :target="link.target">
         <component
-          :is="`ui-icons-${link.component}`"
+          :is="`ui-icons-${link.title.toLocaleLowerCase()}`"
           class="Socials_Icon"
           :class="{ drawer }"
         />

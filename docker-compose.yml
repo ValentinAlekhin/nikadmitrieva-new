@@ -4,24 +4,17 @@ services:
   strapi:
     build:
       context: ./strapi
-    environment:
-      - PORT=${PORT}
-      - PASSWORD=${PASSWORD}
-      - LOGIN=${LOGIN}
-      - MONGO_URL=${MONGO_URL}
-      - JWT_SECRET=${JWT_SECRET}
-      - IMAGE_DIR=${IMAGE_DIR}
-      - UPLOADS_DIR=${UPLOADS_DIR}
     ports:
-      - 8000:${PORT}
+      - "1337:1337"
     volumes:
-      - ./data:/app/data
+      - ./.cache:/home/app/.cache
+      - ./.tmp:/home/app/.tmp
     restart: unless-stopped
   client:
     build:
       context: ./client
     ports:
-      - 8081:8080
+      - "3000:3000"
     depends_on:
       - strapi
     restart: unless-stopped

@@ -4,7 +4,7 @@ WORKDIR home/app
 
 COPY package*.json ./
 
-RUN npm ci
+RUN yarn install
 
 RUN npm run build
 

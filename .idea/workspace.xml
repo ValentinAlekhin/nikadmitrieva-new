@@ -4,21 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Добавил клиент">
-      <change afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/Dockerfile" afterDir="false" />
+    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Добавил шрифты">
+      <change afterPath="$PROJECT_DIR$/client/static/favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/assets/scss/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/assets/scss/fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Drawer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Drawer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Socials.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Socials.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/store/header/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/header/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/header/mutations.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/header/mutations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/home/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/home/state.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/meta/state.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/meta/state.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/database.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/database.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.env" beforeDir="false" afterPath="$PROJECT_DIR$/template.env" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -91,7 +96,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/server/.env" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/static/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.tmp" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -108,10 +113,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\.tmp" />
+      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new" />
+      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\strapi" />
+      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\client\static" />
       <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\client\static\fonts" />
-      <recent name="\\wsl$\Ubuntu\home\valentin\Projects\nikadmitrieva-new\client\store\about" />
-      <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\store\home" />
-      <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\static\fonts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\strapi\src\api" />
@@ -121,19 +127,31 @@
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\assets\scss" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev client">
-    <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="build" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
+  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/strapi/package.json" />
+    <configuration name="docker-compose.yml.database: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="database" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="build (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
       <command value="run" />
       <scripts>
         <script value="build" />
@@ -182,32 +200,22 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="strapi" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/strapi/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="strapi" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="npm.dev strapi" />
       <item itemvalue="npm.dev client" />
-      <item itemvalue="npm.build" />
       <item itemvalue="npm.start" />
-      <item itemvalue="npm.strapi" />
       <item itemvalue="npm.build (1)" />
       <item itemvalue="npm.start (1)" />
+      <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.database: Compose Deployment" />
         <item itemvalue="npm.start (1)" />
         <item itemvalue="npm.build (1)" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.build" />
-        <item itemvalue="npm.strapi" />
       </list>
     </recent_temporary>
   </component>
@@ -239,7 +247,7 @@
       <workItem from="1645543324132" duration="2199000" />
       <workItem from="1645545617207" duration="1256000" />
       <workItem from="1645554367432" duration="12012000" />
-      <workItem from="1648925719661" duration="3079000" />
+      <workItem from="1648925719661" duration="12432000" />
     </task>
     <task id="LOCAL-00001" summary="Add strapi">
       <created>1644603117948</created>
@@ -276,7 +284,21 @@
       <option name="project" value="LOCAL" />
       <updated>1645543670310</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Добавил шрифты">
+      <created>1648928886715</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648928886715</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Добавил шрифты">
+      <created>1648928932975</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648928932975</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,7 +323,8 @@
     <MESSAGE value="Add order" />
     <MESSAGE value="Добавил сжатие на ходу" />
     <MESSAGE value="Добавил клиент" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил клиент" />
+    <MESSAGE value="Добавил шрифты" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил шрифты" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

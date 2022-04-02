@@ -3,8 +3,14 @@ export default {
     commit('setLoading', true)
 
     try {
-      const data = await this.$axios.$get('header')
-      console.log(data)
+      const { menus } = await this.$axios.$get('menus')
+
+      const data = menus.reduce((acc, list) => {
+        acc[list.slug] = list.items
+
+        return acc
+      }, {})
+
       commit('setData', data)
     } catch (e) {
       commit('setError', e)

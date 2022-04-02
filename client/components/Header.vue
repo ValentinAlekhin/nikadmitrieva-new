@@ -9,13 +9,13 @@
         <nav class="Header_Nav">
           <ul class="Header_NavList">
             <li
-              v-for="link of data.links"
-              :key="link.to"
+              v-for="link of data.main"
+              :key="link.url"
               class="Header_NavItem"
             >
               <nuxt-link
                 class="Header_NavLink"
-                :to="link.to"
+                :to="link.url"
                 active-class="active"
                 exact
               >

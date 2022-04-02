@@ -10,16 +10,20 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.1.0",
-    "@strapi/plugin-users-permissions": "4.1.0",
-    "@strapi/strapi": "^4.1.0",
+    "@strapi/plugin-i18n": "4.1.7",
+    "@strapi/plugin-users-permissions": "4.1.7",
+    "@strapi/strapi": "^4.1.7",
     "app-root-dir": "^1.0.2",
     "fs-extra": "^10.0.0",
     "marked": "^4.0.12",
     "mime-types": "^2.1.34",
     "sharp": "^0.30.1",
     "sqlite3": "5.0.2",
-    "strapi-plugin-rest-cache": "^4.0.0",
+    "strapi-plugin-io": "^1.0.0",
+    "strapi-plugin-menus": "^0.2.4",
+    "strapi-plugin-rest-cache": "4.2.4",
+    "strapi-plugin-website-builder": "^2.2.0",
+    "strapi-provider-rest-cache-memory": "^4.2.4",
     "strapi-utils": "^3.6.8"
   },
   "author": {

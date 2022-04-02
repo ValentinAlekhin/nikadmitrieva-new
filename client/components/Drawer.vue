@@ -1,10 +1,10 @@
 <template>
   <div class="Drawer" :class="{ open: drawer }">
     <ul class="Drawer_Links">
-      <li v-for="link of data.links" :key="link.to" class="Drawer_LinkItem">
+      <li v-for="link of data.main" :key="link.url" class="Drawer_LinkItem">
         <nuxt-link
           class="Drawer_Link"
-          :to="link.to"
+          :to="link.url"
           active-class="active"
           exact
           @click.native="toggleDrawer"
