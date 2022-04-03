@@ -2,14 +2,14 @@
   <header class="Header">
     <div class="Header_Content container">
       <h1 class="Header_Title">
-        <nuxt-link class="Header_TitleLink" to="/">{{ data.title }}</nuxt-link>
+        <nuxt-link class="Header_TitleLink" to="/">{{ metaData.title }}</nuxt-link>
       </h1>
 
       <div class="Header_NavSocials">
         <nav class="Header_Nav">
           <ul class="Header_NavList">
             <li
-              v-for="link of data.main"
+              v-for="link of headerData.main"
               :key="link.url"
               class="Header_NavItem"
             >
@@ -36,7 +36,8 @@ import { mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapState('header', ['data']),
+    ...mapState('header', { headerData: 'data' }),
+    ...mapState('meta', { metaData: 'data' })
   },
 }
 </script>

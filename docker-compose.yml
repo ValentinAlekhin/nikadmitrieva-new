@@ -4,6 +4,7 @@ services:
   strapi:
     build:
       context: ./strapi
+    image: valentinalekhin/nikadmitrieva-server
     ports:
       - "1337:1337"
     volumes:
@@ -13,6 +14,7 @@ services:
   client:
     build:
       context: ./client
+    image: valentinalekhin/nikadmitrieva-client
     ports:
       - "3000:3000"
     depends_on:
