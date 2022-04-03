@@ -13,7 +13,7 @@ module.exports = ({ env }) => ({
   'website-builder': {
     enabled: true,
     config: {
-      url: 'https://link-to-hit-on-trigger.com',
+      url: 'http://127.0.0.1:3001/build',
       trigger: {
         type: 'manual',
       },
