@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:14-alpine
 
 WORKDIR home/app
 
@@ -10,4 +10,4 @@ RUN npm run build
 
 COPY . .
 
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "run", "start:builder" ]

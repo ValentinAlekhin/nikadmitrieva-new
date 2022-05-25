@@ -3,5 +3,12 @@
 </template>
 
 <script>
-export default {}
+import meta from '~/mixins/meta'
+
+export default {
+  mixins: [meta],
+  computed: {
+    pageTitle: () => 'Contact',
+  },
+}
 </script>

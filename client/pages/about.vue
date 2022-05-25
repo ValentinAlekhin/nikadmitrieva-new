@@ -6,10 +6,13 @@
 
 <script>
 import { mapState } from 'vuex'
+import meta from '~/mixins/meta'
 
 export default {
+  mixins: [meta],
   computed: {
     ...mapState('about', ['data']),
+    pageTitle: () => 'About',
   },
 }
 </script>

@@ -10,6 +10,14 @@ const rootDir = appRootDir.get()
 const uploadsDir = path.join(rootDir, 'public', 'uploads')
 const tmpDir = path.join(rootDir, '.cache', 'images')
 
+const createTmpDir = () => {
+  try {
+    fs.mkdirSync(tmpDir)
+    console.log('create')
+  } catch (e) {
+  }
+}
+
 const findClosest = (num, arr) =>
   arr.reduce((prev, curr) =>
     Math.abs(curr - num) < Math.abs(prev - num) ? curr : prev,
@@ -20,7 +28,7 @@ const widths = Array(20)
   .map((_, i) => (i + 1) * 100)
 
 const getImageName = ({ext, blur, width, height, id}) =>
-  `${id}_w${width}_h${height}_b${blur}.${ext}`
+  `${ id }_w${ width }_h${ height }_b${ blur }.${ ext }`
 
 const fileExist = (filePath) =>
   fs.promises
@@ -31,6 +39,8 @@ const fileExist = (filePath) =>
 module.exports = {
   index: async (ctx) => {
     const {id} = ctx.query
+
+    createTmpDir()
 
     try {
       const targetImage = await strapi.plugins.upload.services.upload.findOne(
@@ -60,7 +70,7 @@ module.exports = {
       const height = Math.round(width / (imageWidth / imageHeight))
       const imageName = getImageName({...query, height})
       const imagePath = path.join(tmpDir, imageName)
-      const originalPath = path.join(uploadsDir, `${hash}${imageExt}`)
+      const originalPath = path.join(uploadsDir, `${ hash }${ imageExt }`)
 
       const imageExist = await fileExist(imagePath)
       if (!imageExist) {

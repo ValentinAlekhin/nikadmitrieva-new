@@ -1,22 +1,41 @@
-version: '3.1'
+version: '3.5'
 
 services:
   strapi:
     build:
       context: ./strapi
     image: valentinalekhin/nikadmitrieva-server
+    container_name: strapi
+    hostname: strapi
     ports:
       - "1337:1337"
+    environment:
+      - BUILDER_URL=${BUILDER_URL}
+      - BUILDER_KEY=${BUILDER_KEY}
     volumes:
       - ./.cache:/home/app/.cache
       - ./.tmp:/home/app/.tmp
+    networks:
+      - default
     restart: unless-stopped
   client:
     build:
       context: ./client
     image: valentinalekhin/nikadmitrieva-client
+    container_name: client
+    hostname: client
     ports:
-      - "3000:3000"
+      - "${BUILDER_PORT}:${BUILDER_PORT}"
+    environment:
+      - BUILDER_PORT=${BUILDER_PORT}
+      - BUILDER_KEY=${BUILDER_KEY}
+    volumes:
+      - ./.dist:/home/app/dist
+    networks:
+      - default
     depends_on:
       - strapi
     restart: unless-stopped
+
+networks:
+  default:

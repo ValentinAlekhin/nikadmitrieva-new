@@ -1,4 +1,6 @@
-module.exports = ({ env }) => ({
+const { builderKey, builderUrl } = require('./env')
+
+module.exports = () => ({
   upload: {
     config: {
       xlarge: 1920,
@@ -13,7 +15,10 @@ module.exports = ({ env }) => ({
   'website-builder': {
     enabled: true,
     config: {
-      url: 'http://127.0.0.1:3001/build',
+      url: builderUrl,
+      body: {
+        key: builderKey,
+      },
       trigger: {
         type: 'manual',
       },
