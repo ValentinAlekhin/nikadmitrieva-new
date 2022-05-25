@@ -8,11 +8,7 @@
 
     <masonry-grid :items="series.images">
       <template #item="{ item }">
-        <image-card
-          :image="item"
-          :title="''"
-          :link="`/series/${id}/${item.id}`"
-        />
+        <image-card :image="item" />
       </template>
     </masonry-grid>
   </div>
@@ -36,6 +32,20 @@ export default {
 
 <style lang="scss" scoped>
 .Series {
+  &_Header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+
+  &_Title {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 400;
+    color: #404044;
+  }
+
   &_Images {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;

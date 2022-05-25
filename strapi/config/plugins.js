@@ -1,4 +1,4 @@
-const { builderKey, builderUrl } = require('./env')
+const {builderKey, builderUrl} = require('./env')
 
 module.exports = () => ({
   upload: {
@@ -10,6 +10,30 @@ module.exports = () => ({
     enabled: true,
     config: {
       maxDepth: 0,
+      layouts: {
+        menuItem: {
+          image: [
+            {
+              input: {
+                label: 'SVG',
+                value: 'svg',
+                name: 'svg',
+                type: 'string',
+              },
+            },
+          ],
+          description: [
+            {
+              input: {
+                label: 'Description',
+                value: 'description',
+                name: 'description',
+                type: 'string',
+              },
+            },
+          ],
+        },
+      },
     },
   },
   'website-builder': {
@@ -22,13 +46,13 @@ module.exports = () => ({
       trigger: {
         type: 'manual',
       },
-    }
+    },
   },
   io: {
     enabled: true,
     config: {
       IOServerOptions: {
-        cors: { path: '*' },
+        cors: {path: '*'},
       },
       contentTypes: '*',
     },

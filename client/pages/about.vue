@@ -1,6 +1,9 @@
 <template>
   <div class="About">
-    <div class="About_Text" v-html="data.textHtml" />
+    <div class="About_Content">
+      <image-card class="About_Image" :image="data.image" />
+      <div class="About_Text" v-html="data.textHtml" />
+    </div>
   </div>
 </template>
 
@@ -19,17 +22,49 @@ export default {
 
 <style lang="scss" scoped>
 .About {
-  width: 50%;
-  margin: 0 auto;
+  height: 100%;
+
+  @include md {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_Content {
+    @include md {
+      width: 80%;
+    }
+
+    @include xl {
+      width: 70%;
+    }
+
+    @include xxl {
+      width: 50%;
+    }
+  }
+
+  &_Image {
+    margin-top: 5px;
+    margin-right: 30px;
+    margin-bottom: 30px !important;
+    float: left;
+
+    @include md {
+      margin-bottom: 0;
+    }
+  }
 }
 </style>
 
 <style lang="scss">
 .About {
   &_Text {
-    img {
-      display: block;
-      width: 100%;
+    color: #404044;
+
+    p {
+      margin-bottom: 20px;
+      font-size: 16px;
     }
   }
 }

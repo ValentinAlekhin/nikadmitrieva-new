@@ -3,7 +3,7 @@ export default {
     commit('setLoading', true)
 
     try {
-      const data = await this.$axios.$get('/about')
+      const data = await this.$axios.$get('/about?populate=image')
       commit('setData', data)
     } catch (e) {
       commit('setError', e)

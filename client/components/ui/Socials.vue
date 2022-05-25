@@ -1,13 +1,13 @@
 <template>
   <ul class="Socials">
     <li v-for="link of data.socials" :key="link.url">
-      <a :href="link.url" class="Socials_Link" :target="link.target">
-        <component
-          :is="`ui-icons-${link.title.toLocaleLowerCase()}`"
-          class="Socials_Icon"
-          :class="{ drawer }"
-        />
-      </a>
+      <a
+        :href="link.url"
+        class="Socials_Link"
+        :class="{ drawer }"
+        :target="link.target"
+        v-html="link.svg"
+      />
     </li>
   </ul>
 </template>
@@ -37,22 +37,28 @@ export default {
     display: flex;
     align-items: center;
   }
+}
+</style>
 
-  &_Icon {
-    margin: 0 5px;
-    width: 20px;
-    height: 20px;
-    fill: #404044;
-    transition: all 0.3s;
+<style lang="scss">
+.Socials {
+  &_Link {
+    svg {
+      margin: 0 5px;
+      width: 20px;
+      height: 20px;
+      fill: #404044;
+      transition: all 0.3s;
 
-    &.drawer {
+      &:hover {
+        fill: #8f8f8e;
+      }
+    }
+
+    &.drawer svg {
       width: 30px;
       height: 30px;
       margin: 0 10px;
-    }
-
-    &:hover {
-      fill: #8f8f8e;
     }
   }
 }

@@ -1,5 +1,11 @@
 <template>
-  <nuxt-link :to="link" class="ImageCard">
+  <component
+    :is="component"
+    ref="card"
+    :to="link"
+    class="ImageCard"
+    :style="style"
+  >
     <picture class="ImageCard_Picture">
       <source
         v-for="set of srcSets"
@@ -22,13 +28,13 @@
       :alt="`${image.alternateText} preview`"
     />
 
-    <div class="ImageCard_Overlay">
+    <div v-if="link" class="ImageCard_Overlay">
       <h4 class="ImageCard_Title">{{ title }}</h4>
       <span class="ImageCard_IconContainer">
         <ui-icons-plus class="ImageCard_Icon" />
       </span>
     </div>
-  </nuxt-link>
+  </component>
 </template>
 
 <script>
@@ -46,18 +52,45 @@ export default {
     },
     title: {
       type: String,
-      required: true,
+      default: '',
     },
     link: {
       type: String,
-      required: true,
+      default: '',
     },
   },
   data: () => ({
     loaded: false,
+    width: null,
   }),
   computed: {
+    component: (vm) => (vm.link ? 'nuxt-link' : 'div'),
     srcSets: (vm) => getSrcSetsById(vm.image.id),
+    aspectRatio: (vm) => vm.image.width / vm.image.height,
+    style: (vm) => ({
+      height: vm.width ? `${vm.width / vm.aspectRatio}px` : 'auto',
+    }),
+  },
+  mounted() {
+    this.setHeight()
+
+    window.addEventListener('resize', this.setHeight)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.setHeight)
+  },
+  methods: {
+    setHeight() {
+      if (!this.$refs) return
+
+      const { card } = this.$refs
+      if (!card) return
+
+      const element = card?.$el ?? card
+      if (!element) return
+
+      this.width = element.offsetWidth
+    },
   },
 }
 </script>

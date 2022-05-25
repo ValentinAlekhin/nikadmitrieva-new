@@ -4,26 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Много обнов">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.nuxtignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/nodemon.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/strapi/config/env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Save">
+      <change afterPath="$PROJECT_DIR$/strapi/src/extensions/menus/strapi-server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/builder/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/builder/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/Drawer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Drawer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ImageCard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ImageCard/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/MasonryGrid/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MasonryGrid/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Icons/Instagram.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Icons/Telegram.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ui/Socials.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Socials.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/about.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/contact.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/pages/series/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/series/_id.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/about/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/about/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/image/controllers/image.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/image/controllers/image.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/about/content-types/about/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/about/content-types/about/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/about/controllers/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/about/controllers/about.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -260,7 +259,7 @@
       <workItem from="1649062207307" duration="16000" />
       <workItem from="1649420250709" duration="1857000" />
       <workItem from="1649607345908" duration="47000" />
-      <workItem from="1653464969599" duration="2195000" />
+      <workItem from="1653464969599" duration="14551000" />
     </task>
     <task id="LOCAL-00001" summary="Add strapi">
       <created>1644603117948</created>
@@ -318,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648939416659</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Save">
+      <created>1653468752890</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653468752890</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,7 +351,8 @@
     <MESSAGE value="Добавил клиент" />
     <MESSAGE value="Добавил шрифты" />
     <MESSAGE value="Много обнов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Много обнов" />
+    <MESSAGE value="Save" />
+    <option name="LAST_COMMIT_MESSAGE" value="Save" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

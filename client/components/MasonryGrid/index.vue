@@ -37,17 +37,17 @@ export default {
   mounted() {
     this.setWidth()
 
-    window.addEventListener('resize', throttle(this.setWidth, 200))
+    window.addEventListener('resize', this.setWidth)
   },
   beforeDestroy() {
-    window.removeEventListener('resize', throttle(this.setWidth, 200))
+    window.removeEventListener('resize', this.setWidth)
   },
   methods: {
-    setWidth() {
-      if (!this.$refs.grid) return
+    setWidth: throttle(function () {
+      if (!this.$refs?.grid) return
 
       this.width = this.$refs.grid.offsetWidth
-    },
+    }, 20),
   },
 }
 </script>
