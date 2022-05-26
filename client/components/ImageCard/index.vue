@@ -7,12 +7,8 @@
     :style="style"
   >
     <picture class="ImageCard_Picture">
-      <source
-        v-for="set of srcSets"
-        :key="set.ext"
-        :srcset="set.urls"
-        :type="set.type"
-      />
+      <source :srcset="srcSet" type="image/jpeg" />
+
       <img
         class="ImageCard_Image"
         :src="image.url"
@@ -24,8 +20,8 @@
     <img
       class="ImageCard_Preview"
       :class="{ hide: loaded }"
-      :src="image.preview"
-      :alt="`${image.alternateText} preview`"
+      :src="image.placeholder"
+      :alt="`${image.alternateText} placeholder`"
     />
 
     <div v-if="link" class="ImageCard_Overlay">
@@ -38,7 +34,7 @@
 </template>
 
 <script>
-import { getSrcSetsById } from '~/helpers/helpers'
+import { getSrcSetByFormats } from '~/helpers/helpers'
 
 export default {
   props: {
@@ -65,7 +61,7 @@ export default {
   }),
   computed: {
     component: (vm) => (vm.link ? 'nuxt-link' : 'div'),
-    srcSets: (vm) => getSrcSetsById(vm.image.id),
+    srcSet: (vm) => getSrcSetByFormats(vm.image.formats),
     aspectRatio: (vm) => vm.image.width / vm.image.height,
     style: (vm) => ({
       height: vm.width ? `${vm.width / vm.aspectRatio}px` : 'auto',

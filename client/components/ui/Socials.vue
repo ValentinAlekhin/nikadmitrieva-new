@@ -1,13 +1,14 @@
 <template>
   <ul class="Socials">
     <li v-for="link of data.socials" :key="link.url">
-      <a
-        :href="link.url"
-        class="Socials_Link"
-        :class="{ drawer }"
-        :target="link.target"
-        v-html="link.svg"
-      />
+      <a :href="link.url" class="Socials_Link" :target="link.target">
+        <api-svg
+          class="Socials_Icon"
+          :class="{ drawer }"
+          :svg="link.svg"
+          :scale="link.scale"
+        />
+      </a>
     </li>
   </ul>
 </template>
@@ -42,11 +43,12 @@ export default {
 
 <style lang="scss">
 .Socials {
-  &_Link {
+  &_Icon {
+    margin: 0 5px;
+    width: 20px;
+    height: 20px;
+
     svg {
-      margin: 0 5px;
-      width: 20px;
-      height: 20px;
       fill: #404044;
       transition: all 0.3s;
 
@@ -55,10 +57,10 @@ export default {
       }
     }
 
-    &.drawer svg {
+    &.drawer {
+      margin: 0 10px;
       width: 30px;
       height: 30px;
-      margin: 0 10px;
     }
   }
 }

@@ -1,5 +1,6 @@
 export default {
   async nuxtServerInit({ dispatch }) {
+    console.info(`BASE URL: ${this.$axios.defaults.baseURL}`)
     const actions = [
       'series/getItems',
       'footer/getData',

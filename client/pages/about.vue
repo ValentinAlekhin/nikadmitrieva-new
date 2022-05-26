@@ -1,7 +1,7 @@
 <template>
   <div class="About">
     <div class="About_Content">
-      <image-card class="About_Image" :image="data.image" />
+      <image-card v-if="data.image" class="About_Image" :image="data.image" />
       <div class="About_Text" v-html="data.textHtml" />
     </div>
   </div>
@@ -49,9 +49,18 @@ export default {
     margin-right: 30px;
     margin-bottom: 30px !important;
     float: left;
+    width: 100%;
 
     @include md {
       margin-bottom: 0;
+    }
+
+    @include xl {
+      width: 50%;
+    }
+
+    @include xl {
+      width: 40%;
     }
   }
 }

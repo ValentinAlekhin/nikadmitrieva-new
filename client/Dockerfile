@@ -4,10 +4,13 @@ WORKDIR home/app
 
 COPY package*.json ./
 
-RUN npm ci
+RUN npm i
+
+COPY . .
 
 RUN npm run build
 
-COPY . .
+ENV HOST 0.0.0.0
+EXPOSE 3000
 
 CMD [ "npm", "run", "start" ]

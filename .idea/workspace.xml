@@ -5,24 +5,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Save">
-      <change afterPath="$PROJECT_DIR$/strapi/src/extensions/menus/strapi-server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/components/ApiSvg.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/layouts/error.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLinters/eslint.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/client/.dockerignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/Header.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ImageCard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ImageCard/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/MasonryGrid/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/MasonryGrid/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/Icons/Instagram.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/components/ui/Icons/Telegram.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/components/ui/Socials.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ui/Socials.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/constants/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/constants/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/helpers/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/helpers/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/about.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/contact.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/contact.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/series/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/series/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/about/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/about/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/series/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/series/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/env.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/about/content-types/about/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/about/content-types/about/schema.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/about/controllers/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/about/controllers/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/contact/content-types/contact/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/contact/controllers/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/contact/routes/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/contact/services/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/header/content-types/header/schema.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/header/controllers/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/header/routes/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/api/header/services/header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/components/contact/contact.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/extensions/menus/strapi-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/extensions/menus/strapi-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,13 +121,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
     "javascript.nodejs.core.library.configured.version": "16.14.2",
     "javascript.nodejs.core.library.typings.version": "16.11.36",
     "last_opened_file_path": "C:/Users/Valentin/WebstormProjects/nikadmitrieva-new",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.stylelint": "C:\\Users\\Valentin\\WebstormProjects\\nikadmitrieva-new\\client\\node_modules\\stylelint",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
@@ -141,19 +165,6 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="docker-compose.yml.client: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="services">
-            <list>
-              <option value="client" />
-            </list>
-          </option>
-          <option name="sourceFilePath" value="docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <configuration name="docker-compose.yml.strapi: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -165,6 +176,16 @@
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="dev client" type="js.build_tools.npm">
@@ -207,21 +228,33 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <list>
-      <item itemvalue="Docker.docker-compose.yml.client: Compose Deployment" />
-      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.strapi: Compose Deployment" />
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       <item itemvalue="npm.dev strapi" />
       <item itemvalue="npm.dev client" />
       <item itemvalue="npm.dev:builder" />
+      <item itemvalue="npm.build" />
+      <item itemvalue="npm.start" />
       <item itemvalue="npm.dev" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
-        <item itemvalue="Docker.docker-compose.yml.client: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.strapi: Compose Deployment" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -259,7 +292,10 @@
       <workItem from="1649062207307" duration="16000" />
       <workItem from="1649420250709" duration="1857000" />
       <workItem from="1649607345908" duration="47000" />
-      <workItem from="1653464969599" duration="14551000" />
+      <workItem from="1653464969599" duration="15362000" />
+      <workItem from="1653484196348" duration="4988000" />
+      <workItem from="1653502160236" duration="9851000" />
+      <workItem from="1653578837810" duration="6823000" />
     </task>
     <task id="LOCAL-00001" summary="Add strapi">
       <created>1644603117948</created>
@@ -324,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653468752890</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Save">
+      <created>1653483451312</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653483451312</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

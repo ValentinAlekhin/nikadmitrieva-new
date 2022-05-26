@@ -1,5 +1,11 @@
+const { BASE_URL } = process.env
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  nuxt: {
+    host: '0.0.0.0',
+    port: '3000',
+  },
   target: 'server',
   head: {
     title: 'Nika Dmitrieva',
@@ -37,6 +43,7 @@ export default {
     // '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/dotenv',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -50,12 +57,12 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'http://localhost:1337/api',
+    baseURL: `${BASE_URL}/api`,
   },
 
   proxy: {
-    '/uploads': 'http://localhost:1337/',
-    '/api': 'http://localhost:1337/',
+    '/uploads': `${BASE_URL}/`,
+    '/api': `${BASE_URL}/`,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

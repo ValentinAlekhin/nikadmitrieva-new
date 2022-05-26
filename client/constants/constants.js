@@ -8,7 +8,7 @@ export const IMAGE_TYPES = ['avif', 'webp', 'jpeg'].map((ext) => ({
 }))
 
 export const MASONRY_GRID_BREAKPOINTS = [
-  { width: 576, cols: 1 },
-  { width: 768, cols: 2 },
+  { width: 768, cols: 1 },
+  { width: 992, cols: 2 },
   { width: 1400, cols: 3 },
 ]

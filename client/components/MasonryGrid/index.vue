@@ -59,7 +59,7 @@ export default {
   grid-template-columns: 1fr;
   grid-gap: 20px;
 
-  @include md {
+  @include lg {
     grid-template-columns: repeat(2, 1fr);
   }
 

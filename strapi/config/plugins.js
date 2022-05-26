@@ -1,9 +1,11 @@
-const {builderKey, builderUrl} = require('./env')
-
 module.exports = () => ({
   upload: {
     config: {
-      xlarge: 1920,
+      xxl: 2000,
+      xl: 1600,
+      l: 1200,
+      m: 800,
+      sm: 400,
     },
   },
   menus: {
@@ -21,6 +23,14 @@ module.exports = () => ({
                 type: 'string',
               },
             },
+            {
+              input: {
+                label: 'Scale',
+                value: 'scale',
+                name: 'scale',
+                type: 'string',
+              },
+            },
           ],
           description: [
             {
@@ -34,27 +44,6 @@ module.exports = () => ({
           ],
         },
       },
-    },
-  },
-  'website-builder': {
-    enabled: true,
-    config: {
-      url: builderUrl,
-      body: {
-        key: builderKey,
-      },
-      trigger: {
-        type: 'manual',
-      },
-    },
-  },
-  io: {
-    enabled: true,
-    config: {
-      IOServerOptions: {
-        cors: {path: '*'},
-      },
-      contentTypes: '*',
     },
   },
 })

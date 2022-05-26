@@ -36,14 +36,24 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 50px;
+    margin-bottom: 10px;
+
+    @include md {
+      height: 80px;
+      margin-bottom: 20px;
+    }
   }
 
   &_Title {
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 400;
     color: #404044;
+
+    @include md {
+      font-size: 30px;
+    }
   }
 
   &_Images {

@@ -10,11 +10,13 @@ services:
     ports:
       - "1337:1337"
     environment:
-      - BUILDER_URL=${BUILDER_URL}
-      - BUILDER_KEY=${BUILDER_KEY}
+      - JWT_SECRET=${JWT_SECRET}
+      - API_TOKEN_SALT=${API_TOKEN_SALT}
+      - STRAPI_URL=${STRAPI_URL}
     volumes:
-      - ./.cache:/home/app/.cache
-      - ./.tmp:/home/app/.tmp
+      - ./.cache:/app/.cache
+      - ./.tmp:/app/.tmp
+      - ./public:/app/public
     networks:
       - default
     restart: unless-stopped
@@ -25,12 +27,9 @@ services:
     container_name: client
     hostname: client
     ports:
-      - "${BUILDER_PORT}:${BUILDER_PORT}"
+      - "3000:3000"
     environment:
-      - BUILDER_PORT=${BUILDER_PORT}
-      - BUILDER_KEY=${BUILDER_KEY}
-    volumes:
-      - ./.dist:/home/app/dist
+      - BASE_URL='http://starpi:1337'
     networks:
       - default
     depends_on:

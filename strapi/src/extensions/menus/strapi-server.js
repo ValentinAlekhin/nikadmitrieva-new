@@ -13,6 +13,9 @@ module.exports = (plugin) => {
     description: {
       type: 'string',
     },
+    scale: {
+      type: 'string',
+    },
   }
 
   // Extend the `MenuItem` content type with custom attributes.

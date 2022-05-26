@@ -8,7 +8,7 @@
         :target="link.target"
         class="Contact_Link"
       >
-        <span class="Contact_Icon" v-html="link.svg" />
+        <api-svg class="Contact_Icon" :svg="link.svg" :scale="link.scale" />
         <span class="Contact_Desc">{{ link.description }}</span>
       </a>
     </div>
@@ -24,9 +24,6 @@ export default {
   computed: {
     ...mapState('header', ['data']),
     pageTitle: () => 'Contact',
-  },
-  mounted() {
-    console.log(this.data)
   },
 }
 </script>
@@ -45,15 +42,29 @@ export default {
   &_Content {
     justify-content: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include md {
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
   }
 
   &_Link {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 200px;
-    margin: 20px;
+    margin: 20px 20px 100px;
+
+    @include md {
+      margin: 100px 70px;
+    }
+
+    &:hover .Contact_Desc {
+      opacity: 1;
+    }
   }
 
   &_Icon {
@@ -61,13 +72,27 @@ export default {
     width: 50px;
     height: 50px;
     margin-bottom: 20px;
+
+    @include md {
+      margin-bottom: 0;
+    }
   }
 
   &_Desc {
+    min-width: 200px;
+    position: static;
     font-size: 16px;
     font-weight: 400;
     color: #404044;
     text-align: center;
+    opacity: 1;
+    transition: all ease 0.3s;
+
+    @include md {
+      top: 80px;
+      position: absolute;
+      opacity: 0;
+    }
   }
 }
 </style>

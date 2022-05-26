@@ -8,3 +8,8 @@ export const getSrcSetsById = (id) =>
     type,
     ext,
   }))
+
+export const getSrcSetByFormats = (formats) =>
+  Object.values(formats)
+    .map((f) => `${f.url} ${f.width}w`)
+    .join(',\n')

@@ -2,7 +2,9 @@
   <header class="Header">
     <div class="Header_Content container">
       <h1 class="Header_Title">
-        <nuxt-link class="Header_TitleLink" to="/">{{ metaData.title }}</nuxt-link>
+        <nuxt-link class="Header_TitleLink" to="/"
+          >{{ metaData.title }}
+        </nuxt-link>
       </h1>
 
       <div class="Header_NavSocials">
@@ -37,7 +39,7 @@ import { mapState } from 'vuex'
 export default {
   computed: {
     ...mapState('header', { headerData: 'data' }),
-    ...mapState('meta', { metaData: 'data' })
+    ...mapState('meta', { metaData: 'data' }),
   },
 }
 </script>
@@ -45,7 +47,11 @@ export default {
 <style lang="scss" scoped>
 .Header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  margin-bottom: 2rem;
+  margin-bottom: 10px;
+
+  @include md {
+    margin-bottom: 20px;
+  }
 
   &_Content {
     height: 60px;
