@@ -1,11 +1,11 @@
 <template>
   <div class="Index">
-    <masonry-grid :items="sortedPhotoItems">
+    <masonry-grid :items="drawItems">
       <template #item="{ item }">
         <image-card
           :image="item.images[0]"
           :title="item.title"
-          :link="`/series/${item.id}`"
+          :link="`/art/${item.id}`"
         />
       </template>
     </masonry-grid>
@@ -21,7 +21,8 @@ export default {
   name: 'IndexPage',
   mixins: [meta],
   computed: {
-    ...mapGetters('series', ['sortedPhotoItems']),
+    ...mapGetters('series', ['drawItems']),
+    pageTitle: () => 'Art',
   },
 }
 </script>

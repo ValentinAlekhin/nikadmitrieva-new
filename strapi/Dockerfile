@@ -8,9 +8,10 @@ RUN npm i
 
 ENV NODE_ENV production
 
+COPY . .
+
 RUN npm run build
 
-COPY . .
 
 EXPOSE 1337
 

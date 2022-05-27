@@ -15,8 +15,7 @@
     "title": {
       "type": "string",
       "required": true,
-      "maxLength": 30,
-      "minLength": 4
+      "maxLength": 30
     },
     "description": {
       "type": "richtext",
@@ -29,6 +28,15 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "tag": {
+      "type": "enumeration",
+      "enum": [
+        "photo",
+        "draw"
+      ],
+      "required": true,
+      "default": "photo"
     }
   }
 }

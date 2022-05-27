@@ -75,6 +75,10 @@ export default {
       margin-bottom: 20px;
       font-size: 16px;
     }
+
+    a {
+      text-decoration: underline;
+    }
   }
 }
 </style>
