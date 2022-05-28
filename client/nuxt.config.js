@@ -6,7 +6,7 @@ export default {
     host: '0.0.0.0',
     port: '3000',
   },
-  target: 'server',
+  target: 'static',
   head: {
     title: 'Nika Dmitrieva',
     htmlAttrs: {
@@ -44,6 +44,7 @@ export default {
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
     '@nuxtjs/dotenv',
+    'nuxt-compress',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules

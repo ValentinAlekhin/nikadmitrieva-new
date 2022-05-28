@@ -13,6 +13,7 @@ services:
       - JWT_SECRET=${JWT_SECRET}
       - API_TOKEN_SALT=${API_TOKEN_SALT}
       - STRAPI_URL=${STRAPI_URL}
+      - BUILDER_KEY=${BUILDER_KEY}
     volumes:
       - ./.cache:/app/.cache
       - ./.tmp:/app/.tmp
@@ -26,10 +27,13 @@ services:
     image: valentinalekhin/nikadmitrieva-client
     container_name: client
     hostname: client
+    volumes:
+      - ./dist:/home/app/dist
     ports:
       - "3000:3000"
     environment:
-      - BASE_URL='http://starpi:1337'
+      - BASE_URL=https://api.nikadmitrieva.ru
+      - BUILDER_KEY=${BUILDER_KEY}
     networks:
       - default
     depends_on:

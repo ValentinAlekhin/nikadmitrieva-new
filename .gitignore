@@ -7,3 +7,5 @@ out
 .cache
 .tmp
 .dist
+dist
+public

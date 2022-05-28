@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Save">
-      <change afterPath="$PROJECT_DIR$/client/components/Series.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/art/_id.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/pages/art/index.vue" afterDir="false" />
+    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="1. Убрал ограничение от 4 букв&#10;2. Создал раздел fine arts&#10;3. Заменил иконку">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/builder/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/builder/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/about.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/series/_id.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/series/_id.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/store/series/getters.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/series/getters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/src/api/series/content-types/series/schema.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/api/series/content-types/series/schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +270,8 @@
       <workItem from="1653484196348" duration="4988000" />
       <workItem from="1653502160236" duration="9851000" />
       <workItem from="1653578837810" duration="8291000" />
-      <workItem from="1653640667195" duration="1491000" />
+      <workItem from="1653640667195" duration="1938000" />
+      <workItem from="1653737655894" duration="4380000" />
     </task>
     <task id="LOCAL-00001" summary="Add strapi">
       <created>1644603117948</created>
@@ -347,7 +350,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653585878052</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="1. Убрал ограничение от 4 букв&#10;2. Создал раздел fine arts&#10;3. Заменил иконку">
+      <created>1653642615132</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1653642615132</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,7 +385,8 @@
     <MESSAGE value="Добавил шрифты" />
     <MESSAGE value="Много обнов" />
     <MESSAGE value="Save" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save" />
+    <MESSAGE value="1. Убрал ограничение от 4 букв&#10;2. Создал раздел fine arts&#10;3. Заменил иконку" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. Убрал ограничение от 4 букв&#10;2. Создал раздел fine arts&#10;3. Заменил иконку" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

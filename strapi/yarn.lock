@@ -1846,7 +1846,7 @@
     "@strapi/utils" "4.1.12"
     "fs-extra" "10.0.0"
 
-"@strapi/strapi@^4.1.10", "@strapi/strapi@^4.1.12", "@strapi/strapi@^4.1.5":
+"@strapi/strapi@^4.0.7", "@strapi/strapi@^4.1.10", "@strapi/strapi@^4.1.12", "@strapi/strapi@^4.1.5":
   "integrity" "sha512-vjGE5r0r6wtwA4ixcIZTc2dLRqkPZ22hxM7naUw3lUXynK3GlyyDMASJUMTXRAcxsF/eNrZz2779XgpyPdO8bA=="
   "resolved" "https://registry.npmjs.org/@strapi/strapi/-/strapi-4.1.12.tgz"
   "version" "4.1.12"
@@ -2749,19 +2749,19 @@
   "resolved" "https://registry.npmjs.org/aws4/-/aws4-1.11.0.tgz"
   "version" "1.11.0"
 
+"axios@^0.24.0", "axios@0.24.0":
+  "integrity" "sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA=="
+  "resolved" "https://registry.npmjs.org/axios/-/axios-0.24.0.tgz"
+  "version" "0.24.0"
+  dependencies:
+    "follow-redirects" "^1.14.4"
+
 "axios@^0.26.1":
   "integrity" "sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA=="
   "resolved" "https://registry.npmjs.org/axios/-/axios-0.26.1.tgz"
   "version" "0.26.1"
   dependencies:
     "follow-redirects" "^1.14.8"
-
-"axios@0.24.0":
-  "integrity" "sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA=="
-  "resolved" "https://registry.npmjs.org/axios/-/axios-0.24.0.tgz"
-  "version" "0.24.0"
-  dependencies:
-    "follow-redirects" "^1.14.4"
 
 "axios@0.25.0":
   "integrity" "sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g=="
@@ -8743,19 +8743,19 @@
   "resolved" "https://registry.npmjs.org/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz"
   "version" "3.0.4"
 
-"react-query@^3.34.15":
-  "integrity" "sha512-Od0IkSuS79WJOhzWBx/ys0x13+7wFqgnn64vBqqAAnZ9whocVhl/y1padD5uuZ6EIkXbFbInax0qvY7zGM0thA=="
-  "resolved" "https://registry.npmjs.org/react-query/-/react-query-3.39.0.tgz"
-  "version" "3.39.0"
+"react-query@^3.24.3", "react-query@3.24.3":
+  "integrity" "sha512-JipKpn7XoDVvRWwXWXKSJU5SbNJKqspx9IRBntaQt1EQOBXe9314Z/8cV9YXXbZIhzrHAetT3X7tRClZaYk98g=="
+  "resolved" "https://registry.npmjs.org/react-query/-/react-query-3.24.3.tgz"
+  "version" "3.24.3"
   dependencies:
     "@babel/runtime" "^7.5.5"
     "broadcast-channel" "^3.4.1"
     "match-sorter" "^6.0.2"
 
-"react-query@3.24.3":
-  "integrity" "sha512-JipKpn7XoDVvRWwXWXKSJU5SbNJKqspx9IRBntaQt1EQOBXe9314Z/8cV9YXXbZIhzrHAetT3X7tRClZaYk98g=="
-  "resolved" "https://registry.npmjs.org/react-query/-/react-query-3.24.3.tgz"
-  "version" "3.24.3"
+"react-query@^3.34.15":
+  "integrity" "sha512-Od0IkSuS79WJOhzWBx/ys0x13+7wFqgnn64vBqqAAnZ9whocVhl/y1padD5uuZ6EIkXbFbInax0qvY7zGM0thA=="
+  "resolved" "https://registry.npmjs.org/react-query/-/react-query-3.39.0.tgz"
+  "version" "3.39.0"
   dependencies:
     "@babel/runtime" "^7.5.5"
     "broadcast-channel" "^3.4.1"
@@ -10064,6 +10064,11 @@
   "version" "4.1.7"
   dependencies:
     "plaiceholder" "^2.3.0"
+
+"strapi-plugin-website-builder@^2.2.1":
+  "integrity" "sha512-KqwjfUXQM6B9h73pak7ANU9o5y7X90zYpW50nEVUY1NnmgoELTcovj52KgtCjw8IhdF67Zzn1nM7Kn1NZSSrBw=="
+  "resolved" "https://registry.npmjs.org/strapi-plugin-website-builder/-/strapi-plugin-website-builder-2.2.1.tgz"
+  "version" "2.2.1"
 
 "stream-browserify@^3.0.0":
   "integrity" "sha512-H73RAHsVBapbim0tU2JwwOiXUj+fikfiaoYAKHF3VJfA0pe2BCzkhAHBlLG6REzE+2WNZcxOXjK7lkso+9euLA=="

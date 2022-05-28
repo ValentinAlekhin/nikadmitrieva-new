@@ -78,6 +78,7 @@ export default {
 
     a {
       text-decoration: underline;
+      color: #0081a7;
     }
   }
 }

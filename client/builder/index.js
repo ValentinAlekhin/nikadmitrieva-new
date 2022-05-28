@@ -6,41 +6,50 @@ const express = require('express')
 const cors = require('cors')
 
 const app = express()
-const port = process.env.BUILDER_PORT || 3001
+const port = process.env.BUILDER_PORT || 3000
 const builderKey = process.env.BUILDER_KEY
 
 const appDir = path.join(__dirname, '..')
 
 app.use(cors())
-app.use(express.json());
-app.use(express.urlencoded({
-  extended: true
-}))
+app.use(express.json())
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+)
 
-const buildClient = () => new Promise((resolve, reject) => {
-  const build = exec(`npm run generate --prefix ${appDir}`)
+const buildClient = () =>
+  new Promise((resolve, reject) => {
+    const build = exec(`npm run generate --prefix ${appDir}`)
 
-  build.stdout.on('data', e => console.log(e))
-  build.stdout.on('error', e => reject(e))
-  build.stdout.on('end', e => resolve(e))
-})
+    // eslint-disable-next-line no-console
+    build.stdout.on('data', console.info)
+    build.stdout.on('error', (e) => reject(e))
+    build.stdout.on('end', (e) => {
+      // eslint-disable-next-line no-console
+      console.info('Finish!')
+      resolve(e)
+    })
+  })
 
 app.post('/build', async (req, res) => {
   try {
     const { key } = req.body
 
-    if (!key && key !== builderKey) return res.status(403).send()
+    if (!key || key !== builderKey) return res.status(403).send()
 
     await buildClient()
 
     res.send()
   } catch (e) {
-    console.log(e)
+    // eslint-disable-next-line no-console
+    console.error(e)
     res.status(500).send()
   }
 })
 
 app.listen(port, () => {
-  console.log(`Client builder listening on port ${port}`)
+  // eslint-disable-next-line no-console
+  console.info(`Client builder listening on port ${port}`)
 })
-

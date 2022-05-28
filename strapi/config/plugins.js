@@ -1,4 +1,4 @@
-module.exports = () => ({
+module.exports = ({env}) => ({
   upload: {
     config: {
       xxl: 2000,
@@ -6,6 +6,18 @@ module.exports = () => ({
       l: 1200,
       m: 800,
       sm: 400,
+    },
+  },
+  'website-builder': {
+    enabled: true,
+    config: {
+      url: 'https://nikadmitrieva.ru/build',
+      trigger: {
+        type: 'manual',
+      },
+      body: {
+        key: env('BUILDER_KEY'),
+      },
     },
   },
   menus: {
