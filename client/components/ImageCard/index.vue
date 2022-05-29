@@ -26,6 +26,9 @@
 
     <div v-if="link" class="ImageCard_Overlay">
       <h4 class="ImageCard_Title">{{ title }}</h4>
+
+      <ui-icons-arrow class="ImageCard_ArrowIcon" />
+
       <span class="ImageCard_IconContainer">
         <ui-icons-plus class="ImageCard_Icon" />
       </span>
@@ -137,17 +140,31 @@ export default {
 
   &_Overlay {
     position: absolute;
-    top: -15%;
-    left: -15%;
-    right: -15%;
-    bottom: -15%;
-    background: rgba(64, 64, 68, 0.7);
-    opacity: 0;
-    transform: scale(0.9);
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 
-    &:hover {
-      opacity: 1;
-      transform: scale(1);
+    @include md {
+      display: block;
+      height: auto;
+      top: -15%;
+      left: -15%;
+      right: -15%;
+      bottom: -15%;
+      background: rgba(64, 64, 68, 0.7);
+      opacity: 0;
+      transform: scale(0.9);
+      padding: 0;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
 
@@ -155,23 +172,41 @@ export default {
     color: #fff;
     font-size: 20px;
     font-weight: 600;
-    position: absolute;
-    bottom: calc(15% + 10px);
-    left: calc(15% + 10px);
+
+    @include md {
+      position: absolute;
+      bottom: calc(15% + 10px);
+      left: calc(15% + 10px);
+    }
+  }
+
+  &_ArrowIcon {
+    fill: #fff;
+    height: 20px;
+    width: 20px;
+    transform: rotate(90deg);
+
+    @include md {
+      display: none;
+    }
   }
 
   &_IconContainer {
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 100%;
     background: #404044;
     width: 55px;
     height: 55px;
+
+    @include md {
+      display: flex;
+    }
   }
 
   &_Icon {

@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="1. Убрал ограничение от 4 букв&#10;2. Создал раздел fine arts&#10;3. Заменил иконку">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Сделал статическую генерацию сайта и изменил цвет ссылок на странице &quot;About&quot;">
+      <change afterPath="$PROJECT_DIR$/client/components/ui/Icons/Arrow.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/client/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/builder/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/builder/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pages/about.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/pages/about.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/plugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/components/ImageCard/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/client/components/ImageCard/index.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +120,7 @@
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\components\ImageCard" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev client">
+  <component name="RunManager" selected="npm.dev strapi">
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -271,7 +261,8 @@
       <workItem from="1653502160236" duration="9851000" />
       <workItem from="1653578837810" duration="8291000" />
       <workItem from="1653640667195" duration="1938000" />
-      <workItem from="1653737655894" duration="4380000" />
+      <workItem from="1653737655894" duration="5195000" />
+      <workItem from="1653822509513" duration="1435000" />
     </task>
     <task id="LOCAL-00001" summary="Add strapi">
       <created>1644603117948</created>
@@ -357,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653642615132</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Сделал статическую генерацию сайта и изменил цвет ссылок на странице &quot;About&quot;">
+      <created>1653750047810</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1653750047810</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -386,7 +384,8 @@
     <MESSAGE value="Много обнов" />
     <MESSAGE value="Save" />
     <MESSAGE value="1. Убрал ограничение от 4 букв&#10;2. Создал раздел fine arts&#10;3. Заменил иконку" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. Убрал ограничение от 4 букв&#10;2. Создал раздел fine arts&#10;3. Заменил иконку" />
+    <MESSAGE value="Сделал статическую генерацию сайта и изменил цвет ссылок на странице &quot;About&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сделал статическую генерацию сайта и изменил цвет ссылок на странице &quot;About&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
