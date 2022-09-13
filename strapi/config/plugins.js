@@ -1,4 +1,6 @@
-module.exports = ({env}) => ({
+const env = require('./env')
+
+module.exports = () => ({
   upload: {
     config: {
       xxl: 2000,
@@ -16,7 +18,7 @@ module.exports = ({env}) => ({
         type: 'manual',
       },
       body: {
-        key: env('BUILDER_KEY'),
+        key: env.builder.key,
       },
     },
   },
