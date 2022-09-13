@@ -1,8 +1,10 @@
-module.exports = ({env}) => ({
+const env = require('./env')
+
+module.exports = () => ({
   auth: {
-    secret: env('ADMIN_JWT_SECRET', '50b5ccf75e96f16d75642b2496f22626'),
+    secret: env.admin.secret,
   },
   apiToken: {
-    salt: env('API_TOKEN_SALT', ''),
+    salt: env.admin.salt,
   },
 })

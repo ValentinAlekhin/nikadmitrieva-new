@@ -1,11 +1,15 @@
-const path = require('path');
+const env = require('./env')
 
-module.exports = ({ env }) => ({
+module.exports = () => ({
   connection: {
-    client: 'sqlite',
+    client: 'postgres',
     connection: {
-      filename: path.join(__dirname, '..', env('DATABASE_FILENAME', '.tmp/data.db')),
+      host: env.db.host,
+      port: env.db.port,
+      database: env.db.name,
+      user: env.db.user,
+      password: env.db.password,
     },
-    useNullAsDefault: true,
+    debug: false,
   },
-});
+})
