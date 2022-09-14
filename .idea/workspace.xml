@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Добавил глобальный файл окружения">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/dev/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/dev/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/prod/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/prod/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/config/env.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/env.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/plugins.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,30 +82,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "code.cleanup.on.save": "true",
-    "javascript.nodejs.core.library.configured.version": "16.13.0",
-    "javascript.nodejs.core.library.typings.version": "16.11.58",
-    "last_opened_file_path": "C:/Users/Valentin/WebstormProjects/nikadmitrieva-new",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.stylelint": "C:\\Users\\Valentin\\WebstormProjects\\nikadmitrieva-new\\client\\node_modules\\stylelint",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Valentin\\WebstormProjects\\nikadmitrieva-new\\client\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "preferences.fileTypes",
-    "vue.rearranger.settings.migration": "true",
-    "vuejs.nuxt.types-notification-shown": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.13.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.58&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Valentin/WebstormProjects/nikadmitrieva-new&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;C:\\Users\\Valentin\\WebstormProjects\\nikadmitrieva-new\\client\\node_modules\\stylelint&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Valentin\\WebstormProjects\\nikadmitrieva-new\\client\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;vuejs.nuxt.types-notification-shown&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new" />
@@ -123,7 +122,7 @@
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\components\ImageCard" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev strapi">
+  <component name="RunManager" selected="Docker.dev: Compose Deployment">
     <configuration name="dev: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -216,8 +215,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start:builder" />
         <item itemvalue="Docker.dev: Compose Deployment" />
+        <item itemvalue="npm.start:builder" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.strapi: Compose Deployment" />
         <item itemvalue="npm.start" />
@@ -266,7 +265,8 @@
       <workItem from="1653737655894" duration="5195000" />
       <workItem from="1653822509513" duration="4018000" />
       <workItem from="1659687347690" duration="118000" />
-      <workItem from="1663089793553" duration="6437000" />
+      <workItem from="1663089793553" duration="6560000" />
+      <workItem from="1663142356824" duration="2484000" />
     </task>
     <task id="LOCAL-00001" summary="Add strapi">
       <created>1644603117948</created>
@@ -373,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663094625238</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Добавил глобальный файл окружения">
+      <created>1663096668756</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1663096668756</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

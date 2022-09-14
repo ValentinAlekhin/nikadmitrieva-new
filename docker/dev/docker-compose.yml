@@ -10,3 +10,7 @@ services:
       POSTGRES_PASSWORD: nika
       POSTGRES_USER: nika
       POSTGRES_DB: nika
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
