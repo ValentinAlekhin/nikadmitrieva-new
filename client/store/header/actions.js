@@ -3,13 +3,32 @@ export default {
     commit('setLoading', true)
 
     try {
-      const { menus } = await this.$axios.$get('menus')
+      let { data } = await this.$axios.$get(
+        'menus?nested&populate=*&populate=items.svg'
+      )
 
-      const data = menus.reduce((acc, list) => {
-        acc[list.slug] = list.items
+      data = await data.reduce(async (previousPromise, { attributes }) => {
+        const acc = await previousPromise
+
+        acc[attributes.slug] = await Promise.all(
+          attributes.items.data.map(async (item) => {
+            let svg = null
+            if (item?.attributes?.svg.data?.attributes?.url) {
+              svg = await this.$axios.$get(
+                item.attributes.svg.data.attributes.url,
+                { baseURL: process.env.baseUrl }
+              )
+            }
+
+            return {
+              ...item.attributes,
+              svg,
+            }
+          })
+        )
 
         return acc
-      }, {})
+      }, Promise.resolve({}))
 
       commit('setData', data)
     } catch (e) {

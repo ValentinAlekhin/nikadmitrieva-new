@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   db:
-    image: postgres
+    image: postgres:14-alpine
     container_name: nikadmitrieva-database
     restart: unless-stopped
     ports:
@@ -15,6 +15,7 @@ services:
       - db-data:/var/lib/postgresql/data
     networks:
       - default
+
   strapi:
     build:
       context: ../../strapi
@@ -41,6 +42,7 @@ services:
     networks:
       - default
     restart: unless-stopped
+
   client:
     build:
       context: ../../client
@@ -49,16 +51,30 @@ services:
     hostname: client
     volumes:
       - client:/home/app/dist
-    ports:
-      - "3005:3000"
     environment:
-      - BASE_URL=https://api.nikadmitrieva.ru
+      - BASE_URL=http://strapi:1337
       - BUILDER_KEY=${BUILDER_KEY}
     networks:
       - default
     depends_on:
       - strapi
     restart: unless-stopped
+
+  web:
+    image: valentinalekhin/nikadmitrieva-web
+    container_name: nikadmitrieva-web
+    build:
+      context: ../../web
+    ports:
+      - "3005:80"
+    volumes:
+      - client:/var/www/client:ro
+      - uploads:/var/www/uploads:ro
+    restart: unless-stopped
+    networks:
+      - default
+    depends_on:
+      - client
 
 volumes:
   db-data:

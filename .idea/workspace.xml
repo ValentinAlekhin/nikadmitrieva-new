@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Добавил глобальный файл окружения">
+    <list default="true" id="68157ba6-e30c-45f1-a6a0-2266caff98c0" name="Changes" comment="Добавил веб сервис">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_09_2022_11_17_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_17_09_2022_11_17__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/conf.nginx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/dev/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/dev/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/store/header/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/store/header/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/prod/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/prod/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/config/plugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/config/plugins.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/src/extensions/menus/strapi-server.js" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/src/extensions/menus/strapi-server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/strapi/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/strapi/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,37 +94,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.13.0&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.11.58&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Valentin/WebstormProjects/nikadmitrieva-new&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;C:\\Users\\Valentin\\WebstormProjects\\nikadmitrieva-new\\client\\node_modules\\stylelint&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\Users\\Valentin\\WebstormProjects\\nikadmitrieva-new\\client\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;vuejs.nuxt.types-notification-shown&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "code.cleanup.on.save": "true",
+    "javascript.nodejs.core.library.configured.version": "16.14.2",
+    "javascript.nodejs.core.library.typings.version": "16.11.47",
+    "last_opened_file_path": "C:/Users/Valentin/WebstormProjects/nikadmitrieva-new/strapi/src/api/menu",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.stylelint": "C:\\Users\\Valentin\\WebstormProjects\\nikadmitrieva-new\\client\\node_modules\\stylelint",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Valentin\\WebstormProjects\\nikadmitrieva-new\\client\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true",
+    "vuejs.nuxt.types-notification-shown": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new" />
+      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\strapi\src\api\menu" />
+      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\strapi\src\api" />
+      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\strapi\src\api\menus" />
       <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\docker\prod" />
       <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\.tmp" />
-      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\strapi" />
-      <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\client\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Valentin\WebstormProjects\nikadmitrieva-new\client\static" />
@@ -122,11 +132,10 @@
       <recent name="C:\Users\Valentin\Desktop\projects\nikadmitrieva-new\client\components\ImageCard" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.dev: Compose Deployment">
+  <component name="RunManager" selected="npm.dev client">
     <configuration name="dev: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
-          <option name="envFilePath" value="" />
           <option name="sourceFilePath" value="docker/dev/docker-compose.yml" />
         </settings>
       </deployment>
@@ -151,6 +160,16 @@
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/client/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
     <configuration name="dev client" type="js.build_tools.npm">
@@ -193,16 +212,6 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start:builder" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start:builder" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Docker.dev: Compose Deployment" />
       <item itemvalue="Docker.docker-compose.yml.strapi: Compose Deployment" />
@@ -210,16 +219,16 @@
       <item itemvalue="npm.dev strapi" />
       <item itemvalue="npm.dev client" />
       <item itemvalue="npm.dev:builder" />
-      <item itemvalue="npm.start:builder" />
+      <item itemvalue="npm.build" />
       <item itemvalue="npm.start" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.dev: Compose Deployment" />
-        <item itemvalue="npm.start:builder" />
         <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.strapi: Compose Deployment" />
         <item itemvalue="npm.start" />
+        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
@@ -265,8 +274,10 @@
       <workItem from="1653737655894" duration="5195000" />
       <workItem from="1653822509513" duration="4018000" />
       <workItem from="1659687347690" duration="118000" />
-      <workItem from="1663089793553" duration="6560000" />
-      <workItem from="1663142356824" duration="2484000" />
+      <workItem from="1663404307062" duration="2918000" />
+      <workItem from="1663408412951" duration="8367000" />
+      <workItem from="1663427507829" duration="1347000" />
+      <workItem from="1663492784998" duration="7629000" />
     </task>
     <task id="LOCAL-00001" summary="Add strapi">
       <created>1644603117948</created>
@@ -366,21 +377,7 @@
       <option name="project" value="LOCAL" />
       <updated>1653824105598</updated>
     </task>
-    <task id="LOCAL-00015" summary="Добавил глобальный файл окружения">
-      <created>1663094625238</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1663094625238</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Добавил глобальный файл окружения">
-      <created>1663096668756</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1663096668756</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,8 +408,7 @@
     <MESSAGE value="1. Убрал ограничение от 4 букв&#10;2. Создал раздел fine arts&#10;3. Заменил иконку" />
     <MESSAGE value="Сделал статическую генерацию сайта и изменил цвет ссылок на странице &quot;About&quot;" />
     <MESSAGE value="Обновил дизайн карточки серии на мобильных устройствах" />
-    <MESSAGE value="Добавил глобальный файл окружения" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил глобальный файл окружения" />
+    <option name="LAST_COMMIT_MESSAGE" value="Обновил дизайн карточки серии на мобильных устройствах" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

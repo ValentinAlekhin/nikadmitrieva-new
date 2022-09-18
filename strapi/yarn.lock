@@ -2956,20 +2956,13 @@ aws4@^1.8.0:
   resolved "https://registry.npmjs.org/aws4/-/aws4-1.11.0.tgz"
   integrity sha512-xh1Rl34h6Fi1DC2WWKfxUTVqRsNnr6LsKz2+hfwDxQJWmrx8+c7ylaqBMcHfl1U1r2dsifOvKX3LQuLNZ+XSvA==
 
-axios@0.27.2:
+axios@0.27.2, axios@^0.27.2:
   version "0.27.2"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
   integrity sha512-t+yRIyySRTp/wua5xEr+z1q60QmLq8ABsS5O9Me1AsE5dfKqgnCFzwiCZZ/cGNd1lq4/7akDWMxdhVlucjmnOQ==
   dependencies:
     follow-redirects "^1.14.9"
     form-data "^4.0.0"
-
-axios@^0.26.1:
-  version "0.26.1"
-  resolved "https://registry.npmjs.org/axios/-/axios-0.26.1.tgz"
-  integrity sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
-  dependencies:
-    follow-redirects "^1.14.8"
 
 babel-loader@8.2.5:
   version "8.2.5"
@@ -5206,7 +5199,7 @@ fn.name@1.x.x:
   resolved "https://registry.npmjs.org/fn.name/-/fn.name-1.1.0.tgz"
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
 
-follow-redirects@^1.0.0, follow-redirects@^1.14.8:
+follow-redirects@^1.0.0:
   version "1.15.0"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.0.tgz"
   integrity sha512-aExlJShTV4qOUOL7yF1U5tvLCB0xQuudbf6toyYA0E/acBNw71mvjFTnLaRp50aQaYocMR0a/RMMBIHeZnGyjQ==
@@ -10048,13 +10041,13 @@ std-env@^3.0.1:
   resolved "https://registry.yarnpkg.com/std-env/-/std-env-3.2.1.tgz#00e260ec3901333537125f81282b9296b00d7304"
   integrity sha512-D/uYFWkI/31OrnKmXZqGAGK5GbQRPp/BWA1nuITcc6ICblhhuQUPHS5E2GSCVS7Hwhf4ciq8qsATwBUxv+lI6w==
 
-strapi-plugin-menus@^0.3.2:
-  version "0.3.2"
-  resolved "https://registry.npmjs.org/strapi-plugin-menus/-/strapi-plugin-menus-0.3.2.tgz"
-  integrity sha512-h+xyZvAv082eQRNyZLz9HpKl9MX1lb+DWCA+n7hlVrNr9f3QzGbSw2GfOEuHc/KhjTpoz6A/5k/s7qwIlrXRCA==
+strapi-plugin-menus@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/strapi-plugin-menus/-/strapi-plugin-menus-1.0.2.tgz#02d537f7b6e7d7574702b28b23dc5cf2806d7f58"
+  integrity sha512-2yXoGoPNFESyrTMiwtu1GLBCjdPfQ2X1DOlfn6XmD4PLDd3SrxIsauhK522Ysr21fVv0ufhnHcJlOJqJ9TpwlQ==
   dependencies:
-    axios "^0.26.1"
-    lodash "^4.17.21"
+    axios "^0.27.2"
+    lodash "4.17.21"
     prop-types "^15.8.1"
     qs "^6.10.3"
     react "^17.0.2"

@@ -73,4 +73,8 @@ export default {
   styleResources: {
     scss: ['./assets/scss/*.scss'],
   },
+
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://localhost:1337',
+  },
 }

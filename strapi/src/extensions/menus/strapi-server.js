@@ -8,7 +8,9 @@ module.exports = (plugin) => {
   // on any other schema.
   const customAttrs = {
     svg: {
-      type: 'string',
+      type: 'media',
+      allowedTypes: ['images'],
+      multiple: false,
     },
     description: {
       type: 'string',

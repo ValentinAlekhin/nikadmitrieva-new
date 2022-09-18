@@ -34,7 +34,7 @@ module.exports = () => ({
                 label: 'SVG',
                 value: 'svg',
                 name: 'svg',
-                type: 'string',
+                type: 'media',
               },
             },
             {

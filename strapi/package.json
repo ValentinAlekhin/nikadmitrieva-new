@@ -23,7 +23,7 @@
     "pg": "^8.8.0",
     "sharp": "^0.30.1",
     "sqlite3": "^5.0.8",
-    "strapi-plugin-menus": "^0.3.2",
+    "strapi-plugin-menus": "^1.0.2",
     "strapi-plugin-placeholder": "^4.1.7",
     "strapi-plugin-website-builder": "^2.2.1",
     "style-loader": "^3.3.1"

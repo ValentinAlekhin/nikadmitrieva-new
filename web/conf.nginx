@@ -1,0 +1,28 @@
+events {
+}
+
+http {
+    include mime.types;
+    sendfile on;
+
+    server {
+        listen 80;
+        server_name nikadmitrieva.ru;
+        root /var/www/client;
+        gzip_static on;
+        index index.html;
+
+        location / {
+            try_files $uri $uri/ =404;
+        }
+
+        location /uploads/ {
+            alias /var/www/uploads/;
+        }
+
+        location /build {
+            proxy_pass http://client:3000;
+            proxy_read_timeout 600s;
+        }
+    }
+}
